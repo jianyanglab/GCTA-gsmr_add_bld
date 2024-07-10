@@ -65,13 +65,13 @@ void option(int option_num, char* option_str[])
     double GC_cutoff = 0.7;
 
     // data management
-    string bfile = "", bfile2 = "", bfile_list = "", update_sex_file = "", update_freq_file = "", update_refA_file = "", kp_indi_file = "", rm_indi_file = "", extract_snp_file = "", exclude_snp_file = "", extract_snp_name = "", exclude_snp_name = "", out = "gcta";
+    string bfile = "", bfile2 = "", bfile_list = "", bld = "", bld_list = "", update_sex_file = "", update_freq_file = "", update_refA_file = "", kp_indi_file = "", rm_indi_file = "", extract_snp_file = "", exclude_snp_file = "", extract_snp_name = "", exclude_snp_name = "", out = "gcta";
     bool SNP_major = false, make_bed_flag = false, dose_mach_flag = false, dose_mach_gz_flag = false, dose_beagle_flag = false, bfile2_flag = false, out_freq_flag = false, out_ssq_flag = false;
     bool ref_A = false, recode = false, recode_nomiss = false, recode_std = false, save_ram = false, autosome_flag = false;
-    int bfile_flag = 0, autosome_num = 22, extract_chr_start = 0, extract_chr_end = 0, extract_region_chr = 0, extract_region_bp = 0, extract_region_wind = 0, exclude_region_chr = 0, exclude_region_bp = 0, exclude_region_wind = 0;
+    int bfile_flag = 0, bld_flag = 0, autosome_num = 22, extract_chr_start = 0, extract_chr_end = 0, extract_region_chr = 0, extract_region_bp = 0, extract_region_wind = 0, exclude_region_chr = 0, exclude_region_bp = 0, exclude_region_wind = 0;
     string dose_file = "", dose_info_file = "", update_impRsq_file = "";
     double maf = 0.0, max_maf = 0.0, dose_Rsq_cutoff = 0.0;
-    vector<string> multi_bfiles;
+    vector<string> multi_bfiles, multi_blds;
 
     // GRM
     bool ibc = false, ibc_all = false, grm_flag = false, grm_bin_flag = true, m_grm_flag = false, m_grm_bin_flag = true, make_grm_flag = false, make_grm_inbred_flag = false, dominance_flag = false, make_grm_xchar_flag = false, grm_out_bin_flag = true, make_grm_f3_flag = false;
@@ -214,7 +214,15 @@ void option(int option_num, char* option_str[])
             bfile_flag = 2;
             bfile_list = argv[++i];
             LOGGER << "--mbfile " << argv[i] << endl;
-        } else if (strcmp(argv[i], "--make-bed") == 0) {
+        } else if (strcmp(argv[i], "--bld") == 0) {
+            bld_flag = 1;
+            bld = argv[++i];
+            LOGGER << "--mbld " << argv[i] << endl;
+        } else if (strcmp(argv[i], "--mbld") == 0) {
+            bld_flag = 2;
+            bld_list = argv[++i];
+            LOGGER << "--mbld " << argv[i] << endl;
+        }else if (strcmp(argv[i], "--make-bed") == 0) {
             make_bed_flag = true;
             LOGGER << "--make-bed " << endl;
         } else if (strcmp(argv[i], "--bfile2") == 0) {
@@ -1330,7 +1338,7 @@ void option(int option_num, char* option_str[])
         pter_gcta->read_eR(eR_file);
         pter_gcta->run_ecojo_blup_eR(ecojo_ma_file, ecojo_lambda);
     }
-    else if (bfile_flag) {
+    else if (bfile_flag || bld_flag) {
         if (hapmap_genet_dst) pter_gcta->genet_dst(bfile, hapmap_genet_dst_file);
         else {
             if (bfile2_flag) {
@@ -1339,6 +1347,7 @@ void option(int option_num, char* option_str[])
             }
             // Read the list, if there are multiple bfiles
             if(bfile_flag==2) multi_bfiles = pter_gcta->read_bfile_list(bfile_list);
+            if(bld_flag==2) multi_blds = pter_gcta->read_bld_list(bld_list);
             // Start to read the genotypes
             if(bfile_flag==1) pter_gcta->read_famfile(bfile + ".fam");
             else pter_gcta->read_multi_famfiles(multi_bfiles);
@@ -1348,6 +1357,8 @@ void option(int option_num, char* option_str[])
             if (!blup_indi_file.empty()) pter_gcta->read_indi_blup(blup_indi_file);
             if(bfile_flag==1) pter_gcta->read_bimfile(bfile + ".bim");
             else pter_gcta->read_multi_bimfiles(multi_bfiles);
+            if(bld_flag==1) pter_gcta->read_esifile(bld + ".esi");
+            else pter_gcta->read_multi_esifiles(multi_blds);
             if (!extract_snp_file.empty()) pter_gcta->extract_snp(extract_snp_file);
             if (extract_chr_start > 0) pter_gcta->extract_chr(extract_chr_start, extract_chr_end);
             if(extract_region_chr>0) pter_gcta->extract_region_bp(extract_region_chr, extract_region_bp, extract_region_wind);
@@ -1368,10 +1379,14 @@ void option(int option_num, char* option_str[])
             if(mtcojo_flag && nsnp_read>0) {
                 if(bfile_flag==1) pter_gcta->read_bedfile(bfile + ".bed");
                 else pter_gcta->read_multi_bedfiles(multi_bfiles);
+                if(bld_flag==1) pter_gcta->read_bldfile(bld + ".bld");
+                else pter_gcta->read_multi_bldfiles(multi_blds);
             }
             if(!mtcojo_flag){
                 if(bfile_flag==1) pter_gcta->read_bedfile(bfile + ".bed");
                 else pter_gcta->read_multi_bedfiles(multi_bfiles);
+                if(bld_flag==1) pter_gcta->read_bldfile(bld + ".bld");
+                else pter_gcta->read_multi_bldfiles(multi_blds);
             }
 
             if (!update_impRsq_file.empty()) pter_gcta->update_impRsq(update_impRsq_file);

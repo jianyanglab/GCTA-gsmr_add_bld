@@ -22,6 +22,9 @@
 #include <Eigen/StdVector>
 using namespace std;
 
+#define MAX_LINE_SIZE 0x80000
+#define RESERVEDUNITS 16
+
 namespace CommFunc
 {
 	const double FloatErr=numeric_limits<double>::epsilon();

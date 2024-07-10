@@ -68,10 +68,15 @@ public:
     void read_famfile(string famfile);
     void read_bimfile(string bimfile);
     void read_bedfile(string bedfile);
+    void read_esifile(string esifileName);
+    void read_bldfile(string bldfileName)
     vector<string> read_bfile_list(string bfile_list);
+    vector<string> read_bld_list(string bfile_list);
     void read_multi_famfiles(vector<string> multi_bfiles);
     void read_multi_bimfiles(vector<string> multi_bfiles);
     void read_multi_bedfiles(vector<string> multi_bfiles);
+    void read_multi_esifiles(vector<string> multi_blds);
+    void read_multi_bldfiles(vector<string> multi_blds)
     void read_imp_info_mach_gz(string zinfofile);
     void read_imp_info_mach(string infofile);
     void read_imp_dose_mach_gz(string zdosefile, string kp_indi_file, string rm_indi_file, string blup_indi_file);
@@ -240,6 +245,7 @@ private:
 
     void update_include(vector<int> chr_buf, vector<string> snpid_buf, vector<double> gd_buf, vector<int> bp_buf, vector<string> a1_buf, vector<string> a2_buf, int file_indx);
     void update_keep(vector<string> fid_buf, vector<string> pid_buf, vector<string> fa_id_buf, vector<string> mo_id_buf, vector<int> sex_buf, vector<double> pheno_buf, string famfile);
+    void update_esi(vector<string> &rs_buf, vector<string> &a1_buf, vector<string> &a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<int> include_buf, vector<float> freq_buf, map<string,int> snp_name_map_buf);
     
     void update_id_map_kp(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
     void update_id_map_rm(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
@@ -525,6 +531,23 @@ private:
     // bed file
     vector< vector<bool> > _snp_1;
     vector< vector<bool> > _snp_2;
+
+    //esi file
+    vector<int> _esi_chr;
+    vector<string> _esi_rs;
+    vector<int> _esi_gd;
+    vector<int> _esi_bp;
+    vector<string> _esi_allele1;
+    vector<string> _esi_allele2;
+    vector<int> _esi_include;
+    map<string,int> _esi_snp_name_map;
+    vector<float> _esi_freq;
+    
+    vector<uint64_t> _esi_cols;
+    vector<float> _esi_val;
+    
+    uint64_t _esi_snpNum;
+    uint64_t _esi_valNum;
 
     // imputed data
     bool _dosage_flag;

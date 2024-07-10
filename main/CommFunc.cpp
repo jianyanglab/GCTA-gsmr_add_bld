@@ -137,3 +137,9 @@ void CommFunc::FileExist(string filename)
     ifstream ifile(filename.c_str());
     if(!ifile) LOGGER.e(0, "cannot open the file ["+filename+"] to read.");
 }
+
+uint64_t CommFunc::readuint64(FILE *f) {
+    uint64_t v;
+    fread((void*)(&v), sizeof(v), 1, f);
+    return v;
+}

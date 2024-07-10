@@ -200,6 +200,121 @@ void gcta::init_include()
     }
 }
 
+void gcta::read_esifile(string esifileName) {
+        vector<string> strlist;
+        uint32_t line_idx = 0;
+        int colnum=7;
+        FILE* esifile=fopen(esifileName, "r");
+        if (!(esifile)) {
+            printf("Error: Failed to open file %s.\n",esifileName);
+            exit(EXIT_FAILURE);
+        }
+        printf("Reading SNP information from %s ...\n", esifileName);
+        _esi_chr.clear();
+        _esi_rs.clear();
+        _esi_gd.clear();
+        _esi_bp.clear();
+        _esi_allele1.clear();
+        _esi_allele2.clear();
+        _esi_include.clear();
+        _esi_snp_name_map.clear();
+        _esi_freq.clear();
+        
+        bool chrwarning=false;
+        bool feqwarning=false, allele1warning=false, allele2warning=false;
+        bool orienwarning=false;
+        char Tbuf[MAX_LINE_SIZE];
+        while(fgets(Tbuf, MAX_LINE_SIZE, esifile))
+        {
+            split_string(Tbuf, strlist, ", \t\n");
+            if(Tbuf[0]=='\0') {
+                printf("ERROR: Line %u is blank.\n", line_idx);
+                exit(EXIT_FAILURE);
+            }
+            if(strlist.size()<colnum-1)
+            {
+                printf("ERROR: Line %u has less than %d items.\n", line_idx,colnum-1);
+                exit(EXIT_FAILURE);
+            } else if(strlist.size()==colnum-1) {
+                if(!feqwarning) {
+                    printf("WARNING: Maybe this is an old .esi file which doesn't contain frequency information. \n");
+                    feqwarning=true;
+                }
+            } else if(strlist.size()>colnum) {
+                //printf("WARNING: Line %u has more than %d items. The first %d columns would be used. \n", line_idx,colnum,colnum);
+            }
+            
+            _snp_name_map.insert(pair<string,int>(strlist[1],line_idx));
+            if(_snp_name_map.size()==line_idx)
+            {
+                printf("ERROR: Duplicate SNP : %s.\n", strlist[1].c_str());
+                exit(EXIT_FAILURE);
+            }
+            if(strlist[0]=="X" || strlist[0]=="x") _esi_chr.push_back(23);
+            else if(strlist[0]=="Y" || strlist[0]=="y") _esi_chr.push_back(24);
+            else if(strlist[0]=="NA" || strlist[0]=="na"){
+                _esi_chr.push_back(-9);
+                if(!chrwarning) {
+                    printf("WARNING: At least one SNP chr is missing.\n");
+                    chrwarning=true;
+                }
+            } else if (atoi(strlist[0].c_str())==0 ) {
+                //printf("WARNING: unrecongized chromosome found. This chromosome is set to 0:\n");
+                //printf("%s\n",Tbuf);
+                _esi_chr.push_back(atoi(strlist[0].c_str()));
+            } else if ( atoi(strlist[0].c_str())>24 || atoi(strlist[0].c_str())<0) {
+                //printf("WARNING: abmormal chromosome found:\n");
+                //printf("%s\n",Tbuf);
+                _esi_chr.push_back(atoi(strlist[0].c_str()));
+            } else _esi_chr.push_back(atoi(strlist[0].c_str()));
+            
+            if(strlist[1]=="NA" || strlist[1]=="na") {
+                printf("ERROR: NA SNP ID found:\n");
+                printf("%s\n",Tbuf);
+                exit(EXIT_FAILURE);
+            }
+            _esi_rs.push_back(strlist[1]);
+            _esi_gd.push_back(atoi(strlist[2].c_str()));
+            if(strlist[3]=="NA" || strlist[3]=="na") _esi_bp.push_back(-9);
+            else _esi_bp.push_back(atoi(strlist[3].c_str()));
+            if(strlist[4]=="NA" || strlist[4]=="na") {
+                if(!allele1warning) {
+                    //printf("WARNING: At least one reference allele is missing.\n");
+                    allele1warning=true;
+                }
+            }
+            to_upper(strlist[4]);
+            _esi_allele1.push_back(strlist[4].c_str());
+            if(strlist[5]=="NA" || strlist[5]=="na") {
+                if(!allele2warning) {
+                    //printf("WARNING: At least one alternative allele is missing.\n");
+                    allele2warning=true;
+                }
+            }
+            to_upper(strlist[5]);
+            _esi_allele2.push_back(strlist[5].c_str());
+            if(strlist.size()==colnum)
+            {
+                if(strlist[6]=="NA" || strlist[6]=="na"){
+                    if(!orienwarning){
+                        //printf("WARNING: frequency is \"NA\" in one or more rows.\n");
+                        orienwarning=true;
+                    }
+                    _esi_freq.push_back(-9);
+                } else {
+                    _esi_freq.push_back(atof(strlist[6].c_str()));
+                }
+            } else {
+                _esi_freq.push_back(-9);
+            }
+            _esi_include.push_back(line_idx);
+            line_idx++;
+        }
+        _esi_snpNum =line_idx;
+        fclose(esifile);
+        LOGGER.i(0, std::to_string(_esi_snpNum) + " SNPs to be included from " + std::string(esifileName) + ".");
+}
+
 // some code are adopted from PLINK with modifications
 void gcta::read_bedfile(string bedfile)
 {
@@ -256,6 +371,41 @@ void gcta::read_bedfile(string bedfile)
 
     update_fam(rindi);
     update_bim(rsnp);
+}
+
+void gcta::read_bldfile(string bldfileName)
+{
+    vector<int> headers;
+    headers.resize(RESERVEDUNITS);
+    bld=fopen(bldfileName.c_str(),"rb");
+    if(bld == NULL)
+    {
+        printf("Error: can't open file %s.\n",bldfileName);
+        exit(EXIT_FAILURE);
+    }
+    if(fread(&headers[0], sizeof(int),RESERVEDUNITS, bld)<1)
+    {
+        printf("ERROR: File %s read failed!\n", bldfileName);
+        exit(EXIT_FAILURE);
+    }
+    int indicator = headers[0];
+    if(indicator==0) printf("\nReading ld r from binary file %s...\n", bldfileName);
+    else printf("\nReading ld r-squared from binary file %s...\n", bldfileName);
+    uint64_t valnum=readuint64(bld), colNum=_esi_snpNum+1;
+    uint64_t cur_pos = ftell( bld );
+    fseek( bld, 0L, SEEK_END );
+    uint64_t size_file = ftell( bld );
+    fseek( bld, cur_pos, SEEK_SET );
+    if( size_file - (RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + colNum*sizeof(uint64_t) + valnum*sizeof(float)) != 0) {
+        printf("ERROR: File %s is broken!\n", bldfileName);
+        exit(EXIT_FAILURE);
+    }
+    _esi_cols.resize(colNum);
+    if(fread(&_esi_cols[0], sizeof(uint64_t),colNum, bld)<1)
+    {
+        printf("ERROR: File %s read failed!\n", bldfileName);
+        exit(EXIT_FAILURE);
+    }
 }
 
 void gcta::get_rsnp(vector<int> &rsnp) {
@@ -382,6 +532,27 @@ vector<string>  gcta::read_bfile_list(string bfile_list)
 
     LOGGER.i(0, "There are " + to_string(multi_bfiles.size()) + " PLINK genotype files specified in [" + bfile_list + "].");
     return(multi_bfiles);
+}
+
+// Read the multiple blds
+vector<string>  gcta::read_bld_list(string bld_list)
+{
+    ifstream bin_list(bld_list.c_str());
+    if (!bin_list)
+        LOGGER.e(0, "cannot open the file [" + bld_list + "] to read.");
+    
+    string strbuf = "";
+    vector<string> multi_blds;
+    
+    while(std::getline(bin_list, strbuf))
+    {
+        if(strbuf != "")
+            multi_blds.push_back(strbuf);
+    }
+    bin_list.close();
+
+    LOGGER.i(0, "There are " + to_string(multi_blds.size()) + " PLINK genotype files specified in [" + bld_list + "].");
+    return(multi_blds);
 }
 
 void read_single_famfile(string famfile, vector<string> &fid, vector<string> &pid, vector<string> &fa_id, vector<string> &mo_id, vector<int> &sex, vector<double> &pheno, bool msg_flag) {
@@ -565,7 +736,6 @@ void gcta::read_multi_bimfiles(vector<string> multi_bfiles)
     vector<string> tsnp_name, tallele1, tallele2;
     vector<int> tchr, tbp;
     vector<double> tgenet_dst;
-
     _snp_name_per_chr.clear();
     for( i=0; i<nbfiles; i++ ) {
         bimfile = multi_bfiles[i]+".bim";
@@ -583,6 +753,170 @@ void gcta::read_multi_bimfiles(vector<string> multi_bfiles)
     _ref_A = _allele1; _other_A = _allele2;
 
     LOGGER.i(0, to_string(_snp_num) + " SNPs to be included from PLINK BIM files.");
+}
+
+void gcta::update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<int> include_buf, vector<float> freq_buf, map<string,int> snp_name_map_buf) {
+
+    // Add the new SNP
+    _esi_rs.insert(_esi_rs.end(), rs_buf.begin(), rs_buf.end());
+    _esi_allele1.insert(_allele1.end(), a1_buf.begin(), a1_buf.end());
+    _esi_allele2.insert(_allele2.end(), a2_buf.begin(), a2_buf.end());
+    _esi_chr.insert(_esi_chr.end(), chr_buf.begin(), chr_buf.end());
+    _esi_gd.insert(_esi_gd.end(), gd_buf.begin(), gd_buf.end());
+    _esi_bp.insert(_esi_bp.end(), bp_buf.begin(), bp_buf.end());
+    _esi_include.insert(_esi_include.end(), include_buf.begin(), include_buf.end());
+    _esi_freq.insert(_esi_freq.end(), freq_buf.begin(), freq_buf.end());
+    _esi_snp_name_map.insert(_esi_snp_name_map.end(), snp_name_map_buf.begin(), snp_name_map_buf.end());
+    
+}
+
+void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<string> &esi_allele1, vector<string> &esi_allele2,  vector<int> &esi_chr, vector<int> &esi_gd,vector<int> &esi_bp, vector<int> &esi_include, vector<float> &esi_freq, map<string,int> &esi_snp_name_map, bool msg_flag) {
+    // Read esi file: recombination rate is defined between SNP i and SNP i-1
+        vector<string> strlist;
+        uint32_t line_idx = 0;
+        int colnum=7;
+        FILE* esifile=fopen(esifileName, "r");
+        if (!(esifile)) {
+            printf("Error: Failed to open file %s.\n",esifileName);
+            exit(EXIT_FAILURE);
+        }
+        printf("Reading SNP information from %s ...\n", esifileName);
+        esi_chr.clear();
+        esi_rs.clear();
+        esi_gd.clear();
+        esi_bp.clear();
+        esi_allele1.clear();
+        esi_allele2.clear();
+        esi_include.clear();
+        esi_snp_name_map.clear();
+        esi_freq.clear();
+        
+        bool chrwarning=false;
+        bool feqwarning=false, allele1warning=false, allele2warning=false;
+        bool orienwarning=false;
+        char Tbuf[MAX_LINE_SIZE];
+        while(fgets(Tbuf, MAX_LINE_SIZE, esifile))
+        {
+            split_string(Tbuf, strlist, ", \t\n");
+            if(Tbuf[0]=='\0') {
+                printf("ERROR: Line %u is blank.\n", line_idx);
+                exit(EXIT_FAILURE);
+            }
+            if(strlist.size()<colnum-1)
+            {
+                printf("ERROR: Line %u has less than %d items.\n", line_idx,colnum-1);
+                exit(EXIT_FAILURE);
+            } else if(strlist.size()==colnum-1) {
+                if(!feqwarning) {
+                    printf("WARNING: Maybe this is an old .esi file which doesn't contain frequency information. \n");
+                    feqwarning=true;
+                }
+            } else if(strlist.size()>colnum) {
+                //printf("WARNING: Line %u has more than %d items. The first %d columns would be used. \n", line_idx,colnum,colnum);
+            }
+            
+            esi_snp_name_map.insert(pair<string,int>(strlist[1],line_idx));
+            if(esi_snp_name_map.size()==line_idx)
+            {
+                printf("ERROR: Duplicate SNP : %s.\n", strlist[1].c_str());
+                exit(EXIT_FAILURE);
+            }
+            if(strlist[0]=="X" || strlist[0]=="x") esi_chr.push_back(23);
+            else if(strlist[0]=="Y" || strlist[0]=="y") esi_chr.push_back(24);
+            else if(strlist[0]=="NA" || strlist[0]=="na"){
+                esi_chr.push_back(-9);
+                if(!chrwarning) {
+                    printf("WARNING: At least one SNP chr is missing.\n");
+                    chrwarning=true;
+                }
+            } else if (atoi(strlist[0].c_str())==0 ) {
+                //printf("WARNING: unrecongized chromosome found. This chromosome is set to 0:\n");
+                //printf("%s\n",Tbuf);
+                esi_chr.push_back(atoi(strlist[0].c_str()));
+            } else if ( atoi(strlist[0].c_str())>24 || atoi(strlist[0].c_str())<0) {
+                //printf("WARNING: abmormal chromosome found:\n");
+                //printf("%s\n",Tbuf);
+                esi_chr.push_back(atoi(strlist[0].c_str()));
+            } else esi_chr.push_back(atoi(strlist[0].c_str()));
+            
+            if(strlist[1]=="NA" || strlist[1]=="na") {
+                printf("ERROR: NA SNP ID found:\n");
+                printf("%s\n",Tbuf);
+                exit(EXIT_FAILURE);
+            }
+            esi_rs.push_back(strlist[1]);
+            esi_gd.push_back(atoi(strlist[2].c_str()));
+            if(strlist[3]=="NA" || strlist[3]=="na") esi_bp.push_back(-9);
+            else esi_bp.push_back(atoi(strlist[3].c_str()));
+            if(strlist[4]=="NA" || strlist[4]=="na") {
+                if(!allele1warning) {
+                    //printf("WARNING: At least one reference allele is missing.\n");
+                    allele1warning=true;
+                }
+            }
+            to_upper(strlist[4]);
+            esi_allele1.push_back(strlist[4].c_str());
+            if(strlist[5]=="NA" || strlist[5]=="na") {
+                if(!allele2warning) {
+                    //printf("WARNING: At least one alternative allele is missing.\n");
+                    allele2warning=true;
+                }
+            }
+            to_upper(strlist[5]);
+            esi_allele2.push_back(strlist[5].c_str());
+            if(strlist.size()==colnum)
+            {
+                if(strlist[6]=="NA" || strlist[6]=="na"){
+                    if(!orienwarning){
+                        //printf("WARNING: frequency is \"NA\" in one or more rows.\n");
+                        orienwarning=true;
+                    }
+                    esi_freq.push_back(-9);
+                } else {
+                    esi_freq.push_back(atof(strlist[6].c_str()));
+                }
+            } else {
+                esi_freq.push_back(-9);
+            }
+            esi_include.push_back(line_idx);
+            line_idx++;
+        }
+        fclose(esifile);
+        if(msg_flag) {
+            int esi_snpNum =line_idx;
+            LOGGER.i(0, std::to_string(esi_snpNum) + " SNPs to be included from " + std::string(esifileName) + ".");
+        }
+}
+
+void gcta::read_multi_esifiles(vector<string> multi_blds) {
+    LOGGER.i(0, "Reading the PLINK ESI files ...");
+
+    int i=0, nblds = multi_blds.size();
+    string esifileName = "";
+    vector<string> trs,tallele1,tallele2;
+    vector<int> tchr,tgd,tbp,tinclude;
+    vector<float> tfreq;
+    map<string,int> tsnp_name_map;
+
+    _esi_chr.clear();
+    _esi_rs.clear();
+    _esi_gd.clear();
+    _esi_bp.clear();
+    _esi_allele1.clear();
+    _esi_allele2.clear();
+    _esi_include.clear();
+    _esi_snp_name_map.clear();
+    _esi_freq.clear();
+    for( i=0; i<nblds; i++ ) {
+        esifileName = multi_blds[i]+".esi";
+        read_single_esifile(esifileName, trs, tallele1, tallele2, tchr, tgd, tbp, tinclude, tfreq, tsnp_name_map, false);
+        update_esi(trs, tallele1, tallele2, tchr, tgd, tbp, tinclude, tfreq, tsnp_name_map);
+    }
+
+    // Initialize the variables
+    _esi_snpNum = _esi_snp_name_map.size();
+    LOGGER.i(0, std::to_string(_esi_snpNum) + " SNPs to be included from PLINK ESI files.");
+    
 }
 
 // Read multiple .bed files
@@ -660,6 +994,44 @@ void read_single_bedfile(string bedfile, vector<pair<int,int>> rsnp, vector<int>
     if(msg_flag) LOGGER.i(0, "Genotype data for " + to_string(nindi_chr) + " individuals and " + to_string(nsnp_chr) + " SNPs to be included from [" + bedfile + "].");
 }
 
+void read_single_bldfile(string bldfileName){
+    vector<int> headers;
+    headers.resize(RESERVEDUNITS);
+    bld = fopen(bldfileName.c_str(), "rb");
+    if (bld == NULL)
+    {
+        printf("Error: can't open file %s.\n", bldfileName.c_str());
+        exit(EXIT_FAILURE);
+    }
+    if (fread(&headers[0], sizeof(int), RESERVEDUNITS, bld) < 1)
+    {
+        printf("ERROR: File %s read failed!\n", bldfileName.c_str());
+        exit(EXIT_FAILURE);
+    }
+    int indicator = headers[0];
+    if (indicator == 0)
+        printf("\nReading ld r from binary file %s...\n", bldfileName.c_str());
+    else
+        printf("\nReading ld r-squared from binary file %s...\n", bldfileName.c_str());
+    uint64_t valnum = readuint64(bld), colNum = _esi_snpNum + 1;
+    uint64_t cur_pos = ftell(bld);
+    fseek(bld, 0L, SEEK_END);
+    uint64_t size_file = ftell(bld);
+    fseek(bld, cur_pos, SEEK_SET);
+    if (size_file - (RESERVEDUNITS * sizeof(int) + sizeof(uint64_t) + colNum * sizeof(uint64_t) + valnum * sizeof(float)) != 0)
+    {
+        printf("ERROR: File %s is broken!\n", bldfileName.c_str());
+        exit(EXIT_FAILURE);
+    }
+    uint64_t startPos = _esi_cols.size();
+    _esi_cols.resize(startPos + colNum);
+    if (fread(&_esi_cols[startPos], sizeof(uint64_t), colNum, bld) < 1)
+    {
+        printf("ERROR: File %s read failed!\n", bldfileName.c_str());
+        exit(EXIT_FAILURE);
+    }
+}
+
 void gcta::read_multi_bedfiles(vector<string> multi_bfiles) {
     int i=0, nbfiles = multi_bfiles.size();
     string bedfile = "";
@@ -700,6 +1072,18 @@ void gcta::read_multi_bedfiles(vector<string> multi_bfiles) {
     }
 
     LOGGER.i(0, "Genotype data for " + to_string(_keep.size()) + " individuals and " + to_string(_include.size()) + " SNPs have been included.");
+}
+
+void gcta::read_multi_bldfiles(vector<string> multi_blds){
+    int i=0, nblds = multi_bfiles.size();
+    string bldfileName = "";
+    for( i=0; i<nblds; i++) {        
+        bldfileName =multi_blds[i] + ".bed";
+        read_single_bldfile(bldfileName);
+    }
+
+    LOGGER.i(0, "Genotype data for " + to_string(_keep.size()) + " individuals and " + to_string(_include.size()) + " SNPs have been included.");
+
 }
 
 void gcta::read_imp_info_mach_gz(string zinfofile)
