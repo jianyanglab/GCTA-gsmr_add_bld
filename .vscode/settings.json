@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "*.rmd": "markdown",
+        "vector": "cpp",
+        "__config": "c",
+        "__threading_support": "c",
+        "chrono": "c",
+        "ctime": "c",
+        "__node_handle": "c",
+        "map": "cpp",
+        "ios": "cpp",
+        "array": "cpp",
+        "__tuple": "cpp",
+        "deque": "cpp",
+        "functional": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "istream": "cpp",
+        "string_view": "cpp"
+    }
+}

@@ -445,7 +445,7 @@ void collect_snp_instru_effect(stringstream &ss, vector<vector<bool>> snp_flag, 
     ss << "#effect_end" << endl;
 }
 
-void gcta::gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double freq_thresh, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, bool o_snp_instru_flag, int gsmr_so_alg, int gsmr_beta_version) {
+void gcta::gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double freq_thresh, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, bool o_snp_instru_flag, int gsmr_so_alg, int gsmr_beta_version, int bfile_flag) {
     if(gsmr_beta_version) { _n_gsmr_rst_item = 5; _gsmr_beta_version = 1; }
     else { _n_gsmr_rst_item = 4; _gsmr_beta_version = 0; }
    
@@ -456,32 +456,57 @@ void gcta::gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double 
     ss << "#marker_begin" <<endl;
     int ntrait = _expo_num + _outcome_num;
 
-    // Calculate allele frequency
-    if (_mu.empty()) calcu_mu();
-    LOGGER.i(0, "Checking allele frequencies among the GWAS summary data and the reference sample...");
-    afsnps = remove_freq_diff_snps(_meta_snp_name, _meta_remain_snp, _snp_name_map, _mu, _meta_snp_freq, _snp_val_flag, ntrait, freq_thresh, _out);
-    // Update SNPs set
-    if( afsnps.size()>0 ) {
-        update_id_map_rm(afsnps, _snp_name_map, _include);
-        update_mtcojo_snp_rm(afsnps, _meta_snp_name_map, _meta_remain_snp);
-    }
+     if(bfile_flag){
+        // Calculate allele frequency
+        if (_mu.empty()) calcu_mu();
+        LOGGER.i(0, "Checking allele frequencies among the GWAS summary data and the reference sample...");
+        afsnps = remove_freq_diff_snps(_meta_snp_name, _meta_remain_snp, _snp_name_map, _mu, _meta_snp_freq, _snp_val_flag, ntrait, freq_thresh, _out);
+        // Update SNPs set
+        if( afsnps.size()>0 ) {
+            update_id_map_rm(afsnps, _snp_name_map, _include);
+            update_mtcojo_snp_rm(afsnps, _meta_snp_name_map, _meta_remain_snp);
+        }
 
-    // Remove monomorphic SNPs
-    afsnps = remove_mono_snps(_snp_name_map, _mu, _out);
-    // Update SNPs set
-    if( afsnps.size()>0 ) {
-        update_id_map_rm(afsnps, _snp_name_map, _include);
-        update_mtcojo_snp_rm(afsnps, _meta_snp_name_map, _meta_remain_snp);
-    }
+        // Remove monomorphic SNPs
+        afsnps = remove_mono_snps(_snp_name_map, _mu, _out);
+        // Update SNPs set
+        if( afsnps.size()>0 ) {
+            update_id_map_rm(afsnps, _snp_name_map, _include);
+            update_mtcojo_snp_rm(afsnps, _meta_snp_name_map, _meta_remain_snp);
+        }
 
-    // Only keep the AF for the target trait
-    int nsnp_freq = _meta_snp_name_map.size();
-    _meta_snp_freq.conservativeResize(nsnp_freq,1);
+        // Only keep the AF for the target trait
+        int nsnp_freq = _meta_snp_name_map.size();
+        _meta_snp_freq.conservativeResize(nsnp_freq,1);
 
-    // Estimate intercept from LDSC regression
-    _r_pheno_sample = rho_sample_overlap(_snp_val_flag, _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, _expo_num, _outcome_num, 
+        // Estimate intercept from LDSC regression
+        _r_pheno_sample = rho_sample_overlap(_snp_val_flag, _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, _expo_num, _outcome_num, 
                                         _meta_snp_name, _meta_remain_snp, ref_ld_dirt, w_ld_dirt, _gwas_trait_name, gsmr_so_alg);
+    } else {
+        LOGGER.i(0, "Checking allele frequencies among the GWAS summary data and the reference sample...");
+        afsnps = remove_freq_diff_snps(_meta_snp_name, _meta_remain_snp, _esi_snp_name_map, _esi_freq, _meta_snp_freq, _snp_val_flag, ntrait, freq_thresh, _out);
+        // Update SNPs set
+        if( afsnps.size()>0 ) {
+            update_id_map_rm(afsnps, _esi_snp_name_map, _esi_include);
+            update_mtcojo_snp_rm(afsnps, _meta_snp_name_map, _meta_remain_snp);
+        }
 
+        // Remove monomorphic SNPs
+        afsnps = remove_mono_snps(_esi_snp_name_map, _esi_freq, _out);
+        // Update SNPs set
+        if( afsnps.size()>0 ) {
+            update_id_map_rm(afsnps, _esi_snp_name_map, _esi_include);
+            update_mtcojo_snp_rm(afsnps, _meta_snp_name_map, _meta_remain_snp);
+        }
+
+        // Only keep the AF for the target trait
+        int nsnp_freq = _meta_snp_name_map.size();
+        _meta_snp_freq.conservativeResize(nsnp_freq,1);
+
+        // Estimate intercept from LDSC regression
+        _r_pheno_sample = rho_sample_overlap(_snp_val_flag, _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, _expo_num, _outcome_num, 
+                                        _meta_snp_name, _meta_remain_snp, ref_ld_dirt, w_ld_dirt, _gwas_trait_name, gsmr_so_alg);
+    }
    // GSMR analysis
     switch(gsmr_alg_flag) {
         case 0 : { 
