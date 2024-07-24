@@ -143,3 +143,15 @@ uint64_t CommFunc::readuint64(FILE *f) {
     fread((void*)(&v), sizeof(v), 1, f);
     return v;
 }
+
+float CommFunc::readfloat(FILE *f) {
+    float v;
+    fread((void*)(&v), sizeof(v), 1, f);
+    return v;
+}
+
+int CommFunc::readint(FILE *f) {
+    int v;
+    fread((void*)(&v), sizeof(v), 1, f);
+    return v;
+}

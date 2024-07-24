@@ -953,6 +953,63 @@ vector<string> gcta::clumping_meta(eigenVector snp_chival, vector<bool> snp_flag
     return indices_snp;
 }
 
+vector<string> gcta::clumping_meta_bld(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh, FILE* ldfprt) {   
+    wind_size = wind_size*1e3;
+    // Only select SNPs that are matched with plink binary file
+    vector<pair<double, int>> snp_pvalbuf;
+    int i = 0, indx = 0, nsnp_plink = _esi_include.size(), nsnp_meta = _meta_remain_snp.size();
+    double pvalbuf = 0.0;
+    string snpbuf = "", snpbuf_left="", snpbuf_right="";
+    map<string,int>::iterator iter;
+
+    // Sort the p-value
+    for(i=0; i<nsnp_meta; i++) {
+        if(!snp_flag[i]) continue;
+        iter = _esi_snp_name_map.find(_meta_snp_name[_meta_remain_snp[i]]);
+        if(iter==_esi_snp_name_map.end()) continue;
+        snp_pvalbuf.push_back(make_pair(snp_chival(_meta_remain_snp[i]), _meta_remain_snp[i]));
+    }
+
+    std::stable_sort(snp_pvalbuf.begin(), snp_pvalbuf.end());
+    std::reverse(snp_pvalbuf.begin(), snp_pvalbuf.end());
+
+    int nsnp_clumped=snp_pvalbuf.size();
+    pval_thresh = StatFunc::qchisq(pval_thresh, 1);
+    // Start to clump
+    map<string, bool> clumped_snp;
+    for(i=0; i<nsnp_clumped; i++) {
+        pvalbuf = snp_pvalbuf[i].first;
+        if( pvalbuf <= pval_thresh) continue;
+        indx = snp_pvalbuf[i].second;
+        clumped_snp.insert(pair<string,bool>(_meta_snp_name[indx],false));
+    }
+
+    map<string, bool>::iterator iter_clump;
+    int geno_indx=0, geno_indx_j = 0, geno_indx_buf = 0, geno_indx_center = 0, nindi=_keep.size();
+    int left_indx = 0, right_indx = 0;
+    double r2=0.0;
+    vector<string> indices_snp;
+    eigenVector x(nindi), x_j(nindi);
+    nsnp_clumped=clumped_snp.size();
+    for(i=0; i<nsnp_clumped; i++) {
+        indx = snp_pvalbuf[i].second;
+        snpbuf = _meta_snp_name[indx];
+        if(clumped_snp[snpbuf]) continue;
+        iter = _esi_snp_name_map.find(snpbuf);
+        geno_indx = iter -> second;
+
+        int64_t valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + _esi_snpNum*sizeof(uint64_t);
+        uint64_t poss=_esi_cols[geno_indx];
+        fseek(ldfprt, poss*sizeof(float)+valSTART, SEEK_SET );
+        r2=readfloat(ldfprt);
+        if(r2 >= r2_thresh) indices_snp.push_back(snpbuf);      
+        
+    }
+  
+    return indices_snp;
+}
+
+
 vector<int> rm_cor_elements(eigenMatrix r_mat, double r2_thresh, bool r2_flag) {
     int i = 0, j = 0, n = r_mat.cols();
     vector<int> kept_ID;
@@ -1504,9 +1561,12 @@ double global_heidi_outlier_topsnp_iter(eigenVector bxy, eigenMatrix &cov_bxy, e
     return(global_heidi_pvalue);
 }
 
-vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg) {
-
-    int i=0, j=0, nsnp = _include.size(), nindi=_keep.size();    
+vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bfile_flag=1) {
+    if(bfile_flag){
+        int i=0, j=0, nsnp = _include.size(), nindi=_keep.size();   
+    }else{
+        int i=0, j=0, nsnp = _esi_include.size();
+    }
     vector<string> indices_snp;
     vector<double> rst(_n_gsmr_rst_item);
     for(i=0; i<_n_gsmr_rst_item; i++) rst[i] = nan("");
@@ -1518,7 +1578,12 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
 
     // clumping analysis
     eigenVector bzx_chival=bzx.array()*bzx.array()/(bzx_se.array()*bzx_se.array());
-    indices_snp = clumping_meta(bzx_chival, snp_flag, gwas_thresh, wind_size, r2_thresh);
+    if (bfile_flag){
+        indices_snp = clumping_meta(bzx_chival, snp_flag, gwas_thresh, wind_size, r2_thresh);
+    }else{
+        indices_snp = clumping_meta_bld(bzx_chival, snp_flag, gwas_thresh, wind_size, r2_thresh, bld);
+    }
+    
     int n_indices_snp = indices_snp.size();
 
     //LOGGER.i(0, to_string(n_indices_snp) + " index SNPs are obtained from the clumping analysis of the " + nsnp + " genome-wide significant SNPs.");
@@ -1532,32 +1597,60 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
         return rst;
     }
 
-    // LD r
-    MatrixXf x_sub(nindi, n_indices_snp);
-    vector<int> snp_sn(n_indices_snp);
-    map<string, int>::iterator iter;
-    int i_buf = 0;
-    for( i = 0; i < n_indices_snp; i++ ) {
-        iter = _snp_name_map.find(indices_snp[i]);
-        i_buf = iter->second;
-        snp_sn[i] = find(_include.begin(), _include.end(), i_buf) - _include.begin();
-    }
+    if(bfile_flag){
+        // LD r
+        MatrixXf x_sub(nindi, n_indices_snp);
+        vector<int> snp_sn(n_indices_snp);
+        map<string, int>::iterator iter;
+        int i_buf = 0;
+        for( i = 0; i < n_indices_snp; i++ ) {
+            iter = _snp_name_map.find(indices_snp[i]);
+            i_buf = iter->second;
+            snp_sn[i] = find(_include.begin(), _include.end(), i_buf) - _include.begin();
+        }
 
-    // construct x coefficient
-    eigenMatrix ld_r_mat(n_indices_snp, n_indices_snp);
-    make_XMat_subset(x_sub, snp_sn, true);
+        // construct x coefficient
+        eigenMatrix ld_r_mat(n_indices_snp, n_indices_snp);
+        make_XMat_subset(x_sub, snp_sn, true);
 
-    double x_sd1 = 0.0, x_sd2 = 0.0, x_cov = 0.0;
-    ld_r_mat = MatrixXd::Identity(n_indices_snp, n_indices_snp);
-    for(i=0; i<(n_indices_snp-1); i++) {
-        x_sd1 = x_sub.col(i).norm();
-        for(j=(i+1); j<n_indices_snp; j++) {
-            x_cov = x_sub.col(i).dot(x_sub.col(j));
-            x_sd2 = x_sub.col(j).norm();
-            ld_r_mat(i,j) = ld_r_mat(j,i) = x_cov/(x_sd1*x_sd2);
+        double x_sd1 = 0.0, x_sd2 = 0.0, x_cov = 0.0;
+        ld_r_mat = MatrixXd::Identity(n_indices_snp, n_indices_snp);
+        for(i=0; i<(n_indices_snp-1); i++) {
+            x_sd1 = x_sub.col(i).norm();
+            for(j=(i+1); j<n_indices_snp; j++) {
+                x_cov = x_sub.col(i).dot(x_sub.col(j));
+                x_sd2 = x_sub.col(j).norm();
+                ld_r_mat(i,j) = ld_r_mat(j,i) = x_cov/(x_sd1*x_sd2);
+            }
+        }
+    }else{
+
+        //get indicator
+        fseek(bld,0L,SEEK_SET);
+        int indicator=readint(bld);
+
+        eigenMatrix ld_r_mat(n_indices_snp, n_indices_snp);
+        ld_r_mat = MatrixXd::Identity(n_indices_snp, n_indices_snp);
+        uint64_t valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + (_esi_snpNum+1)*sizeof(uint64_t);
+        map<string, int>::iterator iter;
+        int i_buf = 0;
+        for(int i=0;i<n_indices_snp-1;i++)
+        {
+            ld_r_mat(i,i)=1;
+            
+            for(int j=i+1;j<n_indices_snp;j++)
+            {
+                iter = _snp_name_map.find(indices_snp[j]);
+                i_buf = iter->second;
+                long poss=_esi_cols[i_buf];
+                fseek(bld, poss*sizeof(float)+valSTART, SEEK_SET );
+                if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(readfloat(bld));
+                else ld_r_mat(i,j)=ld_r_mat(j,i)=readfloat(bld);
+
+            }
         }
     }
-   
+    
     // LD pruning
     vector<int> kept_ID;
     kept_ID = rm_cor_elements(ld_r_mat, r2_thresh, true);

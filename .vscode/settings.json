@@ -18,6 +18,10 @@
         "unordered_map": "cpp",
         "unordered_set": "cpp",
         "istream": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "complex": "cpp",
+        "iosfwd": "cpp",
+        "memory": "cpp",
+        "__tree": "cpp"
     }
 }

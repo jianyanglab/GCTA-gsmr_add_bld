@@ -375,6 +375,7 @@ void gcta::read_bedfile(string bedfile)
 
 void gcta::read_bldfile(string bldfileName)
 {
+    bld = NULL;
     vector<int> headers;
     headers.resize(RESERVEDUNITS);
     bld=fopen(bldfileName.c_str(),"rb");
@@ -995,6 +996,7 @@ void read_single_bedfile(string bedfile, vector<pair<int,int>> rsnp, vector<int>
 }
 
 void read_single_bldfile(string bldfileName){
+    bld = NULL;
     vector<int> headers;
     headers.resize(RESERVEDUNITS);
     bld = fopen(bldfileName.c_str(), "rb");

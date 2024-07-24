@@ -44,6 +44,8 @@ namespace CommFunc
 	const double Sign(const double &a, const double &b);
 	int rand_seed(); //positive value, return random seed using the system time
     void FileExist(string filename);
-}
+	uint64_t readuint64(FILE *f);
+	float readfloat(FILE *f);
+	int readint(FILE *f)
 
 #endif
