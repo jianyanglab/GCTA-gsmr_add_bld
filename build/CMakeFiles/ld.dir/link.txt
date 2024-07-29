@@ -1,0 +1,2 @@
+/usr/bin/ar qc libld.a CMakeFiles/ld.dir/src/LD.cpp.o
+/usr/bin/ranlib libld.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgrm.a CMakeFiles/grm.dir/src/GRM.cpp.o
+/usr/bin/ranlib libgrm.a

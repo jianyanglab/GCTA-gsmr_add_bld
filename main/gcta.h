@@ -69,14 +69,15 @@ public:
     void read_bimfile(string bimfile);
     void read_bedfile(string bedfile);
     void read_esifile(string esifileName);
-    void read_bldfile(string bldfileName)
+    void read_bldfile(string bldfileName);
+    void read_single_bldfile(string bldfileName);
     vector<string> read_bfile_list(string bfile_list);
     vector<string> read_bld_list(string bfile_list);
     void read_multi_famfiles(vector<string> multi_bfiles);
     void read_multi_bimfiles(vector<string> multi_bfiles);
     void read_multi_bedfiles(vector<string> multi_bfiles);
     void read_multi_esifiles(vector<string> multi_blds);
-    void read_multi_bldfiles(vector<string> multi_blds)
+    void read_multi_bldfiles(vector<string> multi_blds);
     void read_imp_info_mach_gz(string zinfofile);
     void read_imp_info_mach(string infofile);
     void read_imp_dose_mach_gz(string zdosefile, string kp_indi_file, string rm_indi_file, string blup_indi_file);
@@ -245,7 +246,7 @@ private:
 
     void update_include(vector<int> chr_buf, vector<string> snpid_buf, vector<double> gd_buf, vector<int> bp_buf, vector<string> a1_buf, vector<string> a2_buf, int file_indx);
     void update_keep(vector<string> fid_buf, vector<string> pid_buf, vector<string> fa_id_buf, vector<string> mo_id_buf, vector<int> sex_buf, vector<double> pheno_buf, string famfile);
-    void update_esi(vector<string> &rs_buf, vector<string> &a1_buf, vector<string> &a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<int> include_buf, vector<float> freq_buf, map<string,int> snp_name_map_buf);
+    void update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<int> include_buf, vector<float> freq_buf, map<string,int> snp_name_map_buf);
     
     void update_id_map_kp(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
     void update_id_map_rm(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
@@ -472,9 +473,9 @@ private:
     vector<string> remove_freq_diff_snps(vector<string> meta_snp_name, vector<int> meta_snp_remain, map<string,int> snp_name_map, vector<double> ref_freq, eigenMatrix meta_freq, vector<vector<bool>> snp_flag, int ntrait, double freq_thresh, string outfile_name);
     vector<string> remove_mono_snps(map<string,int> snp_name_map, vector<double> ref_snpfreq, string outfile_name);
     vector<string> filter_meta_snp_pval(vector<string> snp_name, vector<int> remain_snp_indx,  eigenMatrix snp_pval, int start_indx, int end_indx, vector<vector<bool>> snp_flag, double pval_thresh);
-    vector<double> gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bfile_flag=1);
+    vector<double> gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bfile_flag);
     vector<string> clumping_meta(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh);
-    vector<string> clumping_meta_bld(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh, FILE* ldfprt)
+    vector<string> clumping_meta_bld(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh, FILE* ldfprt);
     void update_mtcojo_snp_rm(vector<string> adjsnps, map<string,int> &snp_id_map, vector<int> &remain_snp_indx);
     vector<string> read_snp_ldsc(map<string,int> ldsc_snp_name_map, vector<string> snp_name, vector<int> snp_remain, int &ttl_mk_num, string ref_ld_dirt, string w_ld_dirt, vector<double> &ref_ld_vec, vector<double> &w_ld_vec);
     void reorder_snp_effect(vector<int> snp_remain, eigenMatrix &bhat_z, eigenMatrix &bhat_n, eigenMatrix snp_b, eigenMatrix snp_se, eigenMatrix snp_n, vector<vector<bool>> &snp_flag, vector<vector<bool>> snp_val_flag, vector<int> &nsnp_cm_trait, vector<string> cm_ld_snps, map<string,int> ldsc_snp_name_map, eigenVector &ref_ld, eigenVector &w_ld, vector<double> ref_ld_vec, vector<double> w_ld_vec, int ntrait);
@@ -542,7 +543,7 @@ private:
     vector<string> _esi_allele2;
     vector<int> _esi_include;
     map<string,int> _esi_snp_name_map;
-    vector<float> _esi_freq;
+    vector<double> _esi_freq;
     
     //bld file
     FILE* bld;

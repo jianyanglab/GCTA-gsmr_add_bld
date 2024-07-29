@@ -1001,7 +1001,7 @@ vector<string> gcta::clumping_meta_bld(eigenVector snp_chival, vector<bool> snp_
         int64_t valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + _esi_snpNum*sizeof(uint64_t);
         uint64_t poss=_esi_cols[geno_indx];
         fseek(ldfprt, poss*sizeof(float)+valSTART, SEEK_SET );
-        r2=readfloat(ldfprt);
+        r2=CommFunc::readfloat(ldfprt);
         if(r2 >= r2_thresh) indices_snp.push_back(snpbuf);      
         
     }
@@ -1562,10 +1562,11 @@ double global_heidi_outlier_topsnp_iter(eigenVector bxy, eigenMatrix &cov_bxy, e
 }
 
 vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bfile_flag=1) {
+    int i=0, j=0, nsnp, nindi;
     if(bfile_flag){
-        int i=0, j=0, nsnp = _include.size(), nindi=_keep.size();   
+         nsnp = _include.size(), nindi=_keep.size();   
     }else{
-        int i=0, j=0, nsnp = _esi_include.size();
+         nsnp = _esi_include.size();
     }
     vector<string> indices_snp;
     vector<double> rst(_n_gsmr_rst_item);
@@ -1597,11 +1598,12 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
         return rst;
     }
 
+    eigenMatrix ld_r_mat(n_indices_snp, n_indices_snp);
+    map<string, int>::iterator iter;
     if(bfile_flag){
         // LD r
         MatrixXf x_sub(nindi, n_indices_snp);
         vector<int> snp_sn(n_indices_snp);
-        map<string, int>::iterator iter;
         int i_buf = 0;
         for( i = 0; i < n_indices_snp; i++ ) {
             iter = _snp_name_map.find(indices_snp[i]);
@@ -1610,7 +1612,6 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
         }
 
         // construct x coefficient
-        eigenMatrix ld_r_mat(n_indices_snp, n_indices_snp);
         make_XMat_subset(x_sub, snp_sn, true);
 
         double x_sd1 = 0.0, x_sd2 = 0.0, x_cov = 0.0;
@@ -1627,25 +1628,24 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
 
         //get indicator
         fseek(bld,0L,SEEK_SET);
-        int indicator=readint(bld);
+        int indicator=CommFunc::readint(bld);
 
-        eigenMatrix ld_r_mat(n_indices_snp, n_indices_snp);
+        
         ld_r_mat = MatrixXd::Identity(n_indices_snp, n_indices_snp);
         uint64_t valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + (_esi_snpNum+1)*sizeof(uint64_t);
-        map<string, int>::iterator iter;
         int i_buf = 0;
-        for(int i=0;i<n_indices_snp-1;i++)
+        for(i=0;i<n_indices_snp-1;i++)
         {
             ld_r_mat(i,i)=1;
             
-            for(int j=i+1;j<n_indices_snp;j++)
+            for(j=i+1;j<n_indices_snp;j++)
             {
                 iter = _snp_name_map.find(indices_snp[j]);
                 i_buf = iter->second;
                 long poss=_esi_cols[i_buf];
                 fseek(bld, poss*sizeof(float)+valSTART, SEEK_SET );
-                if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(readfloat(bld));
-                else ld_r_mat(i,j)=ld_r_mat(j,i)=readfloat(bld);
+                if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(CommFunc::readfloat(bld));
+                else ld_r_mat(i,j)=ld_r_mat(j,i)=CommFunc::readfloat(bld);
 
             }
         }

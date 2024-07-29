@@ -1,0 +1,2 @@
+/usr/bin/ar qc libPgenlib.a CMakeFiles/Pgenlib.dir/PgenReader.cpp.o "CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o" "CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o" "CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o" "CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o" "CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o"
+/usr/bin/ranlib libPgenlib.a

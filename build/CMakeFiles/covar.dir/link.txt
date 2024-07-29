@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcovar.a CMakeFiles/covar.dir/src/Covar.cpp.o
+/usr/bin/ranlib libcovar.a

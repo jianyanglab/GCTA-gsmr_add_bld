@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfastfam.a CMakeFiles/fastfam.dir/src/FastFAM.cpp.o
+/usr/bin/ranlib libfastfam.a

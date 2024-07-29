@@ -1,0 +1,2 @@
+/usr/bin/ar qc libacat.a CMakeFiles/acat.dir/src/acat.c.o
+/usr/bin/ranlib libacat.a

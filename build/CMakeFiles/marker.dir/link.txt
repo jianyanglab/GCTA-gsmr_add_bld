@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmarker.a CMakeFiles/marker.dir/src/Marker.cpp.o
+/usr/bin/ranlib libmarker.a

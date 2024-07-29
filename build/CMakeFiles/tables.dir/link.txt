@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtables.a CMakeFiles/tables.dir/src/tables.cpp.o
+/usr/bin/ranlib libtables.a

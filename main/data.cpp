@@ -204,7 +204,7 @@ void gcta::read_esifile(string esifileName) {
         vector<string> strlist;
         uint32_t line_idx = 0;
         int colnum=7;
-        FILE* esifile=fopen(esifileName, "r");
+        FILE* esifile=fopen(esifileName.c_str(), "r");
         if (!(esifile)) {
             printf("Error: Failed to open file %s.\n",esifileName);
             exit(EXIT_FAILURE);
@@ -226,7 +226,7 @@ void gcta::read_esifile(string esifileName) {
         char Tbuf[MAX_LINE_SIZE];
         while(fgets(Tbuf, MAX_LINE_SIZE, esifile))
         {
-            split_string(Tbuf, strlist, ", \t\n");
+            StrFunc::split_string(Tbuf, strlist, ", \t\n");
             if(Tbuf[0]=='\0') {
                 printf("ERROR: Line %u is blank.\n", line_idx);
                 exit(EXIT_FAILURE);
@@ -283,7 +283,7 @@ void gcta::read_esifile(string esifileName) {
                     allele1warning=true;
                 }
             }
-            to_upper(strlist[4]);
+            StrFunc::to_upper(strlist[4]);
             _esi_allele1.push_back(strlist[4].c_str());
             if(strlist[5]=="NA" || strlist[5]=="na") {
                 if(!allele2warning) {
@@ -291,7 +291,7 @@ void gcta::read_esifile(string esifileName) {
                     allele2warning=true;
                 }
             }
-            to_upper(strlist[5]);
+            StrFunc::to_upper(strlist[5]);
             _esi_allele2.push_back(strlist[5].c_str());
             if(strlist.size()==colnum)
             {
@@ -392,7 +392,8 @@ void gcta::read_bldfile(string bldfileName)
     int indicator = headers[0];
     if(indicator==0) printf("\nReading ld r from binary file %s...\n", bldfileName);
     else printf("\nReading ld r-squared from binary file %s...\n", bldfileName);
-    uint64_t valnum=readuint64(bld), colNum=_esi_snpNum+1;
+    uint64_t valnum=CommFunc::readuint64(bld);
+    uint64_t colNum=_esi_snpNum+1;
     uint64_t cur_pos = ftell( bld );
     fseek( bld, 0L, SEEK_END );
     uint64_t size_file = ftell( bld );
@@ -767,7 +768,10 @@ void gcta::update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<strin
     _esi_bp.insert(_esi_bp.end(), bp_buf.begin(), bp_buf.end());
     _esi_include.insert(_esi_include.end(), include_buf.begin(), include_buf.end());
     _esi_freq.insert(_esi_freq.end(), freq_buf.begin(), freq_buf.end());
-    _esi_snp_name_map.insert(_esi_snp_name_map.end(), snp_name_map_buf.begin(), snp_name_map_buf.end());
+    // Insert elements from snp_name_map_buf into _esi_snp_name_map
+    for (const auto& entry : snp_name_map_buf) {
+        _esi_snp_name_map.insert(entry);
+    }
     
 }
 
@@ -776,7 +780,7 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
         vector<string> strlist;
         uint32_t line_idx = 0;
         int colnum=7;
-        FILE* esifile=fopen(esifileName, "r");
+        FILE* esifile=fopen(esifileName.c_str(), "r");
         if (!(esifile)) {
             printf("Error: Failed to open file %s.\n",esifileName);
             exit(EXIT_FAILURE);
@@ -798,7 +802,7 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
         char Tbuf[MAX_LINE_SIZE];
         while(fgets(Tbuf, MAX_LINE_SIZE, esifile))
         {
-            split_string(Tbuf, strlist, ", \t\n");
+            StrFunc::split_string(Tbuf, strlist, ", \t\n");
             if(Tbuf[0]=='\0') {
                 printf("ERROR: Line %u is blank.\n", line_idx);
                 exit(EXIT_FAILURE);
@@ -855,7 +859,7 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
                     allele1warning=true;
                 }
             }
-            to_upper(strlist[4]);
+            StrFunc::to_upper(strlist[4]);
             esi_allele1.push_back(strlist[4].c_str());
             if(strlist[5]=="NA" || strlist[5]=="na") {
                 if(!allele2warning) {
@@ -863,7 +867,7 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
                     allele2warning=true;
                 }
             }
-            to_upper(strlist[5]);
+            StrFunc::to_upper(strlist[5]);
             esi_allele2.push_back(strlist[5].c_str());
             if(strlist.size()==colnum)
             {
@@ -995,7 +999,7 @@ void read_single_bedfile(string bedfile, vector<pair<int,int>> rsnp, vector<int>
     if(msg_flag) LOGGER.i(0, "Genotype data for " + to_string(nindi_chr) + " individuals and " + to_string(nsnp_chr) + " SNPs to be included from [" + bedfile + "].");
 }
 
-void read_single_bldfile(string bldfileName){
+void gcta::read_single_bldfile(string bldfileName){
     bld = NULL;
     vector<int> headers;
     headers.resize(RESERVEDUNITS);
@@ -1015,7 +1019,8 @@ void read_single_bldfile(string bldfileName){
         printf("\nReading ld r from binary file %s...\n", bldfileName.c_str());
     else
         printf("\nReading ld r-squared from binary file %s...\n", bldfileName.c_str());
-    uint64_t valnum = readuint64(bld), colNum = _esi_snpNum + 1;
+    uint64_t valnum = CommFunc::readuint64(bld);
+    uint64_t colNum = _esi_snpNum + 1;
     uint64_t cur_pos = ftell(bld);
     fseek(bld, 0L, SEEK_END);
     uint64_t size_file = ftell(bld);
@@ -1077,7 +1082,7 @@ void gcta::read_multi_bedfiles(vector<string> multi_bfiles) {
 }
 
 void gcta::read_multi_bldfiles(vector<string> multi_blds){
-    int i=0, nblds = multi_bfiles.size();
+    int i=0, nblds = multi_blds.size();
     string bldfileName = "";
     for( i=0; i<nblds; i++) {        
         bldfileName =multi_blds[i] + ".bed";

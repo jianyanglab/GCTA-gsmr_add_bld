@@ -46,6 +46,6 @@ namespace CommFunc
     void FileExist(string filename);
 	uint64_t readuint64(FILE *f);
 	float readfloat(FILE *f);
-	int readint(FILE *f)
-
+	int readint(FILE *f);
+};
 #endif
