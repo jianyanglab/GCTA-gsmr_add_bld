@@ -5,44 +5,44 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /usr/include/stdc-predef.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/LD.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Geno.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/string \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
   /usr/include/features.h \
   /usr/include/sys/cdefs.h \
-  /usr/include/bits/wordsize.h \
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stringfwd.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/memoryfwd.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/char_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/postypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwchar \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
   /usr/include/wchar.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/floatn-common.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/types/mbstate_t.h \
@@ -51,40 +51,46 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /usr/include/bits/types/FILE.h \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/__locale_t.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdint \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h \
+  /usr/include/c++/8/cstdint \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-uintn.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/allocator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/new_allocator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/new \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/localefwd.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++locale.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/clocale \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
   /usr/include/locale.h \
   /usr/include/bits/locale.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iosfwd \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cctype \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/cctype \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/uintn-identity.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream_insert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_forced.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_function.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward/binders.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/atomicity.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/bits/types/time_t.h \
@@ -105,12 +111,11 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /usr/include/bits/thread-shared-types.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/setjmp.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/alloc_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/alloc_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_construct.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/string_conversions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
@@ -122,8 +127,8 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdio \
+  /usr/include/c++/8/bits/std_abs.h \
+  /usr/include/c++/8/cstdio \
   /usr/include/stdio.h \
   /usr/include/bits/types/__fpos_t.h \
   /usr/include/bits/types/__fpos64_t.h \
@@ -132,7 +137,7 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cerrno \
+  /usr/include/c++/8/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
   /usr/include/linux/errno.h \
@@ -140,119 +145,109 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/bits/types/error_t.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/charconv.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functional_hash.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hash_bytes.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/map \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_tree.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/aligned_buffer.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_map.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/tuple \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/uses_allocator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/invoke.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_multimap.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/erase_if.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/vector \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_uninitialized.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_vector.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_bvector.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/vector.tcc \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/include/c++/8/map \
+  /usr/include/c++/8/bits/stl_tree.h \
+  /usr/include/c++/8/ext/aligned_buffer.h \
+  /usr/include/c++/8/bits/stl_map.h \
+  /usr/include/c++/8/tuple \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/bits/uses_allocator.h \
+  /usr/include/c++/8/bits/invoke.h \
+  /usr/include/c++/8/bits/stl_multimap.h \
+  /usr/include/c++/8/vector \
+  /usr/include/c++/8/bits/stl_construct.h \
+  /usr/include/c++/8/bits/stl_uninitialized.h \
+  /usr/include/c++/8/bits/stl_vector.h \
+  /usr/include/c++/8/bits/stl_bvector.h \
+  /usr/include/c++/8/bits/vector.tcc \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Pheno.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Marker.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Logger.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/mutex \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/chrono \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ratio \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/limits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ctime \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/parse_numbers.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/exception \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_ptr.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_init_exception.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/typeinfo \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/nested_exception.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/system_error \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/error_constants.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdexcept \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_mutex.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/unique_lock.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/fstream \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/istream \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ios \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ios_base.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/streambuf \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwctype \
+  /usr/include/c++/8/mutex \
+  /usr/include/c++/8/chrono \
+  /usr/include/c++/8/ratio \
+  /usr/include/c++/8/limits \
+  /usr/include/c++/8/ctime \
+  /usr/include/c++/8/bits/parse_numbers.h \
+  /usr/include/c++/8/system_error \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/error_constants.h \
+  /usr/include/c++/8/bits/std_mutex.h \
+  /usr/include/c++/8/fstream \
+  /usr/include/c++/8/istream \
+  /usr/include/c++/8/ios \
+  /usr/include/c++/8/bits/ios_base.h \
+  /usr/include/c++/8/bits/locale_classes.h \
+  /usr/include/c++/8/bits/locale_classes.tcc \
+  /usr/include/c++/8/streambuf \
+  /usr/include/c++/8/bits/streambuf.tcc \
+  /usr/include/c++/8/bits/basic_ios.h \
+  /usr/include/c++/8/bits/locale_facets.h \
+  /usr/include/c++/8/cwctype \
   /usr/include/wctype.h \
   /usr/include/bits/wctype-wchar.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ostream \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/istream.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/codecvt.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/fstream.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iostream \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/ctype_base.h \
+  /usr/include/c++/8/bits/streambuf_iterator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/ctype_inline.h \
+  /usr/include/c++/8/bits/locale_facets.tcc \
+  /usr/include/c++/8/bits/basic_ios.tcc \
+  /usr/include/c++/8/ostream \
+  /usr/include/c++/8/bits/ostream.tcc \
+  /usr/include/c++/8/bits/istream.tcc \
+  /usr/include/c++/8/bits/codecvt.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/basic_file.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++io.h \
+  /usr/include/c++/8/bits/fstream.tcc \
+  /usr/include/c++/8/iostream \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/AsyncBuffer.hpp \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/condition_variable \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/shared_ptr.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/shared_ptr_base.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/allocated_ptr.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/refwrap.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/unique_ptr.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/concurrence.h \
+  /usr/include/c++/8/condition_variable \
+  /usr/include/c++/8/ext/concurrence.h \
+  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr_base.h \
+  /usr/include/c++/8/bits/allocated_ptr.h \
+  /usr/include/c++/8/bits/refwrap.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/mem.hpp \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/functional \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_function.h \
+  /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/functional \
+  /usr/include/c++/8/bits/std_function.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/tables.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstddef \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/unordered_map \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hashtable.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hashtable_policy.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/unordered_map.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/memory \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_tempbuf.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_raw_storage_iter.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/align.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bit \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/shared_ptr_atomic.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/atomic_base.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/atomic_lockfree_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward/auto_ptr.h \
+  /usr/include/c++/8/cstddef \
+  /usr/include/c++/8/unordered_map \
+  /usr/include/c++/8/bits/hashtable.h \
+  /usr/include/c++/8/bits/hashtable_policy.h \
+  /usr/include/c++/8/bits/unordered_map.h \
+  /usr/include/c++/8/memory \
+  /usr/include/c++/8/bits/stl_tempbuf.h \
+  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/8/bits/shared_ptr_atomic.h \
+  /usr/include/c++/8/bits/atomic_base.h \
+  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/8/backward/auto_ptr.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Logger.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/constants.hpp \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/utils.hpp \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/numeric \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_numeric.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/algorithm \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algo.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/algorithmfwd.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_heap.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/uniform_int_dist.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/sstream \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/sstream.tcc \
+  /usr/include/c++/8/numeric \
+  /usr/include/c++/8/bits/stl_numeric.h \
+  /usr/include/c++/8/algorithm \
+  /usr/include/c++/8/bits/stl_algo.h \
+  /usr/include/c++/8/bits/algorithmfwd.h \
+  /usr/include/c++/8/bits/stl_heap.h \
+  /usr/include/c++/8/bits/uniform_int_dist.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/StatLib.h \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Eigen \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Dense \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Core \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/Macros.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/complex \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cmath \
+  /usr/include/c++/8/complex \
+  /usr/include/c++/8/cmath \
   /usr/include/math.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
@@ -265,19 +260,19 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/mathinline.h \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/MKL_support.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/omp.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cassert \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/omp.h \
+  /usr/include/c++/8/cassert \
   /usr/include/assert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstring \
+  /usr/include/c++/8/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/climits \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h \
+  /usr/include/c++/8/climits \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -530,9 +525,9 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
   /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_list.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/list.tcc \
+  /usr/include/c++/8/list \
+  /usr/include/c++/8/bits/stl_list.h \
+  /usr/include/c++/8/bits/list.tcc \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/cpu_f77blas.h \
   /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl.h \
   /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_version.h \
@@ -574,13 +569,11 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_sparse_qr.h:
 
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_graph.h:
+
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_direct_call.h:
 
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_solvers_ee.h:
-
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_poisson.h:
-
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_trig_transforms.h:
 
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_dfti.h:
 
@@ -594,15 +587,9 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vsl_defines.h:
 
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vsl.h:
-
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vml_functions.h:
-
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vml_defines.h:
 
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_service.h:
-
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_rci.h:
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vml.h:
 
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_pardiso.h:
 
@@ -620,9 +607,17 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_version.h:
 
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_rci.h:
+
+/usr/include/c++/8/bits/list.tcc:
+
+/usr/include/c++/8/bits/stl_list.h:
+
+/usr/include/c++/8/list:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
 
@@ -632,9 +627,7 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/IterativeLinearSolvers:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseQR/SparseQR.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h:
 
@@ -642,11 +635,17 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h:
 
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h:
 
@@ -662,17 +661,15 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/OrderingMethods/Ordering.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/NonMPL2.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/OrderingMethods/Amd.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h:
 
@@ -680,13 +677,7 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseRef.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseMap.h:
 
@@ -696,9 +687,9 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Sparse:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
@@ -720,15 +711,13 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/list:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Eigenvalues:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/arch/Geometry_SSE.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Umeyama.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Hyperplane.h:
 
@@ -738,10 +727,6 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Translation.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Transform.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Quaternion.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
@@ -749,8 +734,6 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/EulerAngles.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Geometry:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SVD/BDCSVD.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SVD/SVDBase.h:
 
@@ -760,165 +743,139 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/SVD:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CoreIterators.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
+/usr/include/c++/8/ostream:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
+/usr/include/bits/types/locale_t.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/HouseholderQR.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseProduct.h:
+/usr/include/c++/8/bits/locale_facets.tcc:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/mem.hpp:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf_iterator.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/tuple:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SVD/BDCSVD.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ios:
+/usr/include/c++/8/bits/locale_classes.tcc:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/fstream:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/ReturnByValue.h:
 
-/usr/include/bits/sys_errlist.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdexcept:
+/usr/include/c++/8/bits/locale_classes.h:
 
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_blas_64.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
 
-/usr/include/bits/errno.h:
+/usr/include/c++/8/system_error:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_mutex.h:
+/usr/include/gnu/stubs.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/parse_numbers.h:
+/usr/include/bits/flt-eval-method.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/VectorBlock.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/chrono:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Householder:
 
-/usr/include/bits/types/struct_sched_param.h:
+/usr/include/bits/uintn-identity.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Pheno.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/vector:
+/usr/include/c++/8/limits:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/CUDA/Half.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/sstream.tcc:
+/usr/include/c++/8/ratio:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/LU:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ios_base.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Transform.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_multimap.h:
+/usr/include/c++/8/bits/invoke.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/exception:
+/usr/include/c++/8/tuple:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/uses_allocator.h:
+/usr/include/c++/8/numeric:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_uninitialized.h:
+/usr/include/c++/8/bits/allocated_ptr.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/unique_ptr.h:
+/usr/include/bits/posix1_lim.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/arch/Geometry_SSE.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/vector.tcc:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_map.h:
+/usr/include/c++/8/bits/stl_relops.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Cholesky:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits:
+/usr/include/bits/libm-simd-decl-stubs.h:
 
-/usr/include/bits/stdint-intn.h:
+/usr/include/c++/8/bits/functional_hash.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hash_bytes.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.tcc:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/AngleAxis.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/FullPivLU.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_bvector.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Jacobi:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Array.h:
 
 /usr/include/bits/types/error_t.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h:
 
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/asm/errno.h:
 
-/usr/include/wctype.h:
+/usr/include/linux/errno.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ratio:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/functional:
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_blas_64.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseView.h:
+/usr/include/bits/errno.h:
 
-/usr/include/bits/stdio_lim.h:
+/usr/include/stdc-predef.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/clocale:
+/usr/include/bits/sys_errlist.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cerrno:
+/usr/include/bits/types/cookie_io_functions_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
+/usr/include/c++/8/cstdio:
+
+/usr/include/c++/8/algorithm:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CwiseUnaryView.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/shared_ptr.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ostream:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/numeric:
+/usr/include/features.h:
 
 /usr/include/bits/types/__fpos_t.h:
+
+/usr/include/c++/8/bits/istream.tcc:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/SparseCore:
 
 /usr/include/stdio.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdio:
-
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/tables.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwctype:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/omp.h:
-
 /usr/include/bits/stdlib-float.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/Quaternion.h:
+
+/usr/include/c++/8/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/8/debug/assertions.h:
 
 /usr/include/bits/types/sigset_t.h:
 
@@ -926,37 +883,23 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /usr/include/sys/select.h:
 
-/usr/include/bits/stdio.h:
+/usr/include/bits/waitflags.h:
 
-/usr/include/asm-generic/errno.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Select.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib:
+/usr/include/c++/8/bits/stl_algo.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/alloc_traits.h:
+/usr/include/linux/limits.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
+/usr/include/c++/8/bits/alloc_traits.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/nested_exception.h:
-
-/usr/include/gnu/stubs-64.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/mutex:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwchar:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/bits/mathcalls.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/istream:
-
-/usr/include/bits/uio_lim.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/string_conversions.h:
+/usr/include/bits/setjmp.h:
 
 /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Logger.h:
 
@@ -968,33 +911,49 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /usr/include/bits/pthreadtypes.h:
 
-/usr/include/bits/cpu-set.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
-
-/usr/include/bits/types/timer_t.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
-
 /usr/include/bits/types/struct_itimerspec.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
 
-/usr/include/features.h:
+/usr/include/bits/types/struct_tm.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
 
-/usr/include/bits/types/mbstate_t.h:
+/usr/include/bits/types/clock_t.h:
+
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_solvers_ee.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/DenseStorage.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/misc/Kernel.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Sparse:
+
+/usr/include/c++/8/mutex:
+
+/usr/include/c++/8/bits/ios_base.h:
+
+/usr/include/c++/8/streambuf:
+
+/usr/include/c++/8/chrono:
+
+/usr/include/bits/time.h:
 
 /usr/include/time.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h:
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vsl.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/SparseCholesky:
+/usr/include/c++/8/bits/locale_facets.h:
 
-/usr/include/bits/stdlib-bsearch.h:
+/usr/include/c++/8/backward/auto_ptr.h:
+
+/usr/include/c++/8/bits/stl_uninitialized.h:
+
+/usr/include/c++/8/bits/concept_check.h:
 
 /usr/include/bits/posix2_lim.h:
 
@@ -1004,181 +963,67 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /usr/include/bits/types.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h:
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_df_defines.h:
 
-/usr/include/wchar.h:
+/usr/include/c++/8/cwchar:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/typeinfo:
+/usr/include/c++/8/condition_variable:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h:
+/usr/include/asm-generic/errno.h:
 
-/usr/include/sys/types.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/LD.cpp:
+/usr/include/c++/8/bits/postypes.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h:
-
-/usr/include/bits/waitstatus.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h:
-
-/usr/include/bits/local_lim.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/OrderingMethods:
-
-/usr/include/bits/types/struct_timespec.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
-
-/usr/include/bits/math-vector.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
-
-/usr/include/bits/setjmp.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_list.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.h:
-
-/usr/include/stdc-predef.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/list.tcc:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/refwrap.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_vector.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/alloc_traits.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_construct.h:
-
-/usr/include/bits/posix1_lim.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/bits/floatn-common.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CoreIterators.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_heap.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf.tcc:
-
-/usr/include/bits/types/struct_timeval.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.tcc:
-
-/usr/include/bits/wordsize.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Inverse.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/char_traits.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h:
-
-/usr/include/bits/timex.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h:
-
-/usr/include/bits/waitflags.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Select.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
-
-/usr/include/bits/types/wint_t.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/unordered_map:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/postypes.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.tcc:
-
-/usr/include/bits/stdint-uintn.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/string:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_init_exception.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/usr/include/bits/types/clock_t.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/DenseStorage.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/misc/Kernel.h:
-
-/usr/include/bits/floatn.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/climits:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/new_allocator.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/atomic_lockfree_defines.h:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h:
 
 /usr/include/bits/long-double.h:
 
 /usr/include/sys/cdefs.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/system_error:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/ctype_base.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h:
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_trig_transforms.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/map:
+/usr/include/c++/8/bits/ptr_traits.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.tcc:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
 
-/usr/include/bits/types/FILE.h:
+/usr/include/c++/8/stdexcept:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h:
+/usr/include/bits/types/wint_t.h:
 
-/usr/include/bits/types/locale_t.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
+/usr/include/c++/8/bits/range_access.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/ReturnByValue.h:
+/usr/include/c++/8/ext/string_conversions.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
+/usr/include/c++/8/bits/unique_ptr.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h:
+/usr/include/c++/8/cstddef:
 
-/usr/include/bits/endian.h:
+/usr/include/c++/8/bits/atomic_lockfree_defines.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdint:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/misc/Image.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Core:
+/usr/include/c++/8/bits/hash_bytes.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_tree.h:
+/usr/include/bits/types/__fpos64_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward/binders.h:
+/usr/include/c++/8/ios:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/NumTraits.h:
+/usr/include/c++/8/bits/move.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Random.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/XprHelper.h:
+
+/usr/include/c++/8/bits/stl_iterator.h:
+
+/usr/include/string.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/SparseQR:
 
@@ -1186,257 +1031,391 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /usr/include/bits/wchar.h:
 
-/usr/include/gnu/stubs.h:
-
-/usr/include/bits/flt-eval-method.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Householder:
-
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_graph.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_forced.h:
-
-/usr/include/bits/types/struct_tm.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward/auto_ptr.h:
+/usr/include/c++/8/bits/stl_heap.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h:
 
 /usr/include/bits/typesizes.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/localefwd.h:
+/usr/include/bits/types/struct_timeval.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/sstream:
+/usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
+/usr/include/c++/8/bits/char_traits.h:
 
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vsl_functions.h:
+/usr/include/c++/8/bits/vector.tcc:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/aligned_buffer.h:
+/usr/include/c++/8/bits/stl_construct.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/LD.h:
+/usr/include/c++/8/bits/std_abs.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_raw_storage_iter.h:
+/usr/include/c++/8/bits/stl_vector.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/allocator.h:
+/usr/include/c++/8/ext/numeric_traits.h:
 
-/usr/include/bits/types/__sigset_t.h:
+/usr/include/bits/types/timer_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/new:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/streambuf:
+/usr/include/c++/8/bits/basic_ios.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/uniform_int_dist.h:
+/usr/include/bits/stdint-intn.h:
 
-/usr/include/bits/locale.h:
+/usr/include/c++/8/bits/localefwd.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream_insert.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/RotationBase.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iosfwd:
+/usr/include/sched.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Marker.h:
 
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_compact.h:
 
 /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Geno.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/allocated_ptr.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Product.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cctype:
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/CUDA/Half.h:
+/usr/include/c++/8/ext/new_allocator.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++locale.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Redux.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/bits/uintn-identity.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/memoryfwd.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h:
-
-/usr/include/ctype.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SVD/JacobiSVD.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/InverseImpl.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
-
-/usr/include/bits/byteswap.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/atomicity.h:
-
-/usr/include/linux/errno.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/concurrence.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
-
-/usr/include/bits/xopen_lim.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/QR:
-
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vml.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_function.h:
-
-/usr/include/stdint.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Block.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/basic_file.h:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/atomic_base.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/unique_lock.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/CUDA/Complex.h:
-
-/usr/include/bits/types/__locale_t.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CommaInitializer.h:
-
-/usr/include/pthread.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/RotationBase.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functional_hash.h:
-
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Marker.h:
-
-/usr/include/sched.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CwiseUnaryView.h:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h:
 
 /usr/include/bits/types/time_t.h:
 
-/usr/include/bits/time.h:
+/usr/include/c++/8/bits/stl_iterator_base_types.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/limits:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++io.h:
+/usr/include/bits/byteswap.h:
 
-/usr/include/assert.h:
+/usr/include/bits/floatn.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/BlockMethods.h:
+/usr/include/c++/8/bits/basic_ios.tcc:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iostream:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/SparseCholesky:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/MapBase.h:
+/usr/include/bits/stdlib-bsearch.h:
 
-/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_df_defines.h:
+/usr/include/c++/8/exception:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/shared_ptr_base.h:
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vsl_functions.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h:
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/LD.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h:
+/usr/include/bits/timex.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_function.h:
+/usr/include/wchar.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstddef:
+/usr/include/c++/8/cstdint:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/DenseBase.h:
+/usr/include/c++/8/bits/stl_numeric.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hashtable_policy.h:
+/usr/include/c++/8/bits/exception.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Visitor.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/unordered_map.h:
+/usr/include/c++/8/bits/stl_algobase.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/memory:
+/usr/include/c++/8/ext/aligned_buffer.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
+/usr/include/sys/types.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ctime:
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/LD.cpp:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+/usr/include/c++/8/bits/stl_raw_storage_iter.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_tempbuf.h:
+/usr/include/c++/8/bits/stl_multimap.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/align.h:
+/usr/include/bits/locale.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bit:
+/usr/include/c++/8/bits/parse_numbers.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/Determinant.h:
+/usr/include/bits/types/struct_sched_param.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/IterativeLinearSolvers:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/utils.hpp:
+/usr/include/c++/8/bits/memoryfwd.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Swap.h:
+/usr/include/bits/stdio.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+/usr/include/c++/8/clocale:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/algorithm:
+/usr/include/bits/floatn-common.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/error_constants.h:
+/usr/include/stdlib.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h:
+/usr/include/c++/8/bits/cxxabi_forced.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/misc/Image.h:
+/usr/include/c++/8/ext/atomicity.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/algorithmfwd.h:
+/usr/include/c++/8/bits/stl_tempbuf.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Eigen:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/EigenBase.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Dense:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/codecvt.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/ctype_inline.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/SolveTriangular.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/complex:
+/usr/include/gnu/stubs-64.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Matrix.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream.tcc:
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++io.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/constants.hpp:
+/usr/include/c++/8/bits/std_mutex.h:
 
-/usr/include/math.h:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h:
 
-/usr/include/string.h:
+/usr/include/c++/8/functional:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
+/usr/include/wctype.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseView.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/c++/8/bits/refwrap.h:
+
+/usr/include/c++/8/bits/allocator.h:
+
+/usr/include/bits/cpu-set.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
+
+/usr/include/c++/8/bits/exception_defines.h:
+
+/usr/include/c++/8/bits/stl_pair.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/c++/8/bits/basic_string.tcc:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Inverse.h:
+
+/usr/include/c++/8/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/8/iosfwd:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h:
+
+/usr/include/c++/8/ext/type_traits.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/NonMPL2.h:
+
+/usr/include/c++/8/bits/stl_bvector.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+
+/usr/include/c++/8/bits/stl_function.h:
+
+/usr/include/bits/uio_lim.h:
+
+/usr/include/c++/8/bits/cpp_type_traits.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
+
+/usr/include/c++/8/bits/ostream.tcc:
+
+/usr/include/c++/8/istream:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Redux.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/c++/8/bits/predefined_ops.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_service.h:
+
+/usr/include/c++/8/cctype:
+
+/usr/include/bits/stdint-uintn.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/Pheno.h:
+
+/usr/include/c++/8/new:
+
+/usr/include/c++/8/stdlib.h:
+
+/usr/include/c++/8/bits/exception_ptr.h:
+
+/usr/include/c++/8/typeinfo:
+
+/usr/include/bits/waitstatus.h:
+
+/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vml_functions.h:
+
+/usr/include/c++/8/utility:
+
+/usr/include/bits/types/mbstate_t.h:
+
+/usr/include/c++/8/bits/stringfwd.h:
+
+/usr/include/c++/8/string:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/QR:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/c++/8/bits/ostream_insert.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h:
+
+/usr/include/ctype.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
+
+/usr/include/c++/8/bits/nested_exception.h:
+
+/usr/include/c++/8/bits/basic_string.h:
+
+/usr/include/bits/math-vector.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
+
+/usr/include/c++/8/cerrno:
+
+/usr/include/c++/8/bits/streambuf.tcc:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CommaInitializer.h:
+
+/usr/include/pthread.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseRef.h:
+
+/usr/include/c++/8/bits/functexcept.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/OrderingMethods:
+
+/usr/include/c++/8/bits/streambuf_iterator.h:
+
+/usr/include/bits/types/struct_timespec.h:
+
+/usr/include/c++/8/memory:
+
+/usr/include/c++/8/type_traits:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/GeneralProduct.h:
+
+/usr/include/c++/8/bits/stl_tree.h:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/basic_file.h:
+
+/usr/include/c++/8/cwctype:
+
+/usr/include/c++/8/bits/shared_ptr_atomic.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
+
+/usr/include/c++/8/bits/fstream.tcc:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/c++/8/iostream:
+
+/usr/include/c++/8/ext/concurrence.h:
+
+/usr/include/c++/8/vector:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/IO.h:
+
+/usr/include/c++/8/bits/shared_ptr.h:
+
+/usr/include/c++/8/bits/shared_ptr_base.h:
+
+/usr/include/c++/8/cstdlib:
+
+/usr/include/c++/8/bits/std_function.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/ArrayBase.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/tables.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseQR/SparseQR.h:
+
+/usr/include/c++/8/unordered_map:
+
+/usr/include/c++/8/bits/hashtable.h:
+
+/usr/include/c++/8/bits/hashtable_policy.h:
+
+/usr/include/c++/8/bits/atomic_base.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
 
 /usr/include/bits/fp-logb.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/shared_ptr_atomic.h:
+/usr/include/c++/8/bits/stl_map.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
+
+/usr/include/math.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/constants.hpp:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/utils.hpp:
+
+/usr/include/c++/8/cstring:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Swap.h:
+
+/usr/include/c++/8/fstream:
+
+/usr/include/c++/8/bits/unordered_map.h:
+
+/usr/include/c++/8/bits/uniform_int_dist.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Ref.h:
+
+/usr/include/c++/8/sstream:
+
+/usr/include/c++/8/bits/sstream.tcc:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Eigen:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Dense:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Core:
+
+/usr/include/c++/8/debug/debug.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+
+/usr/include/c++/8/cmath:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/omp.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
 
 /usr/include/bits/fp-fast.h:
 
@@ -1448,6 +1427,8 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/BandMatrix.h:
 
+/usr/include/c++/8/backward/binders.h:
+
 /usr/include/bits/mathinline.h:
 
 /usr/include/endian.h:
@@ -1456,37 +1437,19 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/include/mem.hpp:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/NoAlias.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h:
+/usr/include/c++/8/cassert:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h:
+/usr/include/assert.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cassert:
-
-/usr/include/bits/types/__FILE.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algo.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstring:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/condition_variable:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Visitor.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/BlockMethods.h:
 
 /usr/include/strings.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
@@ -1494,21 +1457,19 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
 
-/usr/include/linux/limits.h:
+/usr/include/bits/local_lim.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/Meta.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/LU:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/XprHelper.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/istream.tcc:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/Memory.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/erase_if.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Random.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/NumTraits.h:
+
+/usr/include/c++/8/complex:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/MathFunctions.h:
 
@@ -1518,10 +1479,6 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/CUDA/TypeCasting.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseVector.h:
@@ -1530,13 +1487,11 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stringfwd.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
-
 /usr/include/locale.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h:
 
@@ -1546,21 +1501,31 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/IO.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/arch/CUDA/Complex.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/DenseBase.h:
 
 /storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include/mkl_vml_types.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/MatrixBase.h:
 
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/Determinant.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/error_constants.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/EigenBase.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Product.h:
+/usr/include/c++/8/climits:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CoreEvaluators.h:
 
@@ -1572,17 +1537,21 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Assign.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/ArrayBase.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/NestByValue.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/NoAlias.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Matrix.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Array.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
 
@@ -1596,47 +1565,47 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Dot.h:
 
+/usr/include/c++/8/ctime:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/StableNorm.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Stride.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Reverse.h:
 
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/MapBase.h:
+
+/usr/include/c++/8/bits/algorithmfwd.h:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Map.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h:
+/usr/include/stdint.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Ref.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Block.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/invoke.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/VectorBlock.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Transpose.h:
 
+/usr/include/c++/8/initializer_list:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Diagonal.h:
+
+/usr/include/c++/8/array:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/DiagonalProduct.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/Macros.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cmath:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Fuzzy.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/GeneralProduct.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Solve.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_ptr.h:
-
 /usr/include/bits/libc-header-start.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/charconv.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/util/Constants.h:
 
@@ -1644,44 +1613,60 @@ CMakeFiles/ld.dir/src/LD.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/SolverBase.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hashtable.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Transpositions.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/fstream.tcc:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+/usr/include/c++/8/ext/alloc_traits.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
 
+/usr/include/c++/8/map:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/SolveTriangular.h:
-
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
 
 /usr/include/bits/wctype-wchar.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
 
+/usr/include/c++/8/bits/uses_allocator.h:
+
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/Replicate.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Geometry/AngleAxis.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/FullPivLU.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/PartialPivLU.h:
 
-/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Cholesky:
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SVD/JacobiSVD.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/LU/InverseImpl.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/Jacobi:
 
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Cholesky/LLT.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_numeric.h:
-
 /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Householder/Householder.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/SparseCore/SparseProduct.h:
+
+/usr/include/c++/8/bits/codecvt.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:
+
+/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3/Eigen/src/QR/HouseholderQR.h:

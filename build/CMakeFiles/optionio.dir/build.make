@@ -73,15 +73,15 @@ CMakeFiles/optionio.dir/src/OptionIO.cpp.o: CMakeFiles/optionio.dir/flags.make
 CMakeFiles/optionio.dir/src/OptionIO.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/OptionIO.cpp
 CMakeFiles/optionio.dir/src/OptionIO.cpp.o: CMakeFiles/optionio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/optionio.dir/src/OptionIO.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optionio.dir/src/OptionIO.cpp.o -MF CMakeFiles/optionio.dir/src/OptionIO.cpp.o.d -o CMakeFiles/optionio.dir/src/OptionIO.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/OptionIO.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optionio.dir/src/OptionIO.cpp.o -MF CMakeFiles/optionio.dir/src/OptionIO.cpp.o.d -o CMakeFiles/optionio.dir/src/OptionIO.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/OptionIO.cpp
 
 CMakeFiles/optionio.dir/src/OptionIO.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/optionio.dir/src/OptionIO.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/OptionIO.cpp > CMakeFiles/optionio.dir/src/OptionIO.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/OptionIO.cpp > CMakeFiles/optionio.dir/src/OptionIO.cpp.i
 
 CMakeFiles/optionio.dir/src/OptionIO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/optionio.dir/src/OptionIO.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/OptionIO.cpp -o CMakeFiles/optionio.dir/src/OptionIO.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/OptionIO.cpp -o CMakeFiles/optionio.dir/src/OptionIO.cpp.s
 
 # Object files for target optionio
 optionio_OBJECTS = \

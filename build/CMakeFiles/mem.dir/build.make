@@ -73,15 +73,15 @@ CMakeFiles/mem.dir/src/mem.cpp.o: CMakeFiles/mem.dir/flags.make
 CMakeFiles/mem.dir/src/mem.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/mem.cpp
 CMakeFiles/mem.dir/src/mem.cpp.o: CMakeFiles/mem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mem.dir/src/mem.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mem.dir/src/mem.cpp.o -MF CMakeFiles/mem.dir/src/mem.cpp.o.d -o CMakeFiles/mem.dir/src/mem.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/mem.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mem.dir/src/mem.cpp.o -MF CMakeFiles/mem.dir/src/mem.cpp.o.d -o CMakeFiles/mem.dir/src/mem.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/mem.cpp
 
 CMakeFiles/mem.dir/src/mem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mem.dir/src/mem.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/mem.cpp > CMakeFiles/mem.dir/src/mem.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/mem.cpp > CMakeFiles/mem.dir/src/mem.cpp.i
 
 CMakeFiles/mem.dir/src/mem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mem.dir/src/mem.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/mem.cpp -o CMakeFiles/mem.dir/src/mem.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/mem.cpp -o CMakeFiles/mem.dir/src/mem.cpp.s
 
 # Object files for target mem
 mem_OBJECTS = \

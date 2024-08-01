@@ -5,20 +5,19 @@ main/CMakeFiles/mainV1.dir/dcdflib.cpp.o: \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+ /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+ /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
- /usr/include/bits/stdio.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/bits/stdio.h /usr/include/c++/8/stdlib.h \
+ /usr/include/c++/8/cstdlib \
+ /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+ /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+ /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
  /usr/include/stdlib.h /usr/include/bits/waitflags.h \
  /usr/include/bits/waitstatus.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h /usr/include/bits/types/locale_t.h \
@@ -35,13 +34,10 @@ main/CMakeFiles/mainV1.dir/dcdflib.cpp.o: \
  /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
  /usr/include/bits/pthreadtypes-arch.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/math.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cmath \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
- /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
- /usr/include/math.h /usr/include/bits/math-vector.h \
- /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/c++/8/bits/std_abs.h /usr/include/c++/8/math.h \
+ /usr/include/c++/8/cmath /usr/include/c++/8/bits/cpp_type_traits.h \
+ /usr/include/c++/8/ext/type_traits.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
  /usr/include/bits/fp-fast.h \
  /usr/include/bits/mathcalls-helper-functions.h \

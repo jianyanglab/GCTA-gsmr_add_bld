@@ -15,8 +15,8 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: /storage/yangjianLab/ho
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/types/__fpos_t.h \
@@ -29,11 +29,11 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: /storage/yangjianLab/ho
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
@@ -63,16 +63,16 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: /storage/yangjianLab/ho
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
+  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-uintn.h \
   /usr/include/inttypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -81,64 +81,66 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: /storage/yangjianLab/ho
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
   /usr/include/assert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h \
-  /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/string \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stringfwd.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/memoryfwd.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/char_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/postypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwchar \
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
   /usr/include/wchar.h \
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/types/mbstate_t.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdint \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/allocator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/new_allocator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/new \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/localefwd.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++locale.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/clocale \
+  /usr/include/c++/8/cstdint \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
   /usr/include/locale.h \
   /usr/include/bits/locale.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iosfwd \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cctype \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/cctype \
   /usr/include/ctype.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream_insert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_forced.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_function.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward/binders.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/atomicity.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/bits/sched.h \
@@ -150,13 +152,12 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: /storage/yangjianLab/ho
   /usr/include/bits/types/struct_tm.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/setjmp.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/alloc_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/alloc_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_construct.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/string_conversions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdio \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cerrno \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdio \
+  /usr/include/c++/8/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
   /usr/include/linux/errno.h \
@@ -164,48 +165,46 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: /storage/yangjianLab/ho
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/bits/types/error_t.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/charconv.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functional_hash.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hash_bytes.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/vector \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_uninitialized.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_vector.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_bvector.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/vector.tcc \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h \
+  /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.h \
+  /usr/include/c++/8/vector \
+  /usr/include/c++/8/bits/stl_construct.h \
+  /usr/include/c++/8/bits/stl_uninitialized.h \
+  /usr/include/c++/8/bits/stl_vector.h \
+  /usr/include/c++/8/bits/stl_bvector.h \
+  /usr/include/c++/8/bits/vector.tcc \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.h \
   /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iostream \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ostream \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ios \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/exception \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_ptr.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_init_exception.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/typeinfo \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/nested_exception.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ios_base.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/system_error \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/error_constants.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdexcept \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/streambuf \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwctype \
+  /usr/include/c++/8/iostream \
+  /usr/include/c++/8/ostream \
+  /usr/include/c++/8/ios \
+  /usr/include/c++/8/bits/ios_base.h \
+  /usr/include/c++/8/bits/locale_classes.h \
+  /usr/include/c++/8/bits/locale_classes.tcc \
+  /usr/include/c++/8/system_error \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/error_constants.h \
+  /usr/include/c++/8/streambuf \
+  /usr/include/c++/8/bits/streambuf.tcc \
+  /usr/include/c++/8/bits/basic_ios.h \
+  /usr/include/c++/8/bits/locale_facets.h \
+  /usr/include/c++/8/cwctype \
   /usr/include/wctype.h \
   /usr/include/bits/wctype-wchar.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/istream \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/istream.tcc \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/limits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/csignal \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/ctype_base.h \
+  /usr/include/c++/8/bits/streambuf_iterator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/ctype_inline.h \
+  /usr/include/c++/8/bits/locale_facets.tcc \
+  /usr/include/c++/8/bits/basic_ios.tcc \
+  /usr/include/c++/8/bits/ostream.tcc \
+  /usr/include/c++/8/istream \
+  /usr/include/c++/8/bits/istream.tcc \
+  /usr/include/c++/8/limits \
+  /usr/include/c++/8/csignal \
   /usr/include/signal.h \
   /usr/include/bits/signum.h \
   /usr/include/bits/signum-generic.h \
@@ -240,8 +239,8 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o:
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/types/__fpos_t.h \
@@ -254,11 +253,11 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o:
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
@@ -288,16 +287,16 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o:
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
+  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-uintn.h \
   /usr/include/inttypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -306,32 +305,96 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o:
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
   /usr/include/assert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/c++/8/cstdint \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
+  /usr/include/locale.h \
+  /usr/include/bits/locale.h \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdio \
+  /usr/include/c++/8/cerrno \
+  /usr/include/errno.h \
+  /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc \
   /usr/include/stdc-predef.h \
@@ -345,8 +408,8 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: /stora
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/types/__fpos_t.h \
@@ -359,11 +422,11 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: /stora
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
@@ -393,16 +456,16 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: /stora
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
+  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-uintn.h \
   /usr/include/inttypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -411,32 +474,96 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: /stora
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
   /usr/include/assert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/c++/8/cstdint \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
+  /usr/include/locale.h \
+  /usr/include/bits/locale.h \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdio \
+  /usr/include/c++/8/cerrno \
+  /usr/include/errno.h \
+  /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc \
   /usr/include/stdc-predef.h \
@@ -451,8 +578,8 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: /stora
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/types/__fpos_t.h \
@@ -465,11 +592,11 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: /stora
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
@@ -499,16 +626,16 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: /stora
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
+  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-uintn.h \
   /usr/include/inttypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -517,32 +644,83 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: /stora
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
   /usr/include/assert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h \
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/c++/8/cstdint \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
+  /usr/include/locale.h \
+  /usr/include/bits/locale.h \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdio \
+  /usr/include/c++/8/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
   /usr/include/linux/errno.h \
@@ -550,9 +728,27 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: /stora
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/bits/types/error_t.h \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h \
   /usr/include/sys/stat.h \
   /usr/include/bits/stat.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/bits/statx.h \
+  /usr/include/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/types.h \
+  /usr/include/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
   /usr/include/bits/statx-generic.h \
   /usr/include/bits/types/struct_statx_timestamp.h \
   /usr/include/bits/types/struct_statx.h \
@@ -585,8 +781,8 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o: /stor
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/types/__fpos_t.h \
@@ -599,11 +795,11 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o: /stor
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
@@ -633,16 +829,16 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o: /stor
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
+  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-uintn.h \
   /usr/include/inttypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -651,32 +847,96 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o: /stor
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
   /usr/include/assert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/c++/8/cstdint \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
+  /usr/include/locale.h \
+  /usr/include/bits/locale.h \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdio \
+  /usr/include/c++/8/cerrno \
+  /usr/include/errno.h \
+  /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc \
   /usr/include/stdc-predef.h \
@@ -689,8 +949,8 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/types/__fpos_t.h \
@@ -703,11 +963,11 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
@@ -737,16 +997,16 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h \
+  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-uintn.h \
   /usr/include/inttypes.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -755,35 +1015,101 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
   /usr/include/bits/xopen_lim.h \
   /usr/include/bits/uio_lim.h \
   /usr/include/assert.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h \
-  /soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h \
-  /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/c++/8/cstdint \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
+  /usr/include/locale.h \
+  /usr/include/bits/locale.h \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdio \
+  /usr/include/c++/8/cerrno \
+  /usr/include/errno.h \
+  /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h
 
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc:
+/usr/include/bits/getopt_core.h:
+
+/usr/include/bits/getopt_posix.h:
 
 /usr/include/bits/confname.h:
 
@@ -791,19 +1117,39 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
 
 /usr/include/bits/posix_opt.h:
 
+/usr/include/bits/types/struct_iovec.h:
+
 /usr/include/bits/fcntl-linux.h:
 
 /usr/include/bits/fcntl.h:
 
 /usr/include/fcntl.h:
 
-/usr/include/bits/mman-shared.h:
+/usr/include/bits/mman.h:
 
-/usr/include/bits/types/struct_statx_timestamp.h:
+/usr/include/sys/mman.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/asm/posix_types_64.h:
+
+/usr/include/asm/posix_types.h:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/asm/bitsperlong.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/asm/types.h:
+
+/usr/include/linux/stat.h:
 
 /usr/include/bits/stat.h:
-
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc:
 
 /usr/include/bits/types/struct_sigstack.h:
 
@@ -815,11 +1161,13 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
 
 /usr/include/bits/types/sigevent_t.h:
 
+/usr/include/bits/types/sigval_t.h:
+
 /usr/include/bits/siginfo-consts-arch.h:
 
-/usr/include/bits/siginfo-consts.h:
+/usr/include/bits/statx.h:
 
-/usr/include/bits/siginfo-arch.h:
+/usr/include/bits/siginfo-consts.h:
 
 /usr/include/bits/types/__sigval_t.h:
 
@@ -829,35 +1177,39 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
 
 /usr/include/bits/types/sig_atomic_t.h:
 
-/usr/include/bits/getopt_posix.h:
+/usr/include/c++/8/csignal:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/limits:
+/usr/include/c++/8/limits:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/istream:
+/usr/include/c++/8/istream:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/concept_check.h:
+/usr/include/c++/8/typeinfo:
 
-/usr/include/bits/sigaction.h:
+/usr/include/c++/8/bits/move.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/syslimits.h:
+/usr/include/bits/types/__fpos64_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functexcept.h:
+/usr/include/bits/types/struct_statx.h:
 
-/usr/include/strings.h:
+/usr/include/c++/8/backward/binders.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_relops.h:
+/usr/include/c++/8/bits/stl_relops.h:
+
+/usr/include/c++/8/bits/istream.tcc:
 
 /usr/include/bits/types/__fpos_t.h:
 
-/usr/include/bits/types/struct_timeval.h:
+/usr/include/bits/local_lim.h:
 
 /usr/include/limits.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/emmintrin.h:
+/usr/include/c++/8/bits/alloc_traits.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_algobase.h:
+/usr/include/asm-generic/int-ll64.h:
 
-/usr/include/linux/limits.h:
+/usr/include/c++/8/bits/stl_pair.h:
+
+/usr/include/c++/8/bits/exception_defines.h:
 
 /usr/include/bits/sigcontext.h:
 
@@ -865,143 +1217,35 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
 
 /usr/include/inttypes.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/alloc_traits.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_vector.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/error_constants.h:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdint.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_pair.h:
+/usr/include/strings.h:
 
 /usr/include/bits/stdint-uintn.h:
 
-/usr/include/bits/statx-generic.h:
+/usr/include/c++/8/cctype:
 
-/usr/include/string.h:
+/usr/include/c++/8/bits/std_abs.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/char_traits.h:
+/usr/include/bits/floatn-common.h:
+
+/usr/include/c++/8/bits/locale_facets.h:
+
+/usr/include/c++/8/utility:
+
+/usr/include/bits/siginfo-arch.h:
+
+/usr/include/c++/8/string:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/locale.h:
 
 /usr/include/bits/signum.h:
 
 /usr/include/bits/stdlib-float.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwctype:
-
 /usr/include/alloca.h:
 
 /usr/include/bits/thread-shared-types.h:
-
-/usr/include/bits/types/sigval_t.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/initializer_list:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/include/bits/posix1_lim.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_construct.h:
-
-/usr/include/bits/wchar.h:
-
-/usr/include/assert.h:
-
-/usr/include/gnu/stubs.h:
-
-/usr/include/bits/typesizes.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_forced.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdint:
-
-/usr/include/bits/types/__sigset_t.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/bits/statx.h:
-
-/usr/include/bits/uintn-identity.h:
-
-/usr/include/bits/byteswap.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/move.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream.tcc:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/range_access.h:
-
-/usr/include/bits/local_lim.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_types.h:
-
-/usr/include/bits/types/struct_timespec.h:
-
-/usr/include/sched.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/type_traits.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/system_error:
-
-/usr/include/endian.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.tcc:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.tcc:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/hash_bytes.h:
-
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.h:
-
-/usr/include/unistd.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.h:
-
-/usr/include/stdio.h:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h:
-
-/usr/include/bits/getopt_core.h:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mmintrin.h:
-
-/usr/include/bits/sigthread.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_defines.h:
-
-/usr/include/bits/types.h:
-
-/usr/include/bits/stdlib-bsearch.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/include/bits/long-double.h:
-
-/usr/include/bits/environments.h:
-
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/stdint.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/bits/wordsize.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.tcc:
-
-/usr/include/bits/stdio.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
 
 /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.h:
 
@@ -1009,35 +1253,125 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
 
 /usr/include/bits/pthreadtypes.h:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
+/usr/include/bits/pthreadtypes-arch.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/allocator.h:
+/usr/include/bits/wchar.h:
+
+/usr/include/assert.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/c++/8/bits/basic_string.tcc:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/c++/8/stdexcept:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/c++/8/bits/basic_ios.h:
+
+/usr/include/bits/types/struct_timespec.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/c++/8/bits/functexcept.h:
+
+/usr/include/c++/8/bits/nested_exception.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.h:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h:
+
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h:
+
+/usr/include/c++/8/initializer_list:
+
+/usr/include/bits/stdlib-bsearch.h:
+
+/usr/include/bits/sigthread.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/c++/8/bits/concept_check.h:
+
+/usr/include/c++/8/bits/stl_uninitialized.h:
+
+/usr/include/c++/8/type_traits:
+
+/usr/include/c++/8/bits/hash_bytes.h:
+
+/usr/include/stdint.h:
+
+/usr/include/c++/8/bits/stl_construct.h:
+
+/usr/include/bits/environments.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp:
+
+/usr/include/bits/mman-linux.h:
+
+/usr/include/c++/8/ext/type_traits.h:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/atomic_word.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/bits/uio_lim.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/sys/cdefs.h:
+
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
 
 /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/vector:
-
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/predefined_ops.h:
+/usr/include/c++/8/ext/new_allocator.h:
 
 /usr/include/bits/waitstatus.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator_base_funcs.h:
+/usr/include/bits/stdio.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++config.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/localefwd.h:
+/usr/include/c++/8/clocale:
 
 /usr/include/bits/waitflags.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stringfwd.h:
 
 /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc:
 
 /usr/include/bits/types/FILE.h:
 
+/usr/include/signal.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/types/struct_statx_timestamp.h:
+
+/usr/include/c++/8/bits/allocator.h:
+
 /usr/include/wctype.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h:
 
 /usr/include/bits/types/time_t.h:
 
@@ -1045,187 +1379,191 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
 
 /usr/include/bits/select.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdlib.h:
+/usr/include/features.h:
 
-/usr/include/bits/xopen_lim.h:
+/usr/include/bits/types/struct_FILE.h:
 
-/usr/include/locale.h:
+/usr/include/c++/8/bits/exception.h:
 
-/usr/include/bits/types/struct_iovec.h:
+/usr/include/linux/limits.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_uninitialized.h:
+/usr/include/c++/8/cstdlib:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/streambuf:
+/usr/include/unistd.h:
 
-/usr/include/bits/types/__FILE.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.h:
+/usr/include/c++/8/bits/exception_ptr.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdlib:
-
-/usr/include/bits/ss_flags.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/stdc-predef.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_classes.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/csignal:
-
-/usr/include/ctype.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/locale_facets.h:
-
-/usr/include/bits/types/__locale_t.h:
-
-/usr/include/bits/floatn.h:
+/usr/include/bits/sys_errlist.h:
 
 /usr/include/sys/select.h:
 
 /usr/include/sys/types.h:
 
-/usr/include/bits/types/locale_t.h:
+/usr/include/c++/8/bits/basic_ios.tcc:
 
-/usr/include/bits/sys_errlist.h:
+/usr/include/bits/floatn.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/xmmintrin.h:
+/usr/include/c++/8/iostream:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/std_abs.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h:
 
 /usr/include/bits/types/clock_t.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc:
+/usr/include/bits/types/clockid_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/utility:
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc:
 
 /usr/include/bits/stdint-intn.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/atomicity.h:
+/usr/include/c++/8/stdlib.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/assertions.h:
+/usr/include/c++/8/new:
 
-/usr/include/features.h:
+/usr/include/c++/8/bits/stringfwd.h:
 
-/usr/include/bits/types/struct_FILE.h:
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ptr_traits.h:
+/usr/include/c++/8/bits/memoryfwd.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/debug/debug.h:
+/usr/include/bits/types/struct_sched_param.h:
 
-/usr/include/bits/mman.h:
+/usr/include/c++/8/bits/char_traits.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/mm_malloc.h:
+/usr/include/c++/8/bits/stl_algobase.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/array:
+/usr/include/bits/mman-shared.h:
 
-/usr/include/time.h:
+/usr/include/c++/8/bits/cpp_type_traits.h:
 
-/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.h:
+/usr/include/c++/8/bits/stl_function.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/string:
+/usr/include/c++/8/bits/stl_bvector.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_string.tcc:
+/usr/include/c++/8/ext/numeric_traits.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cwchar:
+/usr/include/c++/8/bits/stl_iterator_base_types.h:
 
-/usr/include/bits/mman-linux.h:
+/usr/include/bits/types/__sigset_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed/limits.h:
+/usr/include/c++/8/bits/stl_iterator_base_funcs.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/postypes.h:
+/usr/include/c++/8/debug/assertions.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/typeinfo:
+/usr/include/c++/8/exception:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf.tcc:
+/usr/include/c++/8/vector:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/basic_ios.h:
+/usr/include/bits/statx-generic.h:
+
+/usr/include/string.h:
+
+/usr/include/c++/8/bits/stl_iterator.h:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/ctype_base.h:
+
+/usr/include/c++/8/bits/ptr_traits.h:
+
+/usr/include/c++/8/debug/debug.h:
+
+/usr/include/c++/8/ext/string_conversions.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h:
+
+/usr/include/c++/8/bits/postypes.h:
+
+/usr/include/bits/ss_flags.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/c++/8/cwchar:
 
 /usr/include/bits/libc-header-start.h:
 
 /usr/include/wchar.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_iterator.h:
+/usr/include/c++/8/cstdint:
 
 /usr/include/bits/timex.h:
 
 /usr/include/bits/types/wint_t.h:
 
-/usr/include/signal.h:
-
-/usr/include/bits/stdio_lim.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/clocale:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/istream.tcc:
+/usr/include/c++/8/bits/predefined_ops.h:
 
 /usr/include/bits/types/mbstate_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/ctype_inline.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/new_allocator.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++allocator.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/new:
+/usr/include/c++/8/bits/stl_vector.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception.h:
-
-/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/c++/8/bits/localefwd.h:
 
 /usr/include/bits/locale.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iosfwd:
+/usr/include/ctype.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cctype:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/mmintrin.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/memoryfwd.h:
+/usr/include/c++/8/bits/ostream_insert.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ostream_insert.h:
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++locale.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_function.h:
+/usr/include/c++/8/bits/cxxabi_forced.h:
 
-/usr/include/linux/errno.h:
+/usr/include/endian.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward/binders.h:
+/usr/include/c++/8/bits/range_access.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr.h:
+/usr/include/c++/8/bits/basic_string.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
+/usr/include/sched.h:
 
-/usr/include/bits/setjmp.h:
+/usr/include/c++/8/cstdio:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/gthr.h:
+
+/usr/include/c++/8/bits/streambuf.tcc:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h:
 
 /usr/include/sys/ucontext.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/c++locale.h:
-
 /usr/include/bits/sched.h:
 
-/usr/include/bits/types/struct_sched_param.h:
+/usr/include/c++/8/bits/ostream.tcc:
+
+/usr/include/time.h:
 
 /usr/include/bits/time.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cerrno:
+/usr/include/c++/8/streambuf:
+
+/usr/include/c++/8/bits/ios_base.h:
 
 /usr/include/bits/types/struct_tm.h:
 
-/usr/include/bits/types/__mbstate_t.h:
+/usr/include/bits/types/struct_itimerspec.h:
 
-/usr/include/bits/uio_lim.h:
+/usr/include/bits/setjmp.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
+/usr/include/c++/8/ext/alloc_traits.h:
 
-/usr/include/gnu/stubs-64.h:
+/usr/include/stdc-predef.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/nested_exception.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/alloc_traits.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/string_conversions.h:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/cstdio:
-
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/stdexcept:
+/usr/include/c++/8/cerrno:
 
 /usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
 
 /usr/include/bits/posix2_lim.h:
 
@@ -1237,48 +1575,56 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storag
 
 /usr/include/asm-generic/errno-base.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ext/numeric_traits.h:
-
 /usr/include/bits/types/error_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/stl_bvector.h:
+/usr/include/c++/8/bits/functional_hash.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:
+/usr/include/c++/8/array:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/charconv.h:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/emmintrin.h:
 
-/usr/include/sys/mman.h:
+/usr/include/c++/8/bits/cxxabi_init_exception.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/functional_hash.h:
+/usr/include/c++/8/iosfwd:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/iostream:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/xmmintrin.h:
 
-/usr/include/bits/types/struct_statx.h:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/mm_malloc.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ostream:
+/usr/include/c++/8/ext/atomicity.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/ios:
+/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cpp_type_traits.h:
+/usr/include/bits/types/struct_timeval.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/exception:
+/usr/include/c++/8/bits/vector.tcc:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/type_traits:
+/usr/include/bits/types/locale_t.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/cxxabi_init_exception.h:
+/usr/include/c++/8/ostream:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/vector.tcc:
+/usr/include/linux/types.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/exception_ptr.h:
+/usr/include/c++/8/ios:
 
-/usr/include/bits/types/clockid_t.h:
+/usr/include/c++/8/bits/locale_classes.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/ios_base.h:
+/usr/include/bits/types/__locale_t.h:
+
+/usr/include/c++/8/bits/locale_classes.tcc:
+
+/usr/include/c++/8/system_error:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/error_constants.h:
+
+/usr/include/c++/8/cwctype:
 
 /usr/include/bits/signum-generic.h:
 
 /usr/include/bits/wctype-wchar.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/bits/streambuf_iterator.h:
+/usr/include/gnu/stubs.h:
 
-/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
+/usr/include/c++/8/bits/streambuf_iterator.h:
+
+/usr/include/c++/8/bits/locale_facets.tcc:

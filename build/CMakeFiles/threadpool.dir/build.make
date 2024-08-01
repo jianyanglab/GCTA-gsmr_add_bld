@@ -73,15 +73,15 @@ CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o: CMakeFiles/threadpool.dir/flags.
 CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/ThreadPool.cpp
 CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o: CMakeFiles/threadpool.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o -MF CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o.d -o CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/ThreadPool.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o -MF CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o.d -o CMakeFiles/threadpool.dir/src/ThreadPool.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/ThreadPool.cpp
 
 CMakeFiles/threadpool.dir/src/ThreadPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/threadpool.dir/src/ThreadPool.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/ThreadPool.cpp > CMakeFiles/threadpool.dir/src/ThreadPool.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/ThreadPool.cpp > CMakeFiles/threadpool.dir/src/ThreadPool.cpp.i
 
 CMakeFiles/threadpool.dir/src/ThreadPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/threadpool.dir/src/ThreadPool.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/ThreadPool.cpp -o CMakeFiles/threadpool.dir/src/ThreadPool.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/ThreadPool.cpp -o CMakeFiles/threadpool.dir/src/ThreadPool.cpp.s
 
 # Object files for target threadpool
 threadpool_OBJECTS = \

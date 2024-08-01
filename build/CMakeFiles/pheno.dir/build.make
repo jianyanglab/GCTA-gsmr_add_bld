@@ -73,15 +73,15 @@ CMakeFiles/pheno.dir/src/Pheno.cpp.o: CMakeFiles/pheno.dir/flags.make
 CMakeFiles/pheno.dir/src/Pheno.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Pheno.cpp
 CMakeFiles/pheno.dir/src/Pheno.cpp.o: CMakeFiles/pheno.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pheno.dir/src/Pheno.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pheno.dir/src/Pheno.cpp.o -MF CMakeFiles/pheno.dir/src/Pheno.cpp.o.d -o CMakeFiles/pheno.dir/src/Pheno.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Pheno.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pheno.dir/src/Pheno.cpp.o -MF CMakeFiles/pheno.dir/src/Pheno.cpp.o.d -o CMakeFiles/pheno.dir/src/Pheno.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Pheno.cpp
 
 CMakeFiles/pheno.dir/src/Pheno.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pheno.dir/src/Pheno.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Pheno.cpp > CMakeFiles/pheno.dir/src/Pheno.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Pheno.cpp > CMakeFiles/pheno.dir/src/Pheno.cpp.i
 
 CMakeFiles/pheno.dir/src/Pheno.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pheno.dir/src/Pheno.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Pheno.cpp -o CMakeFiles/pheno.dir/src/Pheno.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Pheno.cpp -o CMakeFiles/pheno.dir/src/Pheno.cpp.s
 
 # Object files for target pheno
 pheno_OBJECTS = \

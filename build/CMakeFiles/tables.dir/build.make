@@ -73,15 +73,15 @@ CMakeFiles/tables.dir/src/tables.cpp.o: CMakeFiles/tables.dir/flags.make
 CMakeFiles/tables.dir/src/tables.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/tables.cpp
 CMakeFiles/tables.dir/src/tables.cpp.o: CMakeFiles/tables.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tables.dir/src/tables.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tables.dir/src/tables.cpp.o -MF CMakeFiles/tables.dir/src/tables.cpp.o.d -o CMakeFiles/tables.dir/src/tables.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/tables.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tables.dir/src/tables.cpp.o -MF CMakeFiles/tables.dir/src/tables.cpp.o.d -o CMakeFiles/tables.dir/src/tables.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/tables.cpp
 
 CMakeFiles/tables.dir/src/tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tables.dir/src/tables.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/tables.cpp > CMakeFiles/tables.dir/src/tables.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/tables.cpp > CMakeFiles/tables.dir/src/tables.cpp.i
 
 CMakeFiles/tables.dir/src/tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tables.dir/src/tables.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/tables.cpp -o CMakeFiles/tables.dir/src/tables.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/tables.cpp -o CMakeFiles/tables.dir/src/tables.cpp.s
 
 # Object files for target tables
 tables_OBJECTS = \

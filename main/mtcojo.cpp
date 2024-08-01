@@ -627,7 +627,8 @@ vector<string> gcta::remove_freq_diff_snps(vector<string> meta_snp_name, vector<
     string snpbuf="";
     vector<string> afsnps;
     map<string,int>::iterator iter_ref;
-
+    printf("fre的大小:%d\n",ref_freq.size());
+    printf("fre的值:%f\n",ref_freq[1552]);
     for( i=0; i<nsnp; i++ ) {
         int refsnp_index = 0;
         vector<double> snpfreq;

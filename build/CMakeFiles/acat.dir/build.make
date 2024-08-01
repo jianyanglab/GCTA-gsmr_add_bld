@@ -73,15 +73,15 @@ CMakeFiles/acat.dir/src/acat.c.o: CMakeFiles/acat.dir/flags.make
 CMakeFiles/acat.dir/src/acat.c.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/acat.c
 CMakeFiles/acat.dir/src/acat.c.o: CMakeFiles/acat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/acat.dir/src/acat.c.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/acat.dir/src/acat.c.o -MF CMakeFiles/acat.dir/src/acat.c.o.d -o CMakeFiles/acat.dir/src/acat.c.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/acat.c
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/acat.dir/src/acat.c.o -MF CMakeFiles/acat.dir/src/acat.c.o.d -o CMakeFiles/acat.dir/src/acat.c.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/acat.c
 
 CMakeFiles/acat.dir/src/acat.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/acat.dir/src/acat.c.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/acat.c > CMakeFiles/acat.dir/src/acat.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/acat.c > CMakeFiles/acat.dir/src/acat.c.i
 
 CMakeFiles/acat.dir/src/acat.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/acat.dir/src/acat.c.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/acat.c -o CMakeFiles/acat.dir/src/acat.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/acat.c -o CMakeFiles/acat.dir/src/acat.c.s
 
 # Object files for target acat
 acat_OBJECTS = \

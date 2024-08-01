@@ -73,15 +73,15 @@ CMakeFiles/utils.dir/src/utils.cpp.o: CMakeFiles/utils.dir/flags.make
 CMakeFiles/utils.dir/src/utils.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/utils.cpp
 CMakeFiles/utils.dir/src/utils.cpp.o: CMakeFiles/utils.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/utils.dir/src/utils.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/utils.dir/src/utils.cpp.o -MF CMakeFiles/utils.dir/src/utils.cpp.o.d -o CMakeFiles/utils.dir/src/utils.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/utils.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/utils.dir/src/utils.cpp.o -MF CMakeFiles/utils.dir/src/utils.cpp.o.d -o CMakeFiles/utils.dir/src/utils.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/utils.cpp
 
 CMakeFiles/utils.dir/src/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/src/utils.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/utils.cpp > CMakeFiles/utils.dir/src/utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/utils.cpp > CMakeFiles/utils.dir/src/utils.cpp.i
 
 CMakeFiles/utils.dir/src/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/src/utils.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/utils.cpp -o CMakeFiles/utils.dir/src/utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/utils.cpp -o CMakeFiles/utils.dir/src/utils.cpp.s
 
 # Object files for target utils
 utils_OBJECTS = \

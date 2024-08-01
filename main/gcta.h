@@ -70,7 +70,7 @@ public:
     void read_bedfile(string bedfile);
     void read_esifile(string esifileName);
     void read_bldfile(string bldfileName);
-    void read_single_bldfile(string bldfileName);
+    void read_single_bldfile(string bldfileNam, int single_snpNum);
     vector<string> read_bfile_list(string bfile_list);
     vector<string> read_bld_list(string bfile_list);
     void read_multi_famfiles(vector<string> multi_bfiles);
@@ -99,6 +99,8 @@ public:
     void extract_chr(int chr_start, int chr_end);
     void filter_snp_maf(double maf);
     void filter_snp_max_maf(double max_maf);
+    void filter_snp_maf_bld(double maf);
+    void filter_snp_max_maf_bld(double max_maf);
     void filter_impRsq(double rsq_cutoff);
     void keep_indi(string indi_list_file);
     void remove_indi(string indi_list_file);
@@ -193,7 +195,7 @@ public:
 
     ////////////////////////////////
     // GSMR
-    void read_gsmrfile(string expo_file_list, string outcome_file_list, double gwas_thresh, int nsnp_gsmr, int gsmr_so_alg);
+    void read_gsmrfile(string expo_file_list, string outcome_file_list, double gwas_thresh, int nsnp_gsmr, int gsmr_so_alg, int bfile_flag);
     void gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double freq_thresh, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, bool o_snp_instru_flag, int gsmr_so_alg, int gsmr_beta_version, int bfile_flag);
     vector<vector<double>> forward_gsmr(stringstream &ss, map<string,int> &snp_instru_map, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, stringstream &ss_pleio, int bfile_flag);
     vector<vector<double>> reverse_gsmr(stringstream &ss, map<string,int> &snp_instru_map, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, stringstream &ss_pleio, int bfile_flag);
@@ -246,7 +248,7 @@ private:
 
     void update_include(vector<int> chr_buf, vector<string> snpid_buf, vector<double> gd_buf, vector<int> bp_buf, vector<string> a1_buf, vector<string> a2_buf, int file_indx);
     void update_keep(vector<string> fid_buf, vector<string> pid_buf, vector<string> fa_id_buf, vector<string> mo_id_buf, vector<int> sex_buf, vector<double> pheno_buf, string famfile);
-    void update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<int> include_buf, vector<float> freq_buf, map<string,int> snp_name_map_buf);
+    void update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<float> freq_buf);
     
     void update_id_map_kp(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
     void update_id_map_rm(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
@@ -551,6 +553,7 @@ private:
     vector<float> _esi_val;
     
     uint64_t _esi_snpNum;
+    map<int,int> _esi_single_snpNum;
     uint64_t _esi_valNum;
 
     // imputed data

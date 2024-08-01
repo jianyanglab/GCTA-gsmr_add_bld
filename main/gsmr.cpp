@@ -87,7 +87,7 @@ void read_gsmr_file_list(string gsmr_file_list, vector<string> &pheno_name, vect
     meta_list.close();
 }
 
-void gcta::read_gsmrfile(string expo_file_list, string outcome_file_list, double gwas_thresh, int nsnp_gsmr, int gsmr_so_alg) {
+void gcta::read_gsmrfile(string expo_file_list, string outcome_file_list, double gwas_thresh, int nsnp_gsmr, int gsmr_so_alg, int bfile_flag) {
     int i = 0, j = 0;
     double pval_thresh = gsmr_so_alg >= 0 ?  1.0 : gwas_thresh;
     vector<string> expo_gwas_file, outcome_gwas_file, gwas_data_file, pheno_name_buf;
@@ -177,35 +177,67 @@ void gcta::read_gsmrfile(string expo_file_list, string outcome_file_list, double
         _meta_snp_pval.col(i) = snp_pval_buf;
         _meta_snp_n_o.col(i) = snp_n_buf;
     }
+    
+    if (bfile_flag){
 
-    // QC of SNPs
-    LOGGER.i(0, "Filtering out SNPs with multiple alleles or missing value ...");
-    vector<string> badsnps;
-    badsnps = remove_bad_snps(_meta_snp_name, _meta_remain_snp, _snp_val_flag, snp_a1, snp_a2, snp_freq,  _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, 
-                              _snp_name_map, _allele1, _allele2, _outcome_num, _expo_num, _out);
-    if(badsnps.size()>0) {
-        update_id_map_rm(badsnps, _snp_name_map, _include);
-        update_mtcojo_snp_rm(badsnps, _meta_snp_name_map, _meta_remain_snp);
+        // QC of SNPs
+        LOGGER.i(0, "Filtering out SNPs with multiple alleles or missing value ...");
+        vector<string> badsnps;
+        badsnps = remove_bad_snps(_meta_snp_name, _meta_remain_snp, _snp_val_flag, snp_a1, snp_a2, snp_freq,  _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, 
+                                _snp_name_map, _allele1, _allele2, _outcome_num, _expo_num, _out);
+        if(badsnps.size()>0) {
+            update_id_map_rm(badsnps, _snp_name_map, _include);
+            update_mtcojo_snp_rm(badsnps, _meta_snp_name_map, _meta_remain_snp);
+        }
+
+        // For output
+        _meta_snp_a1 = snp_a1[0]; _meta_snp_a2 = snp_a2[0];
+        _meta_snp_freq = snp_freq;
+
+        nsnp = _meta_remain_snp.size();
+        if(nsnp<1) LOGGER.e(0, "no SNP is retained for the GSMR analysis.");
+        else LOGGER.i(0, to_string(nsnp) + " SNPs are retained after filtering.");
+
+        // Only keep SNPs with p-value < threshold
+        vector<string> keptsnps;
+        keptsnps = filter_meta_snp_pval(_meta_snp_name, _meta_remain_snp, _meta_snp_pval, 0, npheno, _snp_val_flag, gwas_thresh);
+        if(keptsnps.size()>0) {
+            update_id_map_kp(keptsnps, _snp_name_map, _include);
+        }
+
+        std::stringstream ss;
+        ss << std::scientific << std::setprecision(1) << gwas_thresh;
+        LOGGER.i(0, to_string(_include.size()) + " genome-wide significant SNPs with p < " + ss.str() + " are in common among the exposure(s), the outcome(s) and the LD reference sample.\n");
+    }else{
+        // QC of SNPs
+        LOGGER.i(0, "Filtering out SNPs with multiple alleles or missing value ...");
+        vector<string> badsnps;
+        badsnps = remove_bad_snps(_meta_snp_name, _meta_remain_snp, _snp_val_flag, snp_a1, snp_a2, snp_freq,  _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, 
+                                _esi_snp_name_map, _esi_allele1, _esi_allele2, _outcome_num, _expo_num, _out);
+        if(badsnps.size()>0) {
+            update_id_map_rm(badsnps, _esi_snp_name_map, _esi_include);
+            update_mtcojo_snp_rm(badsnps, _meta_snp_name_map, _meta_remain_snp);
+        }
+
+        // For output
+        _meta_snp_a1 = snp_a1[0]; _meta_snp_a2 = snp_a2[0];
+        _meta_snp_freq = snp_freq;
+
+        nsnp = _meta_remain_snp.size();
+        if(nsnp<1) LOGGER.e(0, "no SNP is retained for the GSMR analysis.");
+        else LOGGER.i(0, to_string(nsnp) + " SNPs are retained after filtering.");
+
+        // Only keep SNPs with p-value < threshold
+        vector<string> keptsnps;
+        keptsnps = filter_meta_snp_pval(_meta_snp_name, _meta_remain_snp, _meta_snp_pval, 0, npheno, _snp_val_flag, gwas_thresh);
+        if(keptsnps.size()>0) {
+            update_id_map_kp(keptsnps, _esi_snp_name_map, _esi_include);
+        }
+
+        std::stringstream ss;
+        ss << std::scientific << std::setprecision(1) << gwas_thresh;
+        LOGGER.i(0, to_string(_esi_include.size()) + " genome-wide significant SNPs with p < " + ss.str() + " are in common among the exposure(s), the outcome(s) and the LD reference sample.\n");
     }
-
-    // For output
-    _meta_snp_a1 = snp_a1[0]; _meta_snp_a2 = snp_a2[0];
-    _meta_snp_freq = snp_freq;
-
-    nsnp = _meta_remain_snp.size();
-    if(nsnp<1) LOGGER.e(0, "no SNP is retained for the GSMR analysis.");
-    else LOGGER.i(0, to_string(nsnp) + " SNPs are retained after filtering.");
-
-    // Only keep SNPs with p-value < threshold
-    vector<string> keptsnps;
-    keptsnps = filter_meta_snp_pval(_meta_snp_name, _meta_remain_snp, _meta_snp_pval, 0, npheno, _snp_val_flag, gwas_thresh);
-    if(keptsnps.size()>0) {
-        update_id_map_kp(keptsnps, _snp_name_map, _include);
-    }
-
-    std::stringstream ss;
-    ss << std::scientific << std::setprecision(1) << gwas_thresh;
-    LOGGER.i(0, to_string(_include.size()) + " genome-wide significant SNPs with p < " + ss.str() + " are in common among the exposure(s), the outcome(s) and the LD reference sample.\n");
 }
 
 eigenMatrix gcta::rho_sample_overlap(vector<vector<bool>> snp_val_flag, eigenMatrix snp_b, eigenMatrix snp_se, eigenMatrix snp_pval, eigenMatrix snp_n, int nexpo, int noutcome, 
@@ -483,8 +515,24 @@ void gcta::gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double 
         _r_pheno_sample = rho_sample_overlap(_snp_val_flag, _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, _expo_num, _outcome_num, 
                                         _meta_snp_name, _meta_remain_snp, ref_ld_dirt, w_ld_dirt, _gwas_trait_name, gsmr_so_alg);
     } else {
+        if (_mu.empty()){
+            map<string, int>::iterator iter0;
+            _mu.clear();
+            for(int i=0;i<_esi_include.size();i++)
+            {
+                int eid=_esi_include[i];
+                string rs=_esi_rs[eid];
+                iter0=_esi_snp_name_map.find(rs);
+                if(iter0 != _esi_snp_name_map.end())
+                {
+                    _mu.push_back(_esi_freq[iter0->second]);
+                }
+
+            }
+        }
+        
         LOGGER.i(0, "Checking allele frequencies among the GWAS summary data and the reference sample...");
-        afsnps = remove_freq_diff_snps(_meta_snp_name, _meta_remain_snp, _esi_snp_name_map, _esi_freq, _meta_snp_freq, _snp_val_flag, ntrait, freq_thresh, _out);
+        afsnps = remove_freq_diff_snps(_meta_snp_name, _meta_remain_snp, _esi_snp_name_map, _mu, _meta_snp_freq, _snp_val_flag, ntrait, freq_thresh, _out);
         // Update SNPs set
         if( afsnps.size()>0 ) {
             update_id_map_rm(afsnps, _esi_snp_name_map, _esi_include);
@@ -492,7 +540,7 @@ void gcta::gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double 
         }
 
         // Remove monomorphic SNPs
-        afsnps = remove_mono_snps(_esi_snp_name_map, _esi_freq, _out);
+        afsnps = remove_mono_snps(_esi_snp_name_map, _mu, _out);
         // Update SNPs set
         if( afsnps.size()>0 ) {
             update_id_map_rm(afsnps, _esi_snp_name_map, _esi_include);

@@ -5,8 +5,8 @@ CMakeFiles/acat.dir/src/acat.c.o: \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stddef.h \
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdarg.h \
+ /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
+ /usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
@@ -37,7 +37,7 @@ CMakeFiles/acat.dir/src/acat.c.o: \
  /usr/include/bits/fp-fast.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathinline.h \
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/stdbool.h \
+ /usr/lib/gcc/x86_64-redhat-linux/8/include/stdbool.h \
  /usr/include/ctype.h /usr/include/time.h /usr/include/bits/time.h \
  /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h

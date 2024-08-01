@@ -73,15 +73,15 @@ CMakeFiles/marker.dir/src/Marker.cpp.o: CMakeFiles/marker.dir/flags.make
 CMakeFiles/marker.dir/src/Marker.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Marker.cpp
 CMakeFiles/marker.dir/src/Marker.cpp.o: CMakeFiles/marker.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/marker.dir/src/Marker.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marker.dir/src/Marker.cpp.o -MF CMakeFiles/marker.dir/src/Marker.cpp.o.d -o CMakeFiles/marker.dir/src/Marker.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Marker.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marker.dir/src/Marker.cpp.o -MF CMakeFiles/marker.dir/src/Marker.cpp.o.d -o CMakeFiles/marker.dir/src/Marker.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Marker.cpp
 
 CMakeFiles/marker.dir/src/Marker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marker.dir/src/Marker.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Marker.cpp > CMakeFiles/marker.dir/src/Marker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Marker.cpp > CMakeFiles/marker.dir/src/Marker.cpp.i
 
 CMakeFiles/marker.dir/src/Marker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marker.dir/src/Marker.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Marker.cpp -o CMakeFiles/marker.dir/src/Marker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Marker.cpp -o CMakeFiles/marker.dir/src/Marker.cpp.s
 
 # Object files for target marker
 marker_OBJECTS = \

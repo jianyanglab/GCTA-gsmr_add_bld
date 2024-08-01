@@ -757,25 +757,20 @@ void gcta::read_multi_bimfiles(vector<string> multi_bfiles)
     LOGGER.i(0, to_string(_snp_num) + " SNPs to be included from PLINK BIM files.");
 }
 
-void gcta::update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<int> include_buf, vector<float> freq_buf, map<string,int> snp_name_map_buf) {
+void gcta::update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf,  vector<float> freq_buf) {
 
     // Add the new SNP
     _esi_rs.insert(_esi_rs.end(), rs_buf.begin(), rs_buf.end());
-    _esi_allele1.insert(_allele1.end(), a1_buf.begin(), a1_buf.end());
-    _esi_allele2.insert(_allele2.end(), a2_buf.begin(), a2_buf.end());
+    _esi_allele1.insert(_esi_allele1.end(), a1_buf.begin(), a1_buf.end());
+    _esi_allele2.insert(_esi_allele2.end(), a2_buf.begin(), a2_buf.end());
     _esi_chr.insert(_esi_chr.end(), chr_buf.begin(), chr_buf.end());
     _esi_gd.insert(_esi_gd.end(), gd_buf.begin(), gd_buf.end());
     _esi_bp.insert(_esi_bp.end(), bp_buf.begin(), bp_buf.end());
-    _esi_include.insert(_esi_include.end(), include_buf.begin(), include_buf.end());
     _esi_freq.insert(_esi_freq.end(), freq_buf.begin(), freq_buf.end());
-    // Insert elements from snp_name_map_buf into _esi_snp_name_map
-    for (const auto& entry : snp_name_map_buf) {
-        _esi_snp_name_map.insert(entry);
-    }
     
-}
+} 
 
-void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<string> &esi_allele1, vector<string> &esi_allele2,  vector<int> &esi_chr, vector<int> &esi_gd,vector<int> &esi_bp, vector<int> &esi_include, vector<float> &esi_freq, map<string,int> &esi_snp_name_map, bool msg_flag) {
+void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<string> &esi_allele1, vector<string> &esi_allele2,  vector<int> &esi_chr, vector<int> &esi_gd,vector<int> &esi_bp, vector<float> &esi_freq, bool msg_flag) {
     // Read esi file: recombination rate is defined between SNP i and SNP i-1
         vector<string> strlist;
         uint32_t line_idx = 0;
@@ -785,15 +780,12 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
             printf("Error: Failed to open file %s.\n",esifileName);
             exit(EXIT_FAILURE);
         }
-        printf("Reading SNP information from %s ...\n", esifileName);
         esi_chr.clear();
         esi_rs.clear();
         esi_gd.clear();
         esi_bp.clear();
         esi_allele1.clear();
         esi_allele2.clear();
-        esi_include.clear();
-        esi_snp_name_map.clear();
         esi_freq.clear();
         
         bool chrwarning=false;
@@ -820,12 +812,6 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
                 //printf("WARNING: Line %u has more than %d items. The first %d columns would be used. \n", line_idx,colnum,colnum);
             }
             
-            esi_snp_name_map.insert(pair<string,int>(strlist[1],line_idx));
-            if(esi_snp_name_map.size()==line_idx)
-            {
-                printf("ERROR: Duplicate SNP : %s.\n", strlist[1].c_str());
-                exit(EXIT_FAILURE);
-            }
             if(strlist[0]=="X" || strlist[0]=="x") esi_chr.push_back(23);
             else if(strlist[0]=="Y" || strlist[0]=="y") esi_chr.push_back(24);
             else if(strlist[0]=="NA" || strlist[0]=="na"){
@@ -883,14 +869,9 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
             } else {
                 esi_freq.push_back(-9);
             }
-            esi_include.push_back(line_idx);
             line_idx++;
         }
         fclose(esifile);
-        if(msg_flag) {
-            int esi_snpNum =line_idx;
-            LOGGER.i(0, std::to_string(esi_snpNum) + " SNPs to be included from " + std::string(esifileName) + ".");
-        }
 }
 
 void gcta::read_multi_esifiles(vector<string> multi_blds) {
@@ -901,7 +882,6 @@ void gcta::read_multi_esifiles(vector<string> multi_blds) {
     vector<string> trs,tallele1,tallele2;
     vector<int> tchr,tgd,tbp,tinclude;
     vector<float> tfreq;
-    map<string,int> tsnp_name_map;
 
     _esi_chr.clear();
     _esi_rs.clear();
@@ -912,14 +892,22 @@ void gcta::read_multi_esifiles(vector<string> multi_blds) {
     _esi_include.clear();
     _esi_snp_name_map.clear();
     _esi_freq.clear();
+    _esi_single_snpNum.clear();
     for( i=0; i<nblds; i++ ) {
         esifileName = multi_blds[i]+".esi";
-        read_single_esifile(esifileName, trs, tallele1, tallele2, tchr, tgd, tbp, tinclude, tfreq, tsnp_name_map, false);
-        update_esi(trs, tallele1, tallele2, tchr, tgd, tbp, tinclude, tfreq, tsnp_name_map);
+        read_single_esifile(esifileName, trs, tallele1, tallele2, tchr, tgd, tbp, tfreq, false);
+        _esi_single_snpNum[i] = trs.size();
+        update_esi(trs, tallele1, tallele2, tchr, tgd, tbp, tfreq);
     }
 
     // Initialize the variables
-    _esi_snpNum = _esi_snp_name_map.size();
+    _esi_snpNum = _esi_rs.size();
+    _esi_include.clear(); _esi_include.resize(_esi_snpNum);
+    for(i=0; i<_esi_snpNum; i++) {
+        _esi_snp_name_map.insert(pair<string,int>(_esi_rs[i], i));
+        _esi_include[i] = i;
+    }
+
     LOGGER.i(0, std::to_string(_esi_snpNum) + " SNPs to be included from PLINK ESI files.");
     
 }
@@ -999,7 +987,7 @@ void read_single_bedfile(string bedfile, vector<pair<int,int>> rsnp, vector<int>
     if(msg_flag) LOGGER.i(0, "Genotype data for " + to_string(nindi_chr) + " individuals and " + to_string(nsnp_chr) + " SNPs to be included from [" + bedfile + "].");
 }
 
-void gcta::read_single_bldfile(string bldfileName){
+void gcta::read_single_bldfile(string bldfileName, int single_snpNum){
     bld = NULL;
     vector<int> headers;
     headers.resize(RESERVEDUNITS);
@@ -1016,11 +1004,11 @@ void gcta::read_single_bldfile(string bldfileName){
     }
     int indicator = headers[0];
     if (indicator == 0)
-        printf("\nReading ld r from binary file %s...\n", bldfileName.c_str());
+        printf("\n %s...\n", bldfileName.c_str());
     else
         printf("\nReading ld r-squared from binary file %s...\n", bldfileName.c_str());
     uint64_t valnum = CommFunc::readuint64(bld);
-    uint64_t colNum = _esi_snpNum + 1;
+    uint64_t colNum = single_snpNum + 1;
     uint64_t cur_pos = ftell(bld);
     fseek(bld, 0L, SEEK_END);
     uint64_t size_file = ftell(bld);
@@ -1085,11 +1073,10 @@ void gcta::read_multi_bldfiles(vector<string> multi_blds){
     int i=0, nblds = multi_blds.size();
     string bldfileName = "";
     for( i=0; i<nblds; i++) {        
-        bldfileName =multi_blds[i] + ".bed";
-        read_single_bldfile(bldfileName);
+        bldfileName =multi_blds[i] + ".bld";
+        int single_snpNum = _esi_single_snpNum[i];
+        read_single_bldfile(bldfileName, single_snpNum);
     }
-
-    LOGGER.i(0, "Genotype data for " + to_string(_keep.size()) + " individuals and " + to_string(_include.size()) + " SNPs have been included.");
 
 }
 
@@ -1833,6 +1820,80 @@ void gcta::filter_snp_max_maf(double max_maf)
     else {
         stable_sort(_include.begin(), _include.end());
         LOGGER << "After filtering SNPs with MAF < " << max_maf << ", there are " << _include.size() << " SNPs (" << prev_size - _include.size() << " SNPs with MAF > " << max_maf << ")." << endl;
+    }
+}
+
+void gcta::filter_snp_maf_bld(double maf)
+{
+    // if (_mu.empty()){
+    //         map<string, int>::iterator iter0;
+    //         _mu.clear();
+    //         for(int i=0;i<_esi_include.size();i++)
+    //         {
+    //             int eid=_esi_include[i];
+    //             string rs=_esi_rs[eid];
+    //             iter0=_esi_snp_name_map.find(rs);
+    //             if(iter0 != _esi_snp_name_map.end())
+    //             {
+    //                 _mu.push_back(_esi_freq[iter0->second]);
+    //             }
+
+    //         }
+    // }
+    LOGGER << "Filtering SNPs with MAF > " << maf << " ..." << endl;
+    map<string, int> id_map_buf(_esi_snp_name_map);
+    map<string, int>::iterator iter, end = id_map_buf.end();
+    int prev_size = _esi_include.size();
+    double fbuf = 0.0;
+    _esi_include.clear();
+    _esi_snp_name_map.clear();
+    for (iter = id_map_buf.begin(); iter != end; iter++) {
+        fbuf =_esi_freq[iter->second]*0.5;
+        if (fbuf <= maf || (1.0 - fbuf) <= maf) continue;
+        _esi_snp_name_map.insert(*iter);
+        _esi_include.push_back(iter->second);
+    }
+    if (_esi_include.size() == 0) LOGGER.e(0, "no SNP is retained for analysis.");
+    else {
+        stable_sort(_esi_include.begin(), _esi_include.end());
+        LOGGER << "After filtering SNPs with MAF > " << maf << ", there are " << _esi_include.size() << " SNPs (" << prev_size - _esi_include.size() << " SNPs with MAF < " << maf << ")." << endl;
+    }
+}
+
+void gcta::filter_snp_max_maf_bld(double max_maf)
+{
+    // if (_mu.empty()){
+    //         map<string, int>::iterator iter0;
+    //         _mu.clear();
+    //         for(int i=0;i<_esi_include.size();i++)
+    //         {
+    //             int eid=_esi_include[i];
+    //             string rs=_esi_rs[eid];
+    //             iter0=_esi_snp_name_map.find(rs);
+    //             if(iter0 != _esi_snp_name_map.end())
+    //             {
+    //                 _mu.push_back(_esi_freq[iter0->second]);
+    //             }
+
+    //         }
+    // }
+    LOGGER << "Filtering SNPs with MAF < " << max_maf << " ..." << endl;
+    map<string, int> id_map_buf(_esi_snp_name_map);
+    map<string, int>::iterator iter, end = id_map_buf.end();
+    int prev_size = _esi_include.size();
+    double fbuf = 0.0;
+    _esi_include.clear();
+    _esi_snp_name_map.clear();
+    for (iter = id_map_buf.begin(); iter != end; iter++) {
+        fbuf = _esi_freq[iter->second]*0.5;
+        if (fbuf > max_maf && 1.0 - fbuf > max_maf) continue;
+        _esi_snp_name_map.insert(*iter);
+        _esi_include.push_back(iter->second);
+    }
+    if (_esi_include.size() == 0) LOGGER.e(0, "no SNP is retained for analysis.");
+    else {
+        stable_sort(_esi_include.begin(), _esi_include.end());
+        LOGGER << "After filtering SNPs with MAF < " << max_maf << ", there are " << _esi_include.size() << " SNPs (" << prev_size - _esi_include.size() << " SNPs with MAF > " << max_maf << ")." << endl;
     }
 }
 

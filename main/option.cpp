@@ -217,7 +217,7 @@ void option(int option_num, char* option_str[])
         } else if (strcmp(argv[i], "--bld") == 0) {
             bld_flag = 1;
             bld = argv[++i];
-            LOGGER << "--mbld " << argv[i] << endl;
+            LOGGER << "--bld " << argv[i] << endl;
         } else if (strcmp(argv[i], "--mbld") == 0) {
             bld_flag = 2;
             bld_list = argv[++i];
@@ -1350,15 +1350,15 @@ void option(int option_num, char* option_str[])
             if(bld_flag==2) multi_blds = pter_gcta->read_bld_list(bld_list);
             // Start to read the genotypes
             if(bfile_flag==1) pter_gcta->read_famfile(bfile + ".fam");
-            else pter_gcta->read_multi_famfiles(multi_bfiles);
+            else if(bfile_flag!=1 && bld_flag==0) pter_gcta->read_multi_famfiles(multi_bfiles);
             if (!kp_indi_file.empty()) pter_gcta->keep_indi(kp_indi_file);
             if (!rm_indi_file.empty()) pter_gcta->remove_indi(rm_indi_file);
             if (!update_sex_file.empty()) pter_gcta->update_sex(update_sex_file);
             if (!blup_indi_file.empty()) pter_gcta->read_indi_blup(blup_indi_file);
             if(bfile_flag==1) pter_gcta->read_bimfile(bfile + ".bim");
-            else pter_gcta->read_multi_bimfiles(multi_bfiles);
+            else if(bfile_flag!=1 && bld_flag==0) pter_gcta->read_multi_bimfiles(multi_bfiles);
             if(bld_flag==1) pter_gcta->read_esifile(bld + ".esi");
-            else pter_gcta->read_multi_esifiles(multi_blds);
+            else if(bld_flag!=1 && bfile_flag==0) pter_gcta->read_multi_esifiles(multi_blds);
             if (!extract_snp_file.empty()) pter_gcta->extract_snp(extract_snp_file);
             if (extract_chr_start > 0) pter_gcta->extract_chr(extract_chr_start, extract_chr_end);
             if(extract_region_chr>0) pter_gcta->extract_region_bp(extract_region_chr, extract_region_bp, extract_region_wind);
@@ -1374,26 +1374,31 @@ void option(int option_num, char* option_str[])
             }
             if (!update_refA_file.empty()) pter_gcta->update_ref_A(update_refA_file);
             if (LD) pter_gcta->read_LD_target_SNPs(LD_file);
-            if(gsmr_flag) pter_gcta->read_gsmrfile(expo_file_list, outcome_file_list, gwas_thresh, nsnp_gsmr, gsmr_so_alg);
+            if(gsmr_flag) pter_gcta->read_gsmrfile(expo_file_list, outcome_file_list, gwas_thresh, nsnp_gsmr, gsmr_so_alg, bfile_flag);
             if(mtcojo_flag) nsnp_read = pter_gcta->read_mtcojofile(mtcojolist_file, gwas_thresh, nsnp_gsmr);
             if(mtcojo_flag && nsnp_read>0) {
                 if(bfile_flag==1) pter_gcta->read_bedfile(bfile + ".bed");
-                else pter_gcta->read_multi_bedfiles(multi_bfiles);
+                else if(bfile_flag!=1 && bld_flag==0) pter_gcta->read_multi_bedfiles(multi_bfiles);
                 if(bld_flag==1) pter_gcta->read_bldfile(bld + ".bld");
-                else pter_gcta->read_multi_bldfiles(multi_blds);
+                else if(bld_flag!=1 && bfile_flag==0) pter_gcta->read_multi_bldfiles(multi_blds);
             }
             if(!mtcojo_flag){
                 if(bfile_flag==1) pter_gcta->read_bedfile(bfile + ".bed");
-                else pter_gcta->read_multi_bedfiles(multi_bfiles);
+                else if(bfile_flag!=1 && bld_flag==0) pter_gcta->read_multi_bedfiles(multi_bfiles);
                 if(bld_flag==1) pter_gcta->read_bldfile(bld + ".bld");
-                else pter_gcta->read_multi_bldfiles(multi_blds);
+                else if(bld_flag!=1 && bfile_flag==0) pter_gcta->read_multi_bldfiles(multi_blds);
             }
 
             if (!update_impRsq_file.empty()) pter_gcta->update_impRsq(update_impRsq_file);
             if (!update_freq_file.empty()) pter_gcta->update_freq(update_freq_file);
             if (dose_Rsq_cutoff > 0.0) pter_gcta->filter_impRsq(dose_Rsq_cutoff);
-            if (maf > 0) pter_gcta->filter_snp_maf(maf);
-            if (max_maf > 0.0) pter_gcta->filter_snp_max_maf(max_maf);
+            if (bfile_flag){
+                if (maf > 0.0) pter_gcta->filter_snp_maf(maf);
+                if (max_maf > 0.0) pter_gcta->filter_snp_max_maf(max_maf);
+            } else{
+                if (maf > 0.0) pter_gcta->filter_snp_maf_bld(maf);
+                if (max_maf > 0.0) pter_gcta->filter_snp_max_maf_bld(max_maf);
+            };
             if (out_freq_flag) pter_gcta->save_freq(out_ssq_flag);
             else if (!paa_file.empty()) pter_gcta->paa(paa_file);
             else if (ibc) pter_gcta->ibc(ibc_all);
@@ -1450,8 +1455,13 @@ void option(int option_num, char* option_str[])
         if (!update_impRsq_file.empty()) pter_gcta->update_impRsq(update_impRsq_file);
         if (!update_freq_file.empty()) pter_gcta->update_freq(update_freq_file);
         if (dose_Rsq_cutoff > 0.0) pter_gcta->filter_impRsq(dose_Rsq_cutoff);
-        if (maf > 0.0) pter_gcta->filter_snp_maf(maf);
-        if (max_maf > 0.0) pter_gcta->filter_snp_max_maf(max_maf);
+        if (bfile_flag){
+            if (maf > 0.0) pter_gcta->filter_snp_maf(maf);
+            if (max_maf > 0.0) pter_gcta->filter_snp_max_maf(max_maf);
+        } else{
+            if (maf > 0.0) pter_gcta->filter_snp_maf_bld(maf);
+            if (max_maf > 0.0) pter_gcta->filter_snp_max_maf_bld(max_maf);
+        };     
         if (out_freq_flag) pter_gcta->save_freq(out_ssq_flag);
         else if (make_grm_flag) pter_gcta->make_grm(dominance_flag, make_grm_xchar_flag, make_grm_inbred_flag, grm_out_bin_flag, make_grm_mtd, false, make_grm_f3_flag, subpopu_file);
         else if (recode || recode_nomiss || recode_std) pter_gcta->save_XMat(recode_nomiss, recode_std);

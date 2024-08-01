@@ -73,15 +73,15 @@ CMakeFiles/grm.dir/src/GRM.cpp.o: CMakeFiles/grm.dir/flags.make
 CMakeFiles/grm.dir/src/GRM.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/GRM.cpp
 CMakeFiles/grm.dir/src/GRM.cpp.o: CMakeFiles/grm.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/grm.dir/src/GRM.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/grm.dir/src/GRM.cpp.o -MF CMakeFiles/grm.dir/src/GRM.cpp.o.d -o CMakeFiles/grm.dir/src/GRM.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/GRM.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/grm.dir/src/GRM.cpp.o -MF CMakeFiles/grm.dir/src/GRM.cpp.o.d -o CMakeFiles/grm.dir/src/GRM.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/GRM.cpp
 
 CMakeFiles/grm.dir/src/GRM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grm.dir/src/GRM.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/GRM.cpp > CMakeFiles/grm.dir/src/GRM.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/GRM.cpp > CMakeFiles/grm.dir/src/GRM.cpp.i
 
 CMakeFiles/grm.dir/src/GRM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grm.dir/src/GRM.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/GRM.cpp -o CMakeFiles/grm.dir/src/GRM.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/GRM.cpp -o CMakeFiles/grm.dir/src/GRM.cpp.s
 
 # Object files for target grm
 grm_OBJECTS = \

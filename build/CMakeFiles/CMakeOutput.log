@@ -1,6 +1,6 @@
 The system is: Linux - 4.18.0-193.el8.x86_64 - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /soft/compiler/gcc/gcc-11.2.0/bin/gcc 
+Compiler: /usr/bin/cc 
 Build flags: 
 Id flags:  
 
@@ -13,7 +13,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is GNU, found in "/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/3.25.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /soft/compiler/gcc/gcc-11.2.0/bin/g++ 
+Compiler: /usr/bin/c++ 
 Build flags: 
 Id flags:  
 
@@ -26,64 +26,31 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 The CXX compiler identification is GNU, found in "/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/3.25.1/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-9Ac0AR
+Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-TQJdn5
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_31e11/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_31e11.dir/build.make CMakeFiles/cmTC_31e11.dir/build
-gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-9Ac0AR'
-Building C object CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o
-/soft/compiler/gcc/gcc-11.2.0/bin/gcc   -v -o CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5b8a0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5b8a0.dir/build.make CMakeFiles/cmTC_5b8a0.dir/build
+gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-TQJdn5'
+Building C object CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c
 Using built-in specs.
-COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/gcc
-Target: x86_64-pc-linux-gnu
-Configured with: ./configure --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18
+COLLECT_GCC=/usr/bin/cc
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
 Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31e11.dir/'
- /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1 -quiet -v /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_31e11.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc5Irlkb.s
-GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
-	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.16.1-GMP
+gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/8/cc1 -quiet -v /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccjo1FRf.s
+GNU C17 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.0.2, isl version isl-0.16.1-GMP
 
-warning: GMP header version 6.1.0 differs from library version 6.1.2.
-warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.
-warning: MPC header version 1.0.3 differs from library version 1.0.2.
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"
-ignoring nonexistent directory "/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring nonexistent directory "/Path/to/Zstd/include"
-ignoring nonexistent directory "/Path/to/Zlib/include"
-ignoring nonexistent directory "/Path/to/SQLite/include"
-ignoring nonexistent directory "/Path/to/GSL/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring nonexistent directory "/Path/to/Zstd/include"
-ignoring nonexistent directory "/Path/to/Zlib/include"
-ignoring nonexistent directory "/Path/to/SQLite/include"
-ignoring nonexistent directory "/Path/to/GSL/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
@@ -97,72 +64,8 @@ ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.
 ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
@@ -186,43 +89,39 @@ ignoring duplicate directory "."
  /storage/yangjianLab/houjunren/include
  /storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include
  .
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include
+ /usr/lib/gcc/x86_64-redhat-linux/8/include
  /usr/local/include
- /soft/compiler/gcc/gcc-11.2.0/include
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed
  /usr/include
 End of search list.
-GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
-	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.16.1-GMP
+GNU C17 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.0.2, isl version isl-0.16.1-GMP
 
-warning: GMP header version 6.1.0 differs from library version 6.1.2.
-warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.
-warning: MPC header version 1.0.3 differs from library version 1.0.2.
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: f0657bd3cfdef074f3949270ec69aa5e
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31e11.dir/'
- as -v --64 -o CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o /tmp/cc5Irlkb.s
+Compiler executable checksum: 220dcc731601936c0ccef916bbdca837
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o /tmp/ccjo1FRf.s
 GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8
-COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/
-LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.'
-Linking C executable cmTC_31e11
-/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31e11.dir/link.txt --verbose=1
-/soft/compiler/gcc/gcc-11.2.0/bin/gcc  -v -rdynamic CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o -o cmTC_31e11 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_5b8a0
+/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b8a0.dir/link.txt --verbose=1
+/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -o cmTC_5b8a0 
 Using built-in specs.
-COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/gcc
-COLLECT_LTO_WRAPPER=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper
-Target: x86_64-pc-linux-gnu
-Configured with: ./configure --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
 Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/
-LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_31e11' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_31e11.'
- /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccafFdDH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_31e11 /lib/../lib64/crt1.o /lib/../lib64/crti.o /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_31e11' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_31e11.'
-gmake[1]: Leaving directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-9Ac0AR'
+gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5b8a0' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXDN4Lh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5b8a0 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5b8a0' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-TQJdn5'
 
 
 
@@ -241,10 +140,8 @@ Parsed C implicit include dir info from above output: rv=done
     add: [/storage/yangjianLab/houjunren/include]
     add: [/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include]
     add: [.]
-    add: [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+    add: [/usr/lib/gcc/x86_64-redhat-linux/8/include]
     add: [/usr/local/include]
-    add: [/soft/compiler/gcc/gcc-11.2.0/include]
-    add: [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
     add: [/usr/include]
   end of search list found
   collapse include dir [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include] ==> [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include]
@@ -259,74 +156,39 @@ Parsed C implicit include dir info from above output: rv=done
   collapse include dir [/storage/yangjianLab/houjunren/include] ==> [/storage/yangjianLab/houjunren/include]
   collapse include dir [/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include] ==> [/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include]
   skipping relative include dir [.]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include] ==> [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/8/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/8/include]
   collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/include] ==> [/soft/compiler/gcc/gcc-11.2.0/include]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed] ==> [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
   collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include;/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include;/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish;/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas;/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include;/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include;/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3;/storage/yangjianLab/houjunren/include;/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include;/usr/local/include;/soft/compiler/gcc/gcc-11.2.0/include;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed;/usr/include]
+  implicit include dirs: [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include;/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include;/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish;/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas;/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include;/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include;/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3;/storage/yangjianLab/houjunren/include;/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include;/usr/lib/gcc/x86_64-redhat-linux/8/include;/usr/local/include;/usr/include]
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-9Ac0AR]
+  ignore line: [Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-TQJdn5]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_31e11/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_31e11.dir/build.make CMakeFiles/cmTC_31e11.dir/build]
-  ignore line: [gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-9Ac0AR']
-  ignore line: [Building C object CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/soft/compiler/gcc/gcc-11.2.0/bin/gcc   -v -o CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5b8a0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5b8a0.dir/build.make CMakeFiles/cmTC_5b8a0.dir/build]
+  ignore line: [gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-TQJdn5']
+  ignore line: [Building C object CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/gcc]
-  ignore line: [Target: x86_64-pc-linux-gnu]
-  ignore line: [Configured with: ./configure --disable-multilib --enable-languages=c c++ fortran objc obj-c++ lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31e11.dir/']
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1 -quiet -v /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_31e11.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc5Irlkb.s]
-  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.16.1-GMP]
+  ignore line: [gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/cc1 -quiet -v /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccjo1FRf.s]
+  ignore line: [GNU C17 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.0.2  isl version isl-0.16.1-GMP]
   ignore line: []
-  ignore line: [warning: GMP header version 6.1.0 differs from library version 6.1.2.]
-  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.]
-  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.0.2.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include"]
-  ignore line: [ignoring nonexistent directory "/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zstd/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zlib/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/SQLite/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/GSL/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zstd/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zlib/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/SQLite/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/GSL/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
@@ -340,72 +202,8 @@ Parsed C implicit link information from above output:
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
@@ -429,65 +227,64 @@ Parsed C implicit link information from above output:
   ignore line: [ /storage/yangjianLab/houjunren/include]
   ignore line: [ /storage/yangjianLab/sharedata/softwares/libuuid_v1.0.3_d20230720/include]
   ignore line: [ .]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/8/include]
   ignore line: [ /usr/local/include]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/include]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.16.1-GMP]
+  ignore line: [GNU C17 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.0.2  isl version isl-0.16.1-GMP]
   ignore line: []
-  ignore line: [warning: GMP header version 6.1.0 differs from library version 6.1.2.]
-  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.]
-  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.0.2.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: f0657bd3cfdef074f3949270ec69aa5e]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31e11.dir/']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o /tmp/cc5Irlkb.s]
+  ignore line: [Compiler executable checksum: 220dcc731601936c0ccef916bbdca837]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o /tmp/ccjo1FRf.s]
   ignore line: [GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8]
-  ignore line: [COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_31e11]
-  ignore line: [/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31e11.dir/link.txt --verbose=1]
-  ignore line: [/soft/compiler/gcc/gcc-11.2.0/bin/gcc  -v -rdynamic CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o -o cmTC_31e11 ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_5b8a0]
+  ignore line: [/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b8a0.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -o cmTC_5b8a0 ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/gcc]
-  ignore line: [COLLECT_LTO_WRAPPER=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper]
-  ignore line: [Target: x86_64-pc-linux-gnu]
-  ignore line: [Configured with: ./configure --disable-multilib --enable-languages=c c++ fortran objc obj-c++ lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_31e11' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_31e11.']
-  link line: [ /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccafFdDH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_31e11 /lib/../lib64/crt1.o /lib/../lib64/crti.o /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o]
-    arg [/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2] ==> ignore
+  ignore line: [gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5b8a0' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXDN4Lh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5b8a0 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccafFdDH.res] ==> ignore
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccXDN4Lh.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
     arg [-m] ==> ignore
     arg [elf_x86_64] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_31e11] ==> ignore
-    arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
-    arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
-    arg [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> obj [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o]
+    arg [cmTC_5b8a0] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o]
     arg [-L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64] ==> dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64]
-    arg [-L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
-    arg [-L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64]
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib] ==> dir [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib]
@@ -496,27 +293,25 @@ Parsed C implicit link information from above output:
     arg [-L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64] ==> dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64]
     arg [-L/storage/yangjianLab/houjunren/lib] ==> dir [/storage/yangjianLab/houjunren/lib]
     arg [-L.] ==> ignore
-    arg [-L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..]
-    arg [CMakeFiles/cmTC_31e11.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..]
+    arg [CMakeFiles/cmTC_5b8a0.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
+    arg [--no-as-needed] ==> ignore
     arg [-lc] ==> lib [c]
     arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
-    arg [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> obj [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o]
-    arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
-  collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
-  collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
-  collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
   collapse library dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64] ==> [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64]
-  collapse library dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
-  collapse library dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> [/soft/compiler/gcc/gcc-11.2.0/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8] ==> [/usr/lib/gcc/x86_64-redhat-linux/8]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> [/usr/lib64]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
   collapse library dir [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib] ==> [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib]
@@ -524,60 +319,37 @@ Parsed C implicit link information from above output:
   collapse library dir [/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib] ==> [/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib]
   collapse library dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64] ==> [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64]
   collapse library dir [/storage/yangjianLab/houjunren/lib] ==> [/storage/yangjianLab/houjunren/lib]
-  collapse library dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> [/soft/compiler/gcc/gcc-11.2.0/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> [/usr/lib]
   implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-  implicit objs: [/lib64/crt1.o;/lib64/crti.o;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o;/lib64/crtn.o]
-  implicit dirs: [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0;/soft/compiler/gcc/gcc-11.2.0/lib64;/lib64;/usr/lib64;/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib;/storage/yangjianLab/houjunren/lib;/soft/compiler/gcc/gcc-11.2.0/lib]
+  implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o;/usr/lib64/crtn.o]
+  implicit dirs: [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64;/usr/lib/gcc/x86_64-redhat-linux/8;/usr/lib64;/lib64;/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib;/storage/yangjianLab/houjunren/lib;/usr/lib]
   implicit fwks: []
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-e3XZd3
+Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-SwGOO8
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1fdd0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1fdd0.dir/build.make CMakeFiles/cmTC_1fdd0.dir/build
-gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-e3XZd3'
-Building CXX object CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o
-/soft/compiler/gcc/gcc-11.2.0/bin/g++   -v -o CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f7405/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f7405.dir/build.make CMakeFiles/cmTC_f7405.dir/build
+gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-SwGOO8'
+Building CXX object CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++   -v -o CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
-COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/g++
-Target: x86_64-pc-linux-gnu
-Configured with: ./configure --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18
+COLLECT_GCC=/usr/bin/c++
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
 Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1fdd0.dir/'
- /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1plus -quiet -v -D_GNU_SOURCE /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1fdd0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccLaiEOb.s
-GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
-	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.16.1-GMP
+gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/8/cc1plus -quiet -v -D_GNU_SOURCE /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccWgvgFq.s
+GNU C++14 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.0.2, isl version isl-0.16.1-GMP
 
-warning: GMP header version 6.1.0 differs from library version 6.1.2.
-warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.
-warning: MPC header version 1.0.3 differs from library version 1.0.2.
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring nonexistent directory "/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring nonexistent directory "/Path/to/Zstd/include"
-ignoring nonexistent directory "/Path/to/Zlib/include"
-ignoring nonexistent directory "/Path/to/SQLite/include"
-ignoring nonexistent directory "/Path/to/GSL/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring nonexistent directory "/Path/to/Zstd/include"
-ignoring nonexistent directory "/Path/to/Zlib/include"
-ignoring nonexistent directory "/Path/to/SQLite/include"
-ignoring nonexistent directory "/Path/to/GSL/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
@@ -591,72 +363,8 @@ ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.
 ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"
-ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"
-ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"
 ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"
@@ -677,46 +385,42 @@ ignoring duplicate directory "/storage/yangjianLab/houjunren/include"
  /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3
  /storage/yangjianLab/houjunren/include
  .
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include
+ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8
+ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward
+ /usr/lib/gcc/x86_64-redhat-linux/8/include
  /usr/local/include
- /soft/compiler/gcc/gcc-11.2.0/include
- /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed
  /usr/include
 End of search list.
-GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
-	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.16.1-GMP
+GNU C++14 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.0.2, isl version isl-0.16.1-GMP
 
-warning: GMP header version 6.1.0 differs from library version 6.1.2.
-warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.
-warning: MPC header version 1.0.3 differs from library version 1.0.2.
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 2f01a2a469d2e94b6315fdf228a1b803
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1fdd0.dir/'
- as -v --64 -o CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccLaiEOb.s
+Compiler executable checksum: 6bc037fd95a01018b18727df05c3a70b
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccWgvgFq.s
 GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8
-COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/
-LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.'
-Linking CXX executable cmTC_1fdd0
-/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fdd0.dir/link.txt --verbose=1
-/soft/compiler/gcc/gcc-11.2.0/bin/g++  -v -rdynamic CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1fdd0 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_f7405
+/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7405.dir/link.txt --verbose=1
+/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f7405 
 Using built-in specs.
-COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/g++
-COLLECT_LTO_WRAPPER=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper
-Target: x86_64-pc-linux-gnu
-Configured with: ./configure --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
 Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/
-LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1fdd0' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1fdd0.'
- /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9cO2eh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fdd0 /lib/../lib64/crt1.o /lib/../lib64/crti.o /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1fdd0' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1fdd0.'
-gmake[1]: Leaving directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-e3XZd3'
+gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f7405' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccX4Mmrw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f7405 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f7405' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-SwGOO8'
 
 
 
@@ -734,13 +438,11 @@ Parsed CXX implicit include dir info from above output: rv=done
     add: [/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3]
     add: [/storage/yangjianLab/houjunren/include]
     add: [.]
-    add: [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0]
-    add: [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu]
-    add: [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward]
-    add: [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+    add: [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8]
+    add: [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux]
+    add: [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward]
+    add: [/usr/lib/gcc/x86_64-redhat-linux/8/include]
     add: [/usr/local/include]
-    add: [/soft/compiler/gcc/gcc-11.2.0/include]
-    add: [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
     add: [/usr/include]
   end of search list found
   collapse include dir [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include] ==> [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include]
@@ -754,65 +456,40 @@ Parsed CXX implicit include dir info from above output: rv=done
   collapse include dir [/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3] ==> [/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3]
   collapse include dir [/storage/yangjianLab/houjunren/include] ==> [/storage/yangjianLab/houjunren/include]
   skipping relative include dir [.]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0] ==> [/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu] ==> [/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward] ==> [/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include] ==> [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8] ==> [/usr/include/c++/8]
+  collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux] ==> [/usr/include/c++/8/x86_64-redhat-linux]
+  collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward] ==> [/usr/include/c++/8/backward]
+  collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/8/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/8/include]
   collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/include] ==> [/soft/compiler/gcc/gcc-11.2.0/include]
-  collapse include dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed] ==> [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
   collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include;/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include;/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish;/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas;/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include;/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include;/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3;/storage/yangjianLab/houjunren/include;/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0;/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu;/soft/compiler/gcc/gcc-11.2.0/include/c++/11.2.0/backward;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include;/usr/local/include;/soft/compiler/gcc/gcc-11.2.0/include;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed;/usr/include]
+  implicit include dirs: [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include;/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include;/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish;/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas;/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include;/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include;/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3;/storage/yangjianLab/houjunren/include;/usr/include/c++/8;/usr/include/c++/8/x86_64-redhat-linux;/usr/include/c++/8/backward;/usr/lib/gcc/x86_64-redhat-linux/8/include;/usr/local/include;/usr/include]
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-e3XZd3]
+  ignore line: [Change Dir: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-SwGOO8]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1fdd0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1fdd0.dir/build.make CMakeFiles/cmTC_1fdd0.dir/build]
-  ignore line: [gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-e3XZd3']
-  ignore line: [Building CXX object CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/soft/compiler/gcc/gcc-11.2.0/bin/g++   -v -o CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f7405/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f7405.dir/build.make CMakeFiles/cmTC_f7405.dir/build]
+  ignore line: [gmake[1]: Entering directory '/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles/CMakeScratch/TryCompile-SwGOO8']
+  ignore line: [Building CXX object CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -c /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/g++]
-  ignore line: [Target: x86_64-pc-linux-gnu]
-  ignore line: [Configured with: ./configure --disable-multilib --enable-languages=c c++ fortran objc obj-c++ lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1fdd0.dir/']
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1plus -quiet -v -D_GNU_SOURCE /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1fdd0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccLaiEOb.s]
-  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.16.1-GMP]
+  ignore line: [gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/cc1plus -quiet -v -D_GNU_SOURCE /storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccWgvgFq.s]
+  ignore line: [GNU C++14 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.0.2  isl version isl-0.16.1-GMP]
   ignore line: []
-  ignore line: [warning: GMP header version 6.1.0 differs from library version 6.1.2.]
-  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.]
-  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.0.2.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring nonexistent directory "/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zstd/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zlib/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/SQLite/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/GSL/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zstd/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/Zlib/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/SQLite/include"]
-  ignore line: [ignoring nonexistent directory "/Path/to/GSL/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
@@ -826,72 +503,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/lapack_v3.10.1_d20220425/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/mkl_v2022.0.1_d20220120/mkl/2022.0.1/include"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3"]
-  ignore line: [ignoring duplicate directory "/storage/yangjianLab/houjunren/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/include"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/jellyfish_v2.3.1_d20240529/include/jellyfish"]
   ignore line: [ignoring duplicate directory "/storage/yangjianLab/sharedata/softwares/OpenBLAS_v0.3.17_d20220426/include/openblas"]
@@ -912,68 +525,67 @@ Parsed CXX implicit link information from above output:
   ignore line: [ /storage/yangjianLab/sharedata/softwares/eigen_v3.3.7_d20220120/include/eigen3]
   ignore line: [ /storage/yangjianLab/houjunren/include]
   ignore line: [ .]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8]
+  ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux]
+  ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward]
+  ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/8/include]
   ignore line: [ /usr/local/include]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/include]
-  ignore line: [ /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.16.1-GMP]
+  ignore line: [GNU C++14 (GCC) version 8.3.1 20191121 (Red Hat 8.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 8.3.1 20191121 (Red Hat 8.3.1-5)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.0.2  isl version isl-0.16.1-GMP]
   ignore line: []
-  ignore line: [warning: GMP header version 6.1.0 differs from library version 6.1.2.]
-  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.6-p2.]
-  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.0.2.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 2f01a2a469d2e94b6315fdf228a1b803]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1fdd0.dir/']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccLaiEOb.s]
+  ignore line: [Compiler executable checksum: 6bc037fd95a01018b18727df05c3a70b]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccWgvgFq.s]
   ignore line: [GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8]
-  ignore line: [COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [Linking CXX executable cmTC_1fdd0]
-  ignore line: [/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fdd0.dir/link.txt --verbose=1]
-  ignore line: [/soft/compiler/gcc/gcc-11.2.0/bin/g++  -v -rdynamic CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1fdd0 ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_f7405]
+  ignore line: [/storage/yangjianLab/sharedata/softwares/cmake-3.25.1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7405.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f7405 ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/soft/compiler/gcc/gcc-11.2.0/bin/g++]
-  ignore line: [COLLECT_LTO_WRAPPER=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper]
-  ignore line: [Target: x86_64-pc-linux-gnu]
-  ignore line: [Configured with: ./configure --disable-multilib --enable-languages=c c++ fortran objc obj-c++ lto --prefix=/soft/compiler/gcc/gcc-11.2.0 --enable-shared --enable-threads=posix --with-gmp=/soft/compiler/gcc/gcc-libs/gmp/gmp-6.1.0 --with-mpfr=/soft/compiler/gcc/gcc-libs/mpfr/mpfr-3.1.4 --with-mpc=/soft/compiler/gcc/gcc-libs/mpc/mpc-1.0.3 --with-isl=/soft/compiler/gcc/gcc-libs/isl/isl-0.18]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COMPILER_PATH=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1fdd0' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1fdd0.']
-  link line: [ /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9cO2eh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fdd0 /lib/../lib64/crt1.o /lib/../lib64/crti.o /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o]
-    arg [/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2] ==> ignore
+  ignore line: [gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib/:/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib/:/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib/:/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/:/storage/yangjianLab/houjunren/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f7405' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccX4Mmrw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f7405 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib -L/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib -L/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib -L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64 -L/storage/yangjianLab/houjunren/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/soft/compiler/gcc/gcc-11.2.0/libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc9cO2eh.res] ==> ignore
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccX4Mmrw.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
     arg [-m] ==> ignore
     arg [elf_x86_64] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1fdd0] ==> ignore
-    arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
-    arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
-    arg [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> obj [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o]
+    arg [cmTC_f7405] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o]
     arg [-L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64] ==> dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64]
-    arg [-L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
-    arg [-L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64]
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib] ==> dir [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib]
@@ -982,8 +594,8 @@ Parsed CXX implicit link information from above output:
     arg [-L/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64] ==> dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64]
     arg [-L/storage/yangjianLab/houjunren/lib] ==> dir [/storage/yangjianLab/houjunren/lib]
     arg [-L.] ==> ignore
-    arg [-L/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..]
-    arg [CMakeFiles/cmTC_1fdd0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..]
+    arg [CMakeFiles/cmTC_f7405.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -991,14 +603,14 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> obj [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o]
-    arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
-  collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
-  collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
-  collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
   collapse library dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64/../lib64] ==> [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64]
-  collapse library dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
-  collapse library dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> [/soft/compiler/gcc/gcc-11.2.0/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8] ==> [/usr/lib/gcc/x86_64-redhat-linux/8]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> [/usr/lib64]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
   collapse library dir [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib] ==> [/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib]
@@ -1006,10 +618,10 @@ Parsed CXX implicit link information from above output:
   collapse library dir [/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib] ==> [/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib]
   collapse library dir [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64] ==> [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64]
   collapse library dir [/storage/yangjianLab/houjunren/lib] ==> [/storage/yangjianLab/houjunren/lib]
-  collapse library dir [/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> [/soft/compiler/gcc/gcc-11.2.0/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> [/usr/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit objs: [/lib64/crt1.o;/lib64/crti.o;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o;/lib64/crtn.o]
-  implicit dirs: [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64;/soft/compiler/gcc/gcc-11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0;/soft/compiler/gcc/gcc-11.2.0/lib64;/lib64;/usr/lib64;/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib;/storage/yangjianLab/houjunren/lib;/soft/compiler/gcc/gcc-11.2.0/lib]
+  implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o;/usr/lib64/crtn.o]
+  implicit dirs: [/storage/yangjianLab/sharedata/softwares/zstd_v1.5.0_d20210705/lib64;/usr/lib/gcc/x86_64-redhat-linux/8;/usr/lib64;/lib64;/storage/yangjianLab/sharedata/softwares/sqlit_v3.35.2_d20210325/lib;/storage/yangjianLab/sharedata/softwares/zlib_v1.2.11_d20210705/lib;/storage/yangjianLab/sharedata/softwares/gsl_v2.7_d20230303/lib;/storage/yangjianLab/houjunren/lib;/usr/lib]
   implicit fwks: []
 
 

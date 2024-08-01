@@ -73,85 +73,85 @@ submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: submods/Pgenlib/CMakeFi
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o -MF CMakeFiles/Pgenlib.dir/PgenReader.cpp.o.d -o CMakeFiles/Pgenlib.dir/PgenReader.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.o -MF CMakeFiles/Pgenlib.dir/PgenReader.cpp.o.d -o CMakeFiles/Pgenlib.dir/PgenReader.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pgenlib.dir/PgenReader.cpp.i"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp > CMakeFiles/Pgenlib.dir/PgenReader.cpp.i
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp > CMakeFiles/Pgenlib.dir/PgenReader.cpp.i
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/PgenReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pgenlib.dir/PgenReader.cpp.s"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp -o CMakeFiles/Pgenlib.dir/PgenReader.cpp.s
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/Pgenlib/PgenReader.cpp -o CMakeFiles/Pgenlib.dir/PgenReader.cpp.s
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/flags.make
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.i"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.i
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.i
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.s"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.s
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/plink2_base.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/plink2_base.cc.s
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/flags.make
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.i"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.i
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.i
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.s"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.s
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_ffi_support.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_ffi_support.cc.s
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/flags.make
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.i"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.i
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.i
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.s"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.s
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_misc.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_misc.cc.s
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/flags.make
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.i"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.i
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.i
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.s"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.s
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_read.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_read.cc.s
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/flags.make
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o: submods/Pgenlib/CMakeFiles/Pgenlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o -MF CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o.d -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.i"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.i
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc > CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.i
 
 submods/Pgenlib/CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.s"
-	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.s
+	cd /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/submods/Pgenlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/submods/plink-ng/2.0/pgenlib_write.cc -o CMakeFiles/Pgenlib.dir/__/plink-ng/2.0/pgenlib_write.cc.s
 
 # Object files for target Pgenlib
 Pgenlib_OBJECTS = \

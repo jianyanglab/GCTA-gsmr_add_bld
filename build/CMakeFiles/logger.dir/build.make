@@ -73,15 +73,15 @@ CMakeFiles/logger.dir/src/Logger.cpp.o: CMakeFiles/logger.dir/flags.make
 CMakeFiles/logger.dir/src/Logger.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Logger.cpp
 CMakeFiles/logger.dir/src/Logger.cpp.o: CMakeFiles/logger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/logger.dir/src/Logger.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/logger.dir/src/Logger.cpp.o -MF CMakeFiles/logger.dir/src/Logger.cpp.o.d -o CMakeFiles/logger.dir/src/Logger.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Logger.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/logger.dir/src/Logger.cpp.o -MF CMakeFiles/logger.dir/src/Logger.cpp.o.d -o CMakeFiles/logger.dir/src/Logger.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Logger.cpp
 
 CMakeFiles/logger.dir/src/Logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/logger.dir/src/Logger.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Logger.cpp > CMakeFiles/logger.dir/src/Logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Logger.cpp > CMakeFiles/logger.dir/src/Logger.cpp.i
 
 CMakeFiles/logger.dir/src/Logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/logger.dir/src/Logger.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Logger.cpp -o CMakeFiles/logger.dir/src/Logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Logger.cpp -o CMakeFiles/logger.dir/src/Logger.cpp.s
 
 # Object files for target logger
 logger_OBJECTS = \

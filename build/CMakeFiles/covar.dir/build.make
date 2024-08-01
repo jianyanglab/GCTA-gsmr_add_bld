@@ -73,15 +73,15 @@ CMakeFiles/covar.dir/src/Covar.cpp.o: CMakeFiles/covar.dir/flags.make
 CMakeFiles/covar.dir/src/Covar.cpp.o: /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Covar.cpp
 CMakeFiles/covar.dir/src/Covar.cpp.o: CMakeFiles/covar.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/covar.dir/src/Covar.cpp.o"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/covar.dir/src/Covar.cpp.o -MF CMakeFiles/covar.dir/src/Covar.cpp.o.d -o CMakeFiles/covar.dir/src/Covar.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Covar.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/covar.dir/src/Covar.cpp.o -MF CMakeFiles/covar.dir/src/Covar.cpp.o.d -o CMakeFiles/covar.dir/src/Covar.cpp.o -c /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Covar.cpp
 
 CMakeFiles/covar.dir/src/Covar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/covar.dir/src/Covar.cpp.i"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Covar.cpp > CMakeFiles/covar.dir/src/Covar.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Covar.cpp > CMakeFiles/covar.dir/src/Covar.cpp.i
 
 CMakeFiles/covar.dir/src/Covar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/covar.dir/src/Covar.cpp.s"
-	/soft/compiler/gcc/gcc-11.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Covar.cpp -o CMakeFiles/covar.dir/src/Covar.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/src/Covar.cpp -o CMakeFiles/covar.dir/src/Covar.cpp.s
 
 # Object files for target covar
 covar_OBJECTS = \

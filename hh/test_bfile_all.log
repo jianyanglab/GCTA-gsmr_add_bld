@@ -1,0 +1,61 @@
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Jul 29 2024 16:41:59, by GCC 8.3
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 18:20:12 CST on Thu Aug 01 2024.
+Hostname: login01.cluster.com
+
+Accepted options:
+--mbfile /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/hh/bfile_gsmr_ref_data_ukb.txt
+--maf 0.01
+--diff-freq 0.2
+--gsmr-file /storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/exposure_data/PAM_P19021_OID20291_Cardiometabolic.txt /storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/outcome_data/T2D_gsmr.txt
+--gsmr-direction 0
+--threads 1
+--clump-r2 0.05
+--gsmr-snp-min 2
+--effect-plot
+--out test_bfile_all
+
+Warning: The number of SNP instruments included in the analysis is too small. There might not be enough SNPs to perform the HEIDI-outlier analysis.
+
+There are 22 PLINK genotype files specified in [/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/hh/bfile_gsmr_ref_data_ukb.txt].
+
+Reading the PLINK FAM files ....
+10000 individuals have been included from the PLINK FAM files.
+Reading the PLINK BIM files ...
+7822990 SNPs to be included from PLINK BIM files.
+
+Reading GWAS summary data for exposure(s) from [/storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/exposure_data/PAM_P19021_OID20291_Cardiometabolic.txt].
+Reading GWAS summary data for outcome(s) from [/storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/outcome_data/T2D_gsmr.txt].
+21295 genome-wide significant SNPs in common between the exposure(s) and the outcome(s).
+Filtering out SNPs with multiple alleles or missing value ...
+4 SNPs have missing value or mismatched alleles. These SNPs have been saved in [test_bfile_all.badsnps].
+21291 SNPs are retained after filtering.
+20577 genome-wide significant SNPs with p < 5.0e-08 are in common among the exposure(s), the outcome(s) and the LD reference sample.
+
+Reading PLINK BED files ...
+Skip reading /storage/yangjianLab/sharedata/LD_reference/UKB/genotype_10K/BED_ukbEUR_imp_v3_INFO0.8_maf0.01_mind0.05_geno0.05_hwe1e6_10K_hg38_chr21.bed, no SNPs retained on this chromosome.
+Genotype data for 10000 individuals and 20577 SNPs have been included.
+Calculating allele frequencies ...
+Filtering SNPs with MAF > 0.01 ...
+After filtering SNPs with MAF > 0.01, there are 20577 SNPs (0 SNPs with MAF < 0.01).
+Checking allele frequencies among the GWAS summary data and the reference sample...
+
+Forward GSMR analysis for exposure #1 and outcome #1 ...
+67 index SNPs are obtained from the clumping analysis with p < 5.0e-08 and LD r2 < 0.05.
+5 pleiotropic SNPs are filtered by HEIDI-outlier analysis.
+62 index SNPs are retained after HEIDI-outlier analysis.
+Forward GSMR analysis for exposure #1 and outcome #1 completed.
+
+The pleiotropic SNPs filtered by HEIDI-outlier analysis have been saved in [test_bfile_all.pleio_snps].
+Saving the SNP instruments for the GSMR plots to [test_bfile_all.eff_plot.gz] ...
+Saving the GSMR analyses results of 1 exposure(s) and 1 outcome(s) to [test_bfile_all.gsmr] ...
+
+GSMR analyses completed.
+
+Analysis finished at 18:29:40 CST on Thu Aug 01 2024
+Overall computational time: 9 minutes 27 sec.

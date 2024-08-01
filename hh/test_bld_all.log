@@ -1,0 +1,42 @@
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Jul 29 2024 16:41:59, by GCC 8.3
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 19:56:00 CST on Thu Aug 01 2024.
+Hostname: login01.cluster.com
+
+Accepted options:
+--mbld /storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/hh/bld_gsmr_ref_data_ukb.txt
+--maf 0.01
+--diff-freq 0.2
+--gsmr-file /storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/exposure_data/PAM_P19021_OID20291_Cardiometabolic.txt /storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/outcome_data/T2D_gsmr.txt
+--gsmr-direction 0
+--threads 1
+--clump-r2 0.05
+--gsmr-snp-min 2
+--effect-plot
+--out test_bld_all
+
+Warning: The number of SNP instruments included in the analysis is too small. There might not be enough SNPs to perform the HEIDI-outlier analysis.
+
+There are 22 PLINK genotype files specified in [/storage/yangjianLab/houjunren/GCTA-gsmr_add_bld/hh/bld_gsmr_ref_data_ukb.txt].
+Reading the PLINK ESI files ...
+7822990 SNPs to be included from PLINK ESI files.
+
+Reading GWAS summary data for exposure(s) from [/storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/exposure_data/PAM_P19021_OID20291_Cardiometabolic.txt].
+Reading GWAS summary data for outcome(s) from [/storage/yangjianLab/guoyazhou/GAMMA_git_data/GSMR/outcome_data/T2D_gsmr.txt].
+21295 genome-wide significant SNPs in common between the exposure(s) and the outcome(s).
+Filtering out SNPs with multiple alleles or missing value ...
+4 SNPs have missing value or mismatched alleles. These SNPs have been saved in [test_bld_all.badsnps].
+21291 SNPs are retained after filtering.
+20577 genome-wide significant SNPs with p < 5.0e-08 are in common among the exposure(s), the outcome(s) and the LD reference sample.
+
+Filtering SNPs with MAF > 0.01 ...
+After filtering SNPs with MAF > 0.01, there are 20576 SNPs (1 SNPs with MAF < 0.01).
+Checking allele frequencies among the GWAS summary data and the reference sample...
+19815 SNP(s) have large difference of allele frequency between the GWAS summary data and the reference sample. These SNPs have been saved in [test_bld_all.freq.badsnps].
+Error: there are too many SNPs that have large difference in allele frequency. Please check the GWAS summary data.
+An error occurs, please check the options or data
