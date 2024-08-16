@@ -218,7 +218,10 @@ void gcta::read_esifile(string esifileName) {
         _esi_allele2.clear();
         _esi_include.clear();
         _esi_snp_name_map.clear();
+        _esi_include_all.clear();
+        _esi_snp_name_map_all.clear();
         _esi_freq.clear();
+        
         
         bool chrwarning=false;
         bool feqwarning=false, allele1warning=false, allele2warning=false;
@@ -244,8 +247,9 @@ void gcta::read_esifile(string esifileName) {
                 //printf("WARNING: Line %u has more than %d items. The first %d columns would be used. \n", line_idx,colnum,colnum);
             }
             
-            _snp_name_map.insert(pair<string,int>(strlist[1],line_idx));
-            if(_snp_name_map.size()==line_idx)
+            _esi_snp_name_map.insert(pair<string,int>(strlist[1],line_idx));
+            _esi_snp_name_map_all.insert(pair<string,int>(strlist[1],line_idx));
+            if(_esi_snp_name_map.size()==line_idx)
             {
                 printf("ERROR: Duplicate SNP : %s.\n", strlist[1].c_str());
                 exit(EXIT_FAILURE);
@@ -308,6 +312,7 @@ void gcta::read_esifile(string esifileName) {
                 _esi_freq.push_back(-9);
             }
             _esi_include.push_back(line_idx);
+            _esi_include_all.push_back(line_idx);
             line_idx++;
         }
         _esi_snpNum =line_idx;
@@ -377,6 +382,12 @@ void gcta::read_bldfile(string bldfileName)
 {
     bld = NULL;
     vector<int> headers;
+    vector<vector<pair<int, int>>> rsnp;
+    vector<int>  rsnp_flag;
+    
+    // Reset variables
+    get_rsnp_bld(rsnp_flag);
+
     headers.resize(RESERVEDUNITS);
     bld=fopen(bldfileName.c_str(),"rb");
     if(bld == NULL)
@@ -408,6 +419,7 @@ void gcta::read_bldfile(string bldfileName)
         printf("ERROR: File %s read failed!\n", bldfileName);
         exit(EXIT_FAILURE);
     }
+    update_esi_bld(rsnp_flag);
 }
 
 void gcta::get_rsnp(vector<int> &rsnp) {
@@ -419,12 +431,68 @@ void gcta::get_rsnp(vector<int> &rsnp) {
     }
 }
 
+void gcta::get_rsnp_bld(vector<int> &rsnp) {
+    rsnp.clear();
+    rsnp.resize(_esi_rs.size());
+    for (int i = 0; i < _esi_rs.size(); i++) {
+        if (_esi_snp_name_map.find(_esi_rs[i]) != _esi_snp_name_map.end()) rsnp[i] = 1;
+        else rsnp[i] = 0;
+    }
+}
+
 void gcta::get_rindi(vector<int> &rindi) {
     rindi.clear();
     rindi.resize(_indi_num);
     for (int i = 0; i < _indi_num; i++) {
         if (_id_map.find(_fid[i] + ":" + _pid[i]) != _id_map.end()) rindi[i] = 1;
         else rindi[i] = 0;
+    }
+}
+
+void gcta::update_esi_bld(vector<int> &rsnp) {
+    int i = 0;
+    //update bim information
+    vector<int> chr_buf, bp_buf, gd_buf;
+    vector<string> a1_buf, a2_buf;
+    vector<string> snp_name_buf;
+    vector<double> fre_buf, impRsq_buf;
+    for (i = 0; i < _esi_rs.size(); i++) {
+        if (!rsnp[i]) continue;
+        chr_buf.push_back(_esi_chr[i]);
+        snp_name_buf.push_back(_esi_rs[i]);
+        bp_buf.push_back(_esi_bp[i]);
+        gd_buf.push_back(_esi_gd[i]);
+        a1_buf.push_back(_esi_allele1[i]);
+        a2_buf.push_back(_esi_allele2[i]);
+        fre_buf.push_back(_esi_freq[i]);
+        if(_impRsq.size()>0) impRsq_buf.push_back(_impRsq[i]);
+    }
+    _esi_chr.clear();
+    _esi_rs.clear();
+    _esi_gd.clear();
+    _esi_bp.clear();
+    _esi_allele1.clear();
+    _esi_allele2.clear();
+    _esi_include.clear();
+    _esi_snp_name_map.clear();
+    _esi_freq.clear(); 
+
+
+
+    _esi_chr = chr_buf;
+    _esi_rs = snp_name_buf;
+    _esi_gd = gd_buf;
+    _esi_bp = bp_buf;
+    _esi_allele1 = a1_buf;
+    _esi_allele2 = a2_buf;
+    _esi_freq = fre_buf;
+    _impRsq = impRsq_buf;
+    // _esi_snpNum = _esi_chr.size();
+    _esi_include.resize(_esi_chr.size());
+
+    for (i = 0; i < _esi_chr.size(); i++) {
+        _esi_include[i] = i;
+        _esi_snp_name_map.insert(pair<string, int>(_esi_rs[i], i));
     }
 }
 
@@ -757,8 +825,17 @@ void gcta::read_multi_bimfiles(vector<string> multi_bfiles)
     LOGGER.i(0, to_string(_snp_num) + " SNPs to be included from PLINK BIM files.");
 }
 
-void gcta::update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf,  vector<float> freq_buf) {
+void gcta::update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf,  vector<float> freq_buf, int file_indx) {
+    int i = 0, nsnp_buf = chr_buf.size();
 
+    for(i=0; i<nsnp_buf; i++) {
+        // Duplicated SNPs
+        if(_esi_snp_name_per_chr.find(rs_buf[i]) !=_esi_snp_name_per_chr.end()) {
+            rs_buf[i] = duplicated_snp_name(rs_buf[i], chr_buf[i], bp_buf[i], a1_buf[i], a2_buf[i]);
+        }
+        // SNP name map per chr
+        _esi_snp_name_per_chr.insert(pair<string,string>(rs_buf[i], to_string(file_indx)+":"+to_string(i)));
+    }
     // Add the new SNP
     _esi_rs.insert(_esi_rs.end(), rs_buf.begin(), rs_buf.end());
     _esi_allele1.insert(_esi_allele1.end(), a1_buf.begin(), a1_buf.end());
@@ -891,24 +968,25 @@ void gcta::read_multi_esifiles(vector<string> multi_blds) {
     _esi_allele2.clear();
     _esi_include.clear();
     _esi_snp_name_map.clear();
+    _esi_snp_name_per_chr.clear();
     _esi_freq.clear();
     _esi_single_snpNum.clear();
     for( i=0; i<nblds; i++ ) {
         esifileName = multi_blds[i]+".esi";
         read_single_esifile(esifileName, trs, tallele1, tallele2, tchr, tgd, tbp, tfreq, false);
         _esi_single_snpNum[i] = trs.size();
-        update_esi(trs, tallele1, tallele2, tchr, tgd, tbp, tfreq);
+        update_esi(trs, tallele1, tallele2, tchr, tgd, tbp, tfreq,i);
     }
 
     // Initialize the variables
-    _esi_snpNum = _esi_rs.size();
-    _esi_include.clear(); _esi_include.resize(_esi_snpNum);
-    for(i=0; i<_esi_snpNum; i++) {
+    // _esi_snpNum = _esi_rs.size();
+    _esi_include.clear(); _esi_include.resize(_esi_rs.size());
+    for(i=0; i<_esi_rs.size(); i++) {
         _esi_snp_name_map.insert(pair<string,int>(_esi_rs[i], i));
         _esi_include[i] = i;
     }
 
-    LOGGER.i(0, std::to_string(_esi_snpNum) + " SNPs to be included from PLINK ESI files.");
+    LOGGER.i(0, std::to_string(_esi_rs.size()) + " SNPs to be included from PLINK ESI files.");
     
 }
 
@@ -923,14 +1001,14 @@ void update_id_chr_map(map<string, string> &chr_map, map<string, int> id_map) {
     for(iter2=chr_map_buf.begin(); iter2!=chr_map_buf.end(); iter2++) chr_map.erase(iter2->first);
 }
 
-void retrieve_snp(map<string,string> snp_chr_map, map<string,int> snp_id_map, vector<vector<pair<int,int>>> &rsnp, int nbfiles) {
+void retrieve_snp(map<string,string> snp_chr_map, map<string,int> snp_id_map, vector<vector<pair<int,int>>> &rsnp, int nblds) {
     int i = 0, j=0, snp_indx = 0;
     string snp_indx_str = "";
     vector<string> vs_buf;
     map<string,string>::iterator iter1;
     map<string,int>::iterator iter2;
 
-    rsnp.clear(); rsnp.resize(nbfiles);
+    rsnp.clear(); rsnp.resize(nblds);
 
     for(iter1=snp_chr_map.begin(), iter2=snp_id_map.begin(); iter1 != snp_chr_map.end(); iter1++, iter2++) {
         vs_buf.clear();
@@ -940,7 +1018,7 @@ void retrieve_snp(map<string,string> snp_chr_map, map<string,int> snp_id_map, ve
         rsnp[atoi(vs_buf[0].c_str())].push_back(make_pair(atoi(vs_buf[1].c_str()), snp_indx));
     }
 
-    for(i=0; i<nbfiles; i++) stable_sort(rsnp[i].begin(), rsnp[i].end());
+    for(i=0; i<nblds; i++) stable_sort(rsnp[i].begin(), rsnp[i].end());
 }
 
 void read_single_bedfile(string bedfile, vector<pair<int,int>> rsnp, vector<int> rindi, vector<vector<bool>> &snp1, vector<vector<bool>> &snp2, bool msg_flag)
@@ -1013,7 +1091,7 @@ void gcta::read_single_bldfile(string bldfileName, int single_snpNum){
     fseek(bld, 0L, SEEK_END);
     uint64_t size_file = ftell(bld);
     fseek(bld, cur_pos, SEEK_SET);
-    if (size_file - (RESERVEDUNITS * sizeof(int) + sizeof(uint64_t) + colNum * sizeof(uint64_t) + valnum * sizeof(float)) != 0)
+    if (size_file - (RESERVEDUNITS * sizeof(int) + sizeof(uint64_t) + colNum* sizeof(uint64_t) + valnum * sizeof(float)) != 0)
     {
         printf("ERROR: File %s is broken!\n", bldfileName.c_str());
         exit(EXIT_FAILURE);
@@ -1044,10 +1122,9 @@ void gcta::read_multi_bedfiles(vector<string> multi_bfiles) {
         _snp_1[i].reserve(_keep.size());
         _snp_2[i].reserve(_keep.size());
     }
-
+   
     // Update the map to retrieve individuals and SNPs
     update_id_chr_map(_snp_name_per_chr, _snp_name_map);
-
     // Reset variables
     get_rindi(rindi_flag);
     get_rsnp(rsnp_flag);
@@ -1055,7 +1132,6 @@ void gcta::read_multi_bedfiles(vector<string> multi_bfiles) {
     update_bim(rsnp_flag);
     
     retrieve_snp(_snp_name_per_chr, _snp_name_map, rsnp, nbfiles);
-
     // Read the coded genotypes
     for( i=0; i<nbfiles; i++) {        
         if(rsnp[i].size()==0) { 
@@ -1072,7 +1148,22 @@ void gcta::read_multi_bedfiles(vector<string> multi_bfiles) {
 void gcta::read_multi_bldfiles(vector<string> multi_blds){
     int i=0, nblds = multi_blds.size();
     string bldfileName = "";
-    for( i=0; i<nblds; i++) {        
+    vector<vector<pair<int, int>>> rsnp;
+    vector<int>  rsnp_flag;
+    
+    update_id_chr_map(_esi_snp_name_per_chr, _esi_snp_name_map);
+    // Reset variables
+    get_rsnp_bld(rsnp_flag);
+    update_esi_bld(rsnp_flag);
+    
+    retrieve_snp(_esi_snp_name_per_chr, _esi_snp_name_map, rsnp, nblds);
+    
+    _esi_cols.clear();
+    for( i=0; i<nblds; i++) {       
+        if(rsnp[i].size()==0) { 
+            LOGGER.i(0, "Skip reading " + multi_blds[i] + ".bld, no SNPs retained on this chromosome.");
+            continue;
+        } 
         bldfileName =multi_blds[i] + ".bld";
         int single_snpNum = _esi_single_snpNum[i];
         read_single_bldfile(bldfileName, single_snpNum);
@@ -1777,6 +1868,8 @@ void gcta::extract_chr(int chr_start, int chr_end)
 
 void gcta::filter_snp_maf(double maf)
 {
+
+
     if (_mu.empty()) calcu_mu();
 
     LOGGER << "Filtering SNPs with MAF > " << maf << " ..." << endl;
@@ -1786,12 +1879,27 @@ void gcta::filter_snp_maf(double maf)
     double fbuf = 0.0;
     _include.clear();
     _snp_name_map.clear();
+
     for (iter = id_map_buf.begin(); iter != end; iter++) {
         fbuf = _mu[iter->second]*0.5;
         if (fbuf <= maf || (1.0 - fbuf) <= maf) continue;
         _snp_name_map.insert(*iter);
         _include.push_back(iter->second);
     }
+
+
+    // std::ofstream outfile("bfileoutput.txt"); // 创建文件输出流对象
+    // // 检查文件是否成功打开
+    // if (outfile.is_open()) {
+    //     // 将 _esi_snp_name_map 和 ref_freq 的数据逐行写入文件
+    //     for (const auto& pair : _snp_name_map) {
+    //         outfile << pair.first << "-" <<pair.second << ": " << _mu[pair.second]*0.5 << std::endl;
+    //     }
+
+    //     // 关闭文件
+    //     outfile.close();
+    // }
+
     if (_include.size() == 0) LOGGER.e(0, "no SNP is retained for analysis.");
     else {
         stable_sort(_include.begin(), _include.end());
@@ -1840,6 +1948,8 @@ void gcta::filter_snp_maf_bld(double maf)
 
     //         }
     // }
+    
+
     LOGGER << "Filtering SNPs with MAF > " << maf << " ..." << endl;
     map<string, int> id_map_buf(_esi_snp_name_map);
     map<string, int>::iterator iter, end = id_map_buf.end();
@@ -1848,11 +1958,16 @@ void gcta::filter_snp_maf_bld(double maf)
     _esi_include.clear();
     _esi_snp_name_map.clear();
     for (iter = id_map_buf.begin(); iter != end; iter++) {
-        fbuf =_esi_freq[iter->second]*0.5;
+        fbuf =_esi_freq[iter->second]*2.0*0.5;
+        if (iter->first == "rs116840427"){
+            _esi_snp_name_map.insert(*iter);
+            _esi_include.push_back(iter->second);
+        }
         if (fbuf <= maf || (1.0 - fbuf) <= maf) continue;
         _esi_snp_name_map.insert(*iter);
         _esi_include.push_back(iter->second);
     }
+
     if (_esi_include.size() == 0) LOGGER.e(0, "no SNP is retained for analysis.");
     else {
         stable_sort(_esi_include.begin(), _esi_include.end());
@@ -1885,7 +2000,7 @@ void gcta::filter_snp_max_maf_bld(double max_maf)
     _esi_include.clear();
     _esi_snp_name_map.clear();
     for (iter = id_map_buf.begin(); iter != end; iter++) {
-        fbuf = _esi_freq[iter->second]*0.5;
+        fbuf =(_esi_freq[iter->second]*2.0)*0.5;
         if (fbuf > max_maf && 1.0 - fbuf > max_maf) continue;
         _esi_snp_name_map.insert(*iter);
         _esi_include.push_back(iter->second);

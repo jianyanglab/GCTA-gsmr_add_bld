@@ -237,6 +237,7 @@ private:
     void init_keep();
     void init_include();
     void get_rsnp(vector<int> &rsnp);
+    void get_rsnp_bld(vector<int> &rsnp);
     void get_rindi(vector<int> &rindi);
 
     void save_famfile();
@@ -244,11 +245,12 @@ private:
     void save_bedfile();
 
     void update_bim(vector<int> &rsnp);
+    void update_esi_bld(vector<int> &rsnp);
     void update_fam(vector<int> &rindi);
 
     void update_include(vector<int> chr_buf, vector<string> snpid_buf, vector<double> gd_buf, vector<int> bp_buf, vector<string> a1_buf, vector<string> a2_buf, int file_indx);
     void update_keep(vector<string> fid_buf, vector<string> pid_buf, vector<string> fa_id_buf, vector<string> mo_id_buf, vector<int> sex_buf, vector<double> pheno_buf, string famfile);
-    void update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<float> freq_buf);
+    void update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<string> a2_buf,  vector<int> chr_buf, vector<int> gd_buf,vector<int> bp_buf, vector<float> freq_buf, int file_indx);
     
     void update_id_map_kp(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
     void update_id_map_rm(const vector<string> &id_list, map<string, int> &id_map, vector<int> &keep);
@@ -473,7 +475,9 @@ private:
     void update_meta_snp(map<string,int> &snp_name_map, vector<string> &snp_name, vector<int> &snp_remain);
     vector<string> remove_bad_snps(vector<string> snp_name, vector<int> snp_remain, vector<vector<bool>> snp_flag, vector<vector<string>> &snp_a1, vector<vector<string>> &snp_a2, eigenMatrix &snp_freq,  eigenMatrix &snp_b, eigenMatrix snp_se, eigenMatrix snp_pval, eigenMatrix snp_n, map<string,int> plink_snp_name_map, vector<string> snp_ref_a1, vector<string> snp_ref_a2, int ntarget, int ncovar, string outfile_name);
     vector<string> remove_freq_diff_snps(vector<string> meta_snp_name, vector<int> meta_snp_remain, map<string,int> snp_name_map, vector<double> ref_freq, eigenMatrix meta_freq, vector<vector<bool>> snp_flag, int ntrait, double freq_thresh, string outfile_name);
+    vector<string> remove_freq_diff_snps_bld(vector<string> meta_snp_name, vector<int> meta_snp_remain, map<string,int> snp_name_map, vector<double> ref_freq, eigenMatrix meta_freq, vector<vector<bool>> snp_flag, int ntrait, double freq_thresh, string outfile_name);
     vector<string> remove_mono_snps(map<string,int> snp_name_map, vector<double> ref_snpfreq, string outfile_name);
+    vector<string> remove_mono_snps_bld(map<string,int> snp_name_map, vector<double> ref_snpfreq, string outfile_name);
     vector<string> filter_meta_snp_pval(vector<string> snp_name, vector<int> remain_snp_indx,  eigenMatrix snp_pval, int start_indx, int end_indx, vector<vector<bool>> snp_flag, double pval_thresh);
     vector<double> gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bfile_flag);
     vector<string> clumping_meta(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh);
@@ -545,6 +549,9 @@ private:
     vector<string> _esi_allele2;
     vector<int> _esi_include;
     map<string,int> _esi_snp_name_map;
+    vector<int> _esi_include_all;
+    map<string,int> _esi_snp_name_map_all;
+    map<string, string> _esi_snp_name_per_chr;
     vector<double> _esi_freq;
     
     //bld file

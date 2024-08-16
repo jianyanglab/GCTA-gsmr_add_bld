@@ -179,7 +179,6 @@ void gcta::read_gsmrfile(string expo_file_list, string outcome_file_list, double
     }
     
     if (bfile_flag){
-
         // QC of SNPs
         LOGGER.i(0, "Filtering out SNPs with multiple alleles or missing value ...");
         vector<string> badsnps;
@@ -208,6 +207,7 @@ void gcta::read_gsmrfile(string expo_file_list, string outcome_file_list, double
         std::stringstream ss;
         ss << std::scientific << std::setprecision(1) << gwas_thresh;
         LOGGER.i(0, to_string(_include.size()) + " genome-wide significant SNPs with p < " + ss.str() + " are in common among the exposure(s), the outcome(s) and the LD reference sample.\n");
+
     }else{
         // QC of SNPs
         LOGGER.i(0, "Filtering out SNPs with multiple alleles or missing value ...");
@@ -218,7 +218,7 @@ void gcta::read_gsmrfile(string expo_file_list, string outcome_file_list, double
             update_id_map_rm(badsnps, _esi_snp_name_map, _esi_include);
             update_mtcojo_snp_rm(badsnps, _meta_snp_name_map, _meta_remain_snp);
         }
-
+        
         // For output
         _meta_snp_a1 = snp_a1[0]; _meta_snp_a2 = snp_a2[0];
         _meta_snp_freq = snp_freq;
@@ -233,7 +233,6 @@ void gcta::read_gsmrfile(string expo_file_list, string outcome_file_list, double
         if(keptsnps.size()>0) {
             update_id_map_kp(keptsnps, _esi_snp_name_map, _esi_include);
         }
-
         std::stringstream ss;
         ss << std::scientific << std::setprecision(1) << gwas_thresh;
         LOGGER.i(0, to_string(_esi_include.size()) + " genome-wide significant SNPs with p < " + ss.str() + " are in common among the exposure(s), the outcome(s) and the LD reference sample.\n");
@@ -515,24 +514,24 @@ void gcta::gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double 
         _r_pheno_sample = rho_sample_overlap(_snp_val_flag, _meta_snp_b, _meta_snp_se, _meta_snp_pval, _meta_snp_n_o, _expo_num, _outcome_num, 
                                         _meta_snp_name, _meta_remain_snp, ref_ld_dirt, w_ld_dirt, _gwas_trait_name, gsmr_so_alg);
     } else {
-        if (_mu.empty()){
-            map<string, int>::iterator iter0;
-            _mu.clear();
-            for(int i=0;i<_esi_include.size();i++)
-            {
-                int eid=_esi_include[i];
-                string rs=_esi_rs[eid];
-                iter0=_esi_snp_name_map.find(rs);
-                if(iter0 != _esi_snp_name_map.end())
-                {
-                    _mu.push_back(_esi_freq[iter0->second]);
-                }
+        // if (_mu.empty()){
+        //     map<string, int>::iterator iter0;
+        //     _mu.clear();
+        //     for(int i=0;i<_esi_include.size();i++)
+        //     {
+        //         int eid=_esi_include[i];
+        //         string rs=_esi_rs[eid];
+        //         iter0=_esi_snp_name_map.find(rs);
+        //         if(iter0 != _esi_snp_name_map.end())
+        //         {
+        //             _mu.push_back(_esi_freq[iter0->second]);
+        //         }
 
-            }
-        }
+        //     }
+        // }
         
         LOGGER.i(0, "Checking allele frequencies among the GWAS summary data and the reference sample...");
-        afsnps = remove_freq_diff_snps(_meta_snp_name, _meta_remain_snp, _esi_snp_name_map, _mu, _meta_snp_freq, _snp_val_flag, ntrait, freq_thresh, _out);
+        afsnps = remove_freq_diff_snps_bld(_meta_snp_name, _meta_remain_snp, _esi_snp_name_map, _esi_freq, _meta_snp_freq, _snp_val_flag, ntrait, freq_thresh, _out);
         // Update SNPs set
         if( afsnps.size()>0 ) {
             update_id_map_rm(afsnps, _esi_snp_name_map, _esi_include);
@@ -540,7 +539,7 @@ void gcta::gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double 
         }
 
         // Remove monomorphic SNPs
-        afsnps = remove_mono_snps(_esi_snp_name_map, _mu, _out);
+        afsnps = remove_mono_snps_bld(_esi_snp_name_map, _esi_freq, _out);
         // Update SNPs set
         if( afsnps.size()>0 ) {
             update_id_map_rm(afsnps, _esi_snp_name_map, _esi_include);
@@ -639,6 +638,7 @@ vector<vector<double>> gcta::forward_gsmr(stringstream &ss, map<string,int> &snp
             LOGGER.i(0, "\nForward GSMR analysis for exposure #" + to_string(i+1) + " and outcome #" + to_string(j+1) + " ...");         
             gsmr_rst =  gsmr_meta(snp_instru, _meta_snp_b.col(i), _meta_snp_se.col(i), _meta_snp_pval.col(i), 
                                   _meta_snp_b.col(j+_expo_num), _meta_snp_se.col(j+_expo_num), _meta_snp_pval.col(j+_expo_num), _r_pheno_sample(i,j), snp_pair_flag, gwas_thresh, clump_wind_size, clump_r2_thresh, std_heidi_thresh, global_heidi_thresh, ld_fdr_thresh, nsnp_gsmr, pleio_snps, err_msg, bfile_flag);
+            
             if(std::isnan(gsmr_rst[3]))
                 LOGGER.w(0, err_msg);
             else
