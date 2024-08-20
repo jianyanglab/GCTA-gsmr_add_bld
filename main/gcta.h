@@ -558,7 +558,7 @@ private:
     FILE* bld;
     vector<uint64_t> _esi_cols;
     vector<float> _esi_val;
-    
+    int _esi_keep;
     uint64_t _esi_snpNum;
     map<int,int> _esi_single_snpNum;
     uint64_t _esi_valNum;

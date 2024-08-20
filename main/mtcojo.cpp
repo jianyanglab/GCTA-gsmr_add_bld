@@ -1710,7 +1710,7 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
     if(bfile_flag){
          nsnp = _include.size(), nindi=_keep.size();   
     }else{
-         nsnp = _esi_include.size(), nindi=10000;
+         nsnp = _esi_include.size();
     }
     vector<string> indices_snp;
     vector<double> rst(_n_gsmr_rst_item);
@@ -1801,7 +1801,13 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
                 }
             }
         }
+        _esi_snp_name_map_all.clear();
+        _esi_include_all.clear();
+        fseek(bld, 4, SEEK_SET); 
+        fread(&_esi_keep, sizeof(int), 4 , bld);
+        nindi = _esi_keep;
     }
+
     
     // LD pruning
     vector<int> kept_ID;
@@ -1814,12 +1820,11 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
         err_msg = "Not enough SNPs to perform the GSMR analysis. At least " + to_string(nsnp_gsmr) + " SNPs are required."; 
         return rst;
     }
-
+    
     // Adjust LD
     int k = 0;
     eigenMatrix ld_pval_mat(n_indices_snp, n_indices_snp);
     vector<pair<double,int>> ld_pval(n_indices_snp*(n_indices_snp-1)/2);
-    LOGGER.i(0, to_string(nindi));
     for(i=0, k=0; i<(n_indices_snp-1); i++) {
         for(j=(i+1); j<n_indices_snp; j++) {
             ld_pval[k++] = make_pair(StatFunc::chi_prob(1, ld_r_mat(kept_ID[i],kept_ID[j])*ld_r_mat(kept_ID[i],kept_ID[j])*(double)nindi), i*n_indices_snp+j); 
@@ -1827,9 +1832,6 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
     }
 
     stable_sort(ld_pval.begin(), ld_pval.end(), [](const pair<double,int> a, const pair<double,int> b) {return a.first > b.first;});
-    for (int j=0;j<ld_pval.size();j++){
-            LOGGER.i(0, to_string(ld_pval[j].first)+":"+to_string(ld_pval[j].second));
-        }
     adjust_ld_r_fdr(ld_r_mat, kept_ID, ld_pval, n_indices_snp, ld_fdr_thresh);
 
     // estimate bxy
