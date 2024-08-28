@@ -218,7 +218,6 @@ void gcta::read_esifile(string esifileName) {
         _esi_allele2.clear();
         _esi_include.clear();
         _esi_snp_name_map.clear();
-        _esi_include_all.clear();
         _esi_snp_name_map_all.clear();
         _esi_freq.clear();
         
@@ -312,7 +311,6 @@ void gcta::read_esifile(string esifileName) {
                 _esi_freq.push_back(-9);
             }
             _esi_include.push_back(line_idx);
-            _esi_include_all.push_back(line_idx);
             line_idx++;
         }
         _esi_snpNum =line_idx;
@@ -847,7 +845,7 @@ void gcta::update_esi(vector<string> rs_buf, vector<string> a1_buf, vector<strin
     
 } 
 
-void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<string> &esi_allele1, vector<string> &esi_allele2,  vector<int> &esi_chr, vector<int> &esi_gd,vector<int> &esi_bp, vector<float> &esi_freq, bool msg_flag) {
+void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<string> &esi_allele1, vector<string> &esi_allele2,  vector<int> &esi_chr, vector<int> &esi_gd,vector<int> &esi_bp, vector<float> &esi_freq, map<int, map<string,int>> &_esi_msnp_name_map_all, int i, bool msg_flag) {
     // Read esi file: recombination rate is defined between SNP i and SNP i-1
         vector<string> strlist;
         uint32_t line_idx = 0;
@@ -864,6 +862,7 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
         esi_allele1.clear();
         esi_allele2.clear();
         esi_freq.clear();
+        _esi_msnp_name_map_all[i].clear();
         
         bool chrwarning=false;
         bool feqwarning=false, allele1warning=false, allele2warning=false;
@@ -888,7 +887,7 @@ void read_single_esifile(string esifileName, vector<string> &esi_rs, vector<stri
             } else if(strlist.size()>colnum) {
                 //printf("WARNING: Line %u has more than %d items. The first %d columns would be used. \n", line_idx,colnum,colnum);
             }
-            
+            _esi_msnp_name_map_all[i].insert(pair<string,int>(strlist[1],line_idx));
             if(strlist[0]=="X" || strlist[0]=="x") esi_chr.push_back(23);
             else if(strlist[0]=="Y" || strlist[0]=="y") esi_chr.push_back(24);
             else if(strlist[0]=="NA" || strlist[0]=="na"){
@@ -959,6 +958,8 @@ void gcta::read_multi_esifiles(vector<string> multi_blds) {
     vector<string> trs,tallele1,tallele2;
     vector<int> tchr,tgd,tbp,tinclude;
     vector<float> tfreq;
+    // map<string,int> tmsnp;
+    
 
     _esi_chr.clear();
     _esi_rs.clear();
@@ -973,9 +974,9 @@ void gcta::read_multi_esifiles(vector<string> multi_blds) {
     _esi_single_snpNum.clear();
     for( i=0; i<nblds; i++ ) {
         esifileName = multi_blds[i]+".esi";
-        read_single_esifile(esifileName, trs, tallele1, tallele2, tchr, tgd, tbp, tfreq, false);
+        read_single_esifile(esifileName, trs, tallele1, tallele2, tchr, tgd, tbp, tfreq, _esi_msnp_name_map_all, i, false);
         _esi_single_snpNum[i] = trs.size();
-        update_esi(trs, tallele1, tallele2, tchr, tgd, tbp, tfreq,i);
+        update_esi(trs, tallele1, tallele2, tchr, tgd, tbp, tfreq, i);
     }
 
     // Initialize the variables
@@ -1065,17 +1066,17 @@ void read_single_bedfile(string bedfile, vector<pair<int,int>> rsnp, vector<int>
     if(msg_flag) LOGGER.i(0, "Genotype data for " + to_string(nindi_chr) + " individuals and " + to_string(nsnp_chr) + " SNPs to be included from [" + bedfile + "].");
 }
 
-void gcta::read_single_bldfile(string bldfileName, int single_snpNum){
-    bld = NULL;
+void gcta::read_single_bldfile(string bldfileName, int single_snpNum, int i){
+    mbld[i] = NULL;
     vector<int> headers;
     headers.resize(RESERVEDUNITS);
-    bld = fopen(bldfileName.c_str(), "rb");
-    if (bld == NULL)
+    mbld[i] = fopen(bldfileName.c_str(), "rb");
+    if (mbld[i] == NULL)
     {
         printf("Error: can't open file %s.\n", bldfileName.c_str());
         exit(EXIT_FAILURE);
     }
-    if (fread(&headers[0], sizeof(int), RESERVEDUNITS, bld) < 1)
+    if (fread(&headers[0], sizeof(int), RESERVEDUNITS, mbld[i]) < 1)
     {
         printf("ERROR: File %s read failed!\n", bldfileName.c_str());
         exit(EXIT_FAILURE);
@@ -1085,22 +1086,22 @@ void gcta::read_single_bldfile(string bldfileName, int single_snpNum){
         printf("\n %s...\n", bldfileName.c_str());
     else
         printf("\nReading ld r-squared from binary file %s...\n", bldfileName.c_str());
-    uint64_t valnum = CommFunc::readuint64(bld);
+    uint64_t valnum = CommFunc::readuint64(mbld[i]);
     uint64_t colNum = single_snpNum + 1;
-    uint64_t cur_pos = ftell(bld);
-    fseek(bld, 0L, SEEK_END);
-    uint64_t size_file = ftell(bld);
-    fseek(bld, cur_pos, SEEK_SET);
+    uint64_t cur_pos = ftell(mbld[i]);
+    fseek(mbld[i], 0L, SEEK_END);
+    uint64_t size_file = ftell(mbld[i]);
+    fseek(mbld[i], cur_pos, SEEK_SET);
     if (size_file - (RESERVEDUNITS * sizeof(int) + sizeof(uint64_t) + colNum* sizeof(uint64_t) + valnum * sizeof(float)) != 0)
     {
         printf("ERROR: File %s is broken!\n", bldfileName.c_str());
         exit(EXIT_FAILURE);
     }
-    uint64_t startPos = _esi_cols.size();
-    _esi_cols.resize(startPos + colNum);
-    if (fread(&_esi_cols[startPos], sizeof(uint64_t), colNum, bld) < 1)
+    _esi_mcols[i].clear();
+    _esi_mcols[i].resize(colNum);
+    if(fread(&_esi_mcols[i][0], sizeof(uint64_t),colNum, mbld[i])<1)
     {
-        printf("ERROR: File %s read failed!\n", bldfileName.c_str());
+        printf("ERROR: File %s read failed!\n", bldfileName);
         exit(EXIT_FAILURE);
     }
 }
@@ -1158,7 +1159,6 @@ void gcta::read_multi_bldfiles(vector<string> multi_blds){
     
     retrieve_snp(_esi_snp_name_per_chr, _esi_snp_name_map, rsnp, nblds);
     
-    _esi_cols.clear();
     for( i=0; i<nblds; i++) {       
         if(rsnp[i].size()==0) { 
             LOGGER.i(0, "Skip reading " + multi_blds[i] + ".bld, no SNPs retained on this chromosome.");
@@ -1166,7 +1166,7 @@ void gcta::read_multi_bldfiles(vector<string> multi_blds){
         } 
         bldfileName =multi_blds[i] + ".bld";
         int single_snpNum = _esi_single_snpNum[i];
-        read_single_bldfile(bldfileName, single_snpNum);
+        read_single_bldfile(bldfileName, single_snpNum,i);
     }
 
 }
@@ -1967,7 +1967,6 @@ void gcta::filter_snp_maf_bld(double maf)
         _esi_snp_name_map.insert(*iter);
         _esi_include.push_back(iter->second);
     }
-
     if (_esi_include.size() == 0) LOGGER.e(0, "no SNP is retained for analysis.");
     else {
         stable_sort(_esi_include.begin(), _esi_include.end());

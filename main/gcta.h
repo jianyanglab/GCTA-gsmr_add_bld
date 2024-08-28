@@ -70,7 +70,7 @@ public:
     void read_bedfile(string bedfile);
     void read_esifile(string esifileName);
     void read_bldfile(string bldfileName);
-    void read_single_bldfile(string bldfileNam, int single_snpNum);
+    void read_single_bldfile(string bldfileNam, int single_snpNum, int i);
     vector<string> read_bfile_list(string bfile_list);
     vector<string> read_bld_list(string bfile_list);
     void read_multi_famfiles(vector<string> multi_bfiles);
@@ -196,9 +196,9 @@ public:
     ////////////////////////////////
     // GSMR
     void read_gsmrfile(string expo_file_list, string outcome_file_list, double gwas_thresh, int nsnp_gsmr, int gsmr_so_alg, int bfile_flag);
-    void gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double freq_thresh, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, bool o_snp_instru_flag, int gsmr_so_alg, int gsmr_beta_version, int bfile_flag);
-    vector<vector<double>> forward_gsmr(stringstream &ss, map<string,int> &snp_instru_map, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, stringstream &ss_pleio, int bfile_flag);
-    vector<vector<double>> reverse_gsmr(stringstream &ss, map<string,int> &snp_instru_map, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, stringstream &ss_pleio, int bfile_flag);
+    void gsmr(int gsmr_alg_flag, string ref_ld_dirt, string w_ld_dirt, double freq_thresh, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, bool o_snp_instru_flag, int gsmr_so_alg, int gsmr_beta_version, int bld_flag);
+    vector<vector<double>> forward_gsmr(stringstream &ss, map<string,int> &snp_instru_map, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, stringstream &ss_pleio, int bld_flag);
+    vector<vector<double>> reverse_gsmr(stringstream &ss, map<string,int> &snp_instru_map, double gwas_thresh, double clump_wind_size, double clump_r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, stringstream &ss_pleio, int bld_flagg);
     eigenMatrix rho_sample_overlap(vector<vector<bool>> snp_val_flag, eigenMatrix snp_b, eigenMatrix snp_se, eigenMatrix snp_pval, eigenMatrix snp_n, int nexpo, int noutcome, vector<string> snp_name, vector<int> snp_remain, string ref_ld_dirt, string w_ld_dirt, vector<string> trait_name, int gsmr_so_alg);
 
     eigenMatrix sample_overlap_ldsc(vector<vector<bool>> snp_val_flag, eigenMatrix snp_b, eigenMatrix snp_se, eigenMatrix snp_n, int nexpo, int noutcome, vector<string> snp_name, vector<int> snp_remain, string ref_ld_dirt, string w_ld_dirt, vector<string> trait_name);
@@ -482,6 +482,7 @@ private:
     vector<double> gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bfile_flag);
     vector<string> clumping_meta(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh);
     vector<string> clumping_meta_bld(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh, FILE* ldfprt);
+    vector<string> clumping_meta_mbld(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh,  map<int, FILE*> ldfprt);
     void update_mtcojo_snp_rm(vector<string> adjsnps, map<string,int> &snp_id_map, vector<int> &remain_snp_indx);
     vector<string> read_snp_ldsc(map<string,int> ldsc_snp_name_map, vector<string> snp_name, vector<int> snp_remain, int &ttl_mk_num, string ref_ld_dirt, string w_ld_dirt, vector<double> &ref_ld_vec, vector<double> &w_ld_vec);
     void reorder_snp_effect(vector<int> snp_remain, eigenMatrix &bhat_z, eigenMatrix &bhat_n, eigenMatrix snp_b, eigenMatrix snp_se, eigenMatrix snp_n, vector<vector<bool>> &snp_flag, vector<vector<bool>> snp_val_flag, vector<int> &nsnp_cm_trait, vector<string> cm_ld_snps, map<string,int> ldsc_snp_name_map, eigenVector &ref_ld, eigenVector &w_ld, vector<double> ref_ld_vec, vector<double> w_ld_vec, int ntrait);
@@ -549,14 +550,16 @@ private:
     vector<string> _esi_allele2;
     vector<int> _esi_include;
     map<string,int> _esi_snp_name_map;
-    vector<int> _esi_include_all;
     map<string,int> _esi_snp_name_map_all;
+    map<int,map<string,int>> _esi_msnp_name_map_all;
     map<string, string> _esi_snp_name_per_chr;
     vector<double> _esi_freq;
     
     //bld file
+    map<int, FILE*> mbld;
     FILE* bld;
     vector<uint64_t> _esi_cols;
+    map<int,vector<uint64_t>>_esi_mcols;
     vector<float> _esi_val;
     int _esi_keep;
     uint64_t _esi_snpNum;

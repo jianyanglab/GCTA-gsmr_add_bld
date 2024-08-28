@@ -980,6 +980,7 @@ vector<string> gcta::clumping_meta(eigenVector snp_chival, vector<bool> snp_flag
     vector<string> indices_snp;
     eigenVector x(nindi), x_j(nindi);
     nsnp_clumped=clumped_snp.size();
+    std::ofstream outputFile("output7.txt");
     for(i=0; i<nsnp_clumped; i++) {
         indx = snp_pvalbuf[i].second;
         snpbuf = _meta_snp_name[indx];
@@ -1026,8 +1027,10 @@ vector<string> gcta::clumping_meta(eigenVector snp_chival, vector<bool> snp_flag
                 break;
             }
         }
+        outputFile << snpbuf << std::endl;
         indices_snp.push_back(snpbuf);
     }
+    outputFile.close();
     return indices_snp;
 }
 
@@ -1152,7 +1155,147 @@ vector<string> gcta::clumping_meta_bld(eigenVector snp_chival, vector<bool> snp_
     return indices_snp;
 }
 
+vector<string> gcta::clumping_meta_mbld(eigenVector snp_chival, vector<bool> snp_flag, double pval_thresh, int wind_size, double r2_thresh,  map<int, FILE*> ldfprt) {  
+    wind_size = wind_size*1e3;
+    // Only select SNPs that are matched with plink binary file
+    vector<pair<double, int>> snp_pvalbuf;
+    int i = 0, indx = 0, nsnp_plink = _esi_include.size(), nsnp_meta = _meta_remain_snp.size();
+    double pvalbuf = 0.0;
+    string snpbuf = "", snpbuf_left="", snpbuf_right="";
+    map<string,int>::iterator iter, iter1, iter2;
+    // Sort the p-value
+    for(i=0; i<nsnp_meta; i++) {
+        if(!snp_flag[i]) continue;
+        iter = _esi_snp_name_map.find(_meta_snp_name[_meta_remain_snp[i]]);
+        if(iter==_esi_snp_name_map.end()) continue;
+        snp_pvalbuf.push_back(make_pair(snp_chival(_meta_remain_snp[i]), _meta_remain_snp[i]));
+    }
 
+    std::stable_sort(snp_pvalbuf.begin(), snp_pvalbuf.end());
+    std::reverse(snp_pvalbuf.begin(), snp_pvalbuf.end());
+    int nsnp_clumped=snp_pvalbuf.size();
+    pval_thresh = StatFunc::qchisq(pval_thresh, 1);
+    // Start to clump
+    map<string, bool> clumped_snp;
+    for(i=0; i<nsnp_clumped; i++) {
+        pvalbuf = snp_pvalbuf[i].first;
+        if( pvalbuf <= pval_thresh) continue;
+        indx = snp_pvalbuf[i].second;
+        clumped_snp.insert(pair<string,bool>(_meta_snp_name[indx],false));
+    }
+
+    map<string, bool>::iterator iter_clump;
+    int geno_indx=0, geno_indx1=0, geno_indx_j = 0, geno_indx_buf = 0, geno_indx_center = 0, toid = 0, chr_num=0;
+    double r2=0.0;
+    int left_indx = 0, right_indx = 0;
+    double r2_left=0.0, r2_right=0.0;
+    vector<string> indices_snp;
+    int64_t valSTART=0;
+    long poss=0;
+    nsnp_clumped=clumped_snp.size();
+    std::ofstream outputFile("output6.txt");
+    for(i=0; i<nsnp_clumped; i++) {
+        indx = snp_pvalbuf[i].second;
+        snpbuf = _meta_snp_name[indx];
+        // if (snpbuf=="rs145487942") continue;
+        if(clumped_snp[snpbuf]) continue;
+        iter = _esi_snp_name_map.find(snpbuf);
+        geno_indx = iter -> second; 
+        geno_indx_center = std::find(_esi_include.begin(), _esi_include.end(), geno_indx) - _esi_include.begin();
+        geno_indx_j = geno_indx_center;
+        // int fileIndex = 0;
+        // for (const auto& fileMap : _esi_msnp_name_map_all) {
+        //     auto iter11 = fileMap.find(snpbuf);
+        //     if (iter11 != fileMap.end()) {
+        //         foundInFile = fileIndex;
+        //         geno_indx1 = iter1 -> second; 
+        //         break;  
+        //     }
+        //     fileIndex++;
+        // }
+        chr_num=_esi_chr[geno_indx]-1;
+        valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + (_esi_single_snpNum[chr_num]+1)*sizeof(uint64_t);
+        iter1 = _esi_msnp_name_map_all[chr_num].find(snpbuf);
+        geno_indx1 = iter1 -> second; 
+        // Left side
+        while(1) {
+            r2_left=-1;  geno_indx_j--;
+            if(geno_indx_j<0) break;
+            snpbuf_left = _esi_rs[_esi_include[geno_indx_j]];
+            if(_esi_chr[geno_indx]==_esi_chr[_esi_include[geno_indx_j]] && abs(_esi_bp[geno_indx] - _esi_bp[_esi_include[geno_indx_j]]) < wind_size) {
+                iter2 = _esi_msnp_name_map_all[chr_num].find(snpbuf_left);
+                toid = iter2 -> second; 
+                iter_clump = clumped_snp.find(snpbuf_left);
+                if(iter_clump==clumped_snp.end()) continue;
+                // r2
+                if(geno_indx1==toid) r2_left = 1;
+                else if(geno_indx1>toid)
+                {
+                    poss=_esi_mcols[chr_num][toid];
+                    fseek(ldfprt[chr_num], (poss+geno_indx1-toid-1)*sizeof(float)+valSTART, SEEK_SET );
+                    r2_left=CommFunc::readfloat(ldfprt[chr_num]);
+                    r2_left = r2_left*r2_left;
+                }
+                else
+                {
+                    poss=_esi_mcols[chr_num][geno_indx1];
+                    fseek( ldfprt[chr_num], (poss+toid-geno_indx1-1)*sizeof(float)+valSTART, SEEK_SET );
+                    r2_left=CommFunc::readfloat(ldfprt[chr_num]);
+                    r2_left = r2_left*r2_left;
+                }
+                // save the SNP
+                // if (snpbuf_left=="rs149697749" || snpbuf_left=="rs147658631" || snpbuf_left=="rs62373621"){
+                //     outputFile <<snpbuf<<"-"<<snpbuf_left<<"-"<< "r2_left: "<<r2_left << std::endl;
+                // }
+                if(r2_left >= r2_thresh) iter_clump->second=true;
+            } else{
+                break;
+            }
+        }
+        // Right side
+        geno_indx_j = geno_indx_center;
+        while (1) {
+            r2_right=-1; geno_indx_j++;
+            if(geno_indx_j >= nsnp_plink) break;
+            snpbuf_right = _esi_rs[_esi_include[geno_indx_j]];
+            if(_esi_chr[geno_indx] == _esi_chr[_esi_include[geno_indx_j]] && abs(_esi_bp[geno_indx] - _esi_bp[_esi_include[geno_indx_j]]) < wind_size ) {
+                iter2 = _esi_msnp_name_map_all[chr_num].find(snpbuf_right);
+                toid = iter2 -> second; 
+                iter_clump = clumped_snp.find(snpbuf_right);
+                if(iter_clump==clumped_snp.end()) continue;
+                // r2       
+                if(geno_indx1==toid) r2_right = 1;
+                else if(geno_indx1>toid)
+                {
+                    poss=_esi_mcols[chr_num][toid];
+                    fseek( ldfprt[chr_num], (poss+geno_indx1-toid-1)*sizeof(float)+valSTART, SEEK_SET );
+                    r2_right=CommFunc::readfloat(ldfprt[chr_num]);
+                    r2_right = r2_right*r2_right;
+                }
+                else
+                {
+                    poss=_esi_mcols[chr_num][geno_indx1];
+                    fseek( ldfprt[chr_num], (poss+toid-geno_indx1-1)*sizeof(float)+valSTART, SEEK_SET );
+                    r2_right=CommFunc::readfloat(ldfprt[chr_num]);
+                    r2_right = r2_right*r2_right;
+                }
+               
+                // Save the SNP
+                // if (snpbuf_right=="rs149697749" || snpbuf_right=="rs147658631" || snpbuf_right=="rs62373621"){
+                //     outputFile <<snpbuf<<"-"<<snpbuf_right<<"-"<< "r2_right: "<<r2_right << std::endl;
+
+                // }
+                if(r2_right >= r2_thresh) iter_clump->second=true;
+            } else{
+                break;
+            }
+        }
+        outputFile << snpbuf << std::endl;
+        indices_snp.push_back(snpbuf);
+    }  
+    outputFile.close();
+    return indices_snp;
+}
 
 vector<int> rm_cor_elements(eigenMatrix r_mat, double r2_thresh, bool r2_flag) {
     int i = 0, j = 0, n = r_mat.cols();
@@ -1705,9 +1848,9 @@ double global_heidi_outlier_topsnp_iter(eigenVector bxy, eigenMatrix &cov_bxy, e
     return(global_heidi_pvalue);
 }
 
-vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bfile_flag=1) {
+vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eigenVector bzx_se, eigenVector bzx_pval, eigenVector bzy, eigenVector bzy_se, eigenVector bzy_pval, double rho_pheno, vector<bool> snp_flag, double gwas_thresh, int wind_size, double r2_thresh, double std_heidi_thresh, double global_heidi_thresh, double ld_fdr_thresh, int nsnp_gsmr, string &pleio_snps, string &err_msg, int bld_flag=0) {
     int i=0, j=0, nsnp, nindi;
-    if(bfile_flag){
+    if(!bld_flag){
          nsnp = _include.size(), nindi=_keep.size();   
     }else{
          nsnp = _esi_include.size();
@@ -1720,19 +1863,18 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
         err_msg = "Not enough SNPs to perform the GSMR analysis. At least " + to_string(nsnp_gsmr) + " SNPs are required."; 
         return rst;
     }
-
     // clumping analysis
     eigenVector bzx_chival=bzx.array()*bzx.array()/(bzx_se.array()*bzx_se.array());
-    if (bfile_flag){
+    if (!bld_flag){
         indices_snp = clumping_meta(bzx_chival, snp_flag, gwas_thresh, wind_size, r2_thresh);
+    }else if (bld_flag==1){
+        indices_snp = clumping_meta_bld(bzx_chival, snp_flag, gwas_thresh, wind_size, r2_thresh, bld);        
     }else{
-        indices_snp = clumping_meta_bld(bzx_chival, snp_flag, gwas_thresh, wind_size, r2_thresh, bld);
+        indices_snp = clumping_meta_mbld(bzx_chival, snp_flag, gwas_thresh, wind_size, r2_thresh, mbld);
     }
     
     int n_indices_snp = indices_snp.size();
-
-    //LOGGER.i(0, to_string(n_indices_snp) + " index SNPs are obtained from the clumping analysis of the " + nsnp + " genome-wide significant SNPs.");
-
+    // LOGGER.i(0, to_string(n_indices_snp) + " index SNPs are obtained from the clumping analysis of the " + nsnp + " genome-wide significant SNPs.");
     std::stringstream ss1, ss2;
     ss1 << std::scientific << std::setprecision(1) << gwas_thresh;
     ss2 << std::fixed << std::setprecision(2) << r2_thresh;
@@ -1743,8 +1885,8 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
     }
 
     eigenMatrix ld_r_mat(n_indices_snp, n_indices_snp);
-    map<string, int>::iterator iter, iter1;
-    if(bfile_flag){
+    map<string, int>::iterator iter, iter1, iter2, iter3;
+    if(!bld_flag){
         // LD r
         MatrixXf x_sub(nindi, n_indices_snp);
         vector<int> snp_sn(n_indices_snp);
@@ -1769,46 +1911,120 @@ vector<double> gcta::gsmr_meta(vector<string> &snp_instru, eigenVector bzx, eige
             }
         }
     }else{
+        if (bld_flag==1){
+            //get indicator
+            fseek(bld,0L,SEEK_SET);
+            int indicator=CommFunc::readint(bld);
 
-        //get indicator
-        fseek(bld,0L,SEEK_SET);
-        int indicator=CommFunc::readint(bld);
-
-        ld_r_mat = MatrixXd::Identity(n_indices_snp, n_indices_snp);
-        uint64_t valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + (_esi_snpNum+1)*sizeof(uint64_t);
-        for(int i=0;i<n_indices_snp;i++)
-        {
-            ld_r_mat(i,i)=1;
-            iter = _esi_snp_name_map_all.find(indices_snp[i]);
-            int id1 = iter->second;
-            for(int j=i+1;j<n_indices_snp;j++)
+            ld_r_mat = MatrixXd::Identity(n_indices_snp, n_indices_snp);
+            uint64_t valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + (_esi_snpNum+1)*sizeof(uint64_t);
+            for(int i=0;i<n_indices_snp;i++)
             {
-                iter1 = _esi_snp_name_map_all.find(indices_snp[j]);
-                int id2 = iter1->second;
-                if(id1>id2)
+                ld_r_mat(i,i)=1;
+                iter = _esi_snp_name_map_all.find(indices_snp[i]);
+                int id1 = iter->second;
+                for(int j=i+1;j<n_indices_snp;j++)
                 {
-                    long poss=_esi_cols[id2];
-                    fseek( bld, (poss+id1-id2-1)*sizeof(float)+valSTART, SEEK_SET );
-                    if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(CommFunc::readfloat(bld));
-                    else ld_r_mat(i,j)=ld_r_mat(j,i)=CommFunc::readfloat(bld);
-                }
-                else
-                {
-                    long poss=_esi_cols[id1];
-                    fseek( bld, (poss+id2-id1-1)*sizeof(float)+valSTART, SEEK_SET );
-                    if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(CommFunc::readfloat(bld));
-                    else ld_r_mat(i,j)=ld_r_mat(j,i)=CommFunc::readfloat(bld);
+                    iter1 = _esi_snp_name_map_all.find(indices_snp[j]);
+                    int id2 = iter1->second;
+                    if(id1>id2)
+                    {
+                        long poss=_esi_cols[id2];
+                        fseek( bld, (poss+id1-id2-1)*sizeof(float)+valSTART, SEEK_SET );
+                        if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(CommFunc::readfloat(bld));
+                        else ld_r_mat(i,j)=ld_r_mat(j,i)=CommFunc::readfloat(bld);
+                    }
+                    else
+                    {
+                        long poss=_esi_cols[id1];
+                        fseek( bld, (poss+id2-id1-1)*sizeof(float)+valSTART, SEEK_SET );
+                        if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(CommFunc::readfloat(bld));
+                        else ld_r_mat(i,j)=ld_r_mat(j,i)=CommFunc::readfloat(bld);
+                    }
                 }
             }
-        }
-        _esi_snp_name_map_all.clear();
-        _esi_include_all.clear();
-        fseek(bld, 4, SEEK_SET); 
-        fread(&_esi_keep, sizeof(int), 4 , bld);
-        nindi = _esi_keep;
-    }
+            _esi_snp_name_map_all.clear();
+            fseek(bld, 4, SEEK_SET); 
+            fread(&_esi_keep, sizeof(int), 4 , bld);
+            nindi = _esi_keep;
 
-    
+        }else{
+            
+            int id1 = 0, id2=0;
+            ld_r_mat = MatrixXd::Identity(n_indices_snp, n_indices_snp);
+            for(int i=0;i<n_indices_snp;i++)
+            {
+                iter = _esi_snp_name_map.find(indices_snp[i]);
+                int chr_num = _esi_chr[iter -> second]-1;
+                iter1 = _esi_msnp_name_map_all[chr_num].find(indices_snp[i]);
+                id1 = iter1 -> second;
+
+                ld_r_mat(i,i)=1;
+                // int fileIndex = 0;
+                // for (const auto& fileMap : _esi_msnp_name_map_all) {
+                //     auto iter = fileMap.find(indices_snp[i]);
+                //     if (iter != fileMap.end()) {
+                //         // 找到了匹配的元素
+                //         foundInFile = fileIndex;
+                //         id1 = iter -> second; 
+                //         break;  // 停止循环
+                //     }
+                //     fileIndex++;
+                // }
+                uint64_t valSTART=RESERVEDUNITS*sizeof(int) + sizeof(uint64_t) + (_esi_single_snpNum[chr_num]+1)*sizeof(uint64_t);
+                //get indicator
+                fseek(mbld[chr_num],0L,SEEK_SET);
+                int indicator=CommFunc::readint(mbld[chr_num]);
+                for(int j=i+1;j<n_indices_snp;j++)
+                {
+                    iter2 = _esi_snp_name_map.find(indices_snp[j]);
+                    int chr_num1 = _esi_chr[iter2 -> second]-1;
+                    iter3 = _esi_msnp_name_map_all[chr_num1].find(indices_snp[j]);
+                    id2 = iter3 -> second;
+                    // int fileIndex1 = 0;
+                    // for (const auto& fileMap1 : _esi_msnp_name_map_all) {
+                    //     auto iter1 = fileMap1.find(indices_snp[j]);
+                    //     if (iter1 != fileMap1.end()) {
+                    //         // 找到了匹配的元素
+                    //         foundInFile1 = fileIndex1;
+                    //         id2 = iter1 -> second; 
+                    //         break;  // 停止循环
+                    //     }
+                    //     fileIndex++;
+                    // }
+                    if (chr_num == chr_num1){
+                        if(id1>id2)
+                        {
+                            long poss=_esi_mcols[chr_num][id2];
+                            fseek( mbld[chr_num], (poss+id1-id2-1)*sizeof(float)+valSTART, SEEK_SET );
+                            if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(CommFunc::readfloat(mbld[chr_num]));
+                            else ld_r_mat(i,j)=ld_r_mat(j,i)=CommFunc::readfloat(mbld[chr_num]);
+                        }
+                        else
+                        {
+                            long poss=_esi_mcols[chr_num][id1];
+                            fseek( mbld[chr_num], (poss+id2-id1-1)*sizeof(float)+valSTART, SEEK_SET );
+                            if(indicator) ld_r_mat(i,j)=ld_r_mat(j,i)=sqrt(CommFunc::readfloat(mbld[chr_num]));
+                            else ld_r_mat(i,j)=ld_r_mat(j,i)=CommFunc::readfloat(mbld[chr_num]);
+                        }
+                    }else{
+                        ld_r_mat(i,j)=ld_r_mat(j,i)=float(0);
+                    }
+                    
+                }
+            }
+
+            fseek(mbld[i], 4, SEEK_SET); 
+            fread(&_esi_keep, sizeof(int), 4 , mbld[i]);
+               
+            _esi_msnp_name_map_all.clear();
+            
+            nindi = _esi_keep;
+        }
+    }
+        
+
+    LOGGER.i(0, to_string(nindi));
     // LD pruning
     vector<int> kept_ID;
     kept_ID = rm_cor_elements(ld_r_mat, r2_thresh, true);
