@@ -165,7 +165,7 @@ void option(int option_num, char* option_str[])
     char chbuf = '\0';
     string mtcojolist_file="", mtcojo_bxy_file="", ref_ld_dirt="", w_ld_dirt="";
     int nsnp_gsmr=10, nsnp_read = 0;
-    double freq_thresh = 0.2, gwas_thresh=5e-8, global_heidi_thresh = 0.01, std_heidi_thresh = 0.01, ld_fdr_thresh=0.05, clump_wind_size=10000, clump_r2_thresh=0.05;
+    double freq_thresh = 0.2, gwas_thresh=5e-8, global_heidi_thresh = 0.01, std_heidi_thresh = 0.01, ld_fdr_thresh=0.05, clump_wind_size=4e6, clump_r2_thresh=0.05;
     bool mtcojo_flag=false, ref_ld_flag=false, w_ld_flag=false, global_heidi_flag=false;
 
     // GSMR
